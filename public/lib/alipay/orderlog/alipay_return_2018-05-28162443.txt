@@ -1,0 +1,15 @@
+Array
+(
+    [total_amount] => 230.00
+    [timestamp] => 2018-05-28 16:24:39
+    [sign] => ZtkV/l9Ev9Lg/XO0fF3Tk46Ke6oSA14gTwtDWaN0QSu/OVWNpqJQ2N1tGMvw0F3rAK/lk5ks/wZuOfEgKQ4gZgnq5eCJQzHJXxWPogc27FmEeEYNKluVtvzOR3PMFM8XuibxxtJP1VnU8Ptppx6OUtGZQbJYd3U/sn7oi7MLNnhQBknN0FZbcQFjDOgt0hMcpL/4Pk4qdl1kh2DsPSVtF5qUSh2oeFOTwNaQ1/1qu/gukcyzV+MeZ0IVJKHA1iXtLcYgimEKxl4t25uFm2U1YyH0iLKvUQeIm6SKftnBQJ73g6AiIxits0l/HhOirjTSSSqG6uoDI8N6B/CIqBwMXQ==
+    [trade_no] => 2018052821001004190503315648
+    [sign_type] => RSA2
+    [auth_app_id] => 2018020202132058
+    [charset] => UTF-8
+    [seller_id] => 2088621983682009
+    [method] => alipay.trade.page.pay.return
+    [app_id] => 2018020202132058
+    [out_trade_no] => 2018528161951197
+    [version] => 1.0
+)

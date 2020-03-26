@@ -1,0 +1,20 @@
+
+<div id="footer" style="bottom: 0px;height: 80px;background:#ECECEC;width: -webkit-fill-available">
+    <hook name="footer_start"/>
+    <div class="links">
+        <links>
+            <a href="{$vo.url|default=''}" target="{$vo.target|default=''}">{$vo.name|default=''}</a>&nbsp;
+        </links>
+
+    </div>
+    <p style="margin-left: 20%;line-height: 30px;color: #999999;">
+        <br>
+        备案号:
+        <notempty name="site_info.site_icp">
+            <a style="color:#999999;" href="http://www.miitbeian.gov.cn/" target="_blank">{$site_info.site_icp}</a>
+            <else/>
+            请在后台设置"网站信息"设置"备案信息"
+        </notempty>
+    </p>
+</div>
+

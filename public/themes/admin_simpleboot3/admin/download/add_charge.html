@@ -1,0 +1,52 @@
+<include file="public@header"/>
+<style type="text/css">
+    .pic-list li {
+        margin-bottom: 5px;
+    }
+    .form-control{width:30%!important;}
+</style>
+
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li><a href="{:url('download/charge')}">手动添加下载记录</a></li>
+        <li  class="active"><a href="{:url('download/add_charge')}">添加下载</a></li>
+    </ul>
+    <form action="{:url('download/upd_charge')}" method="post" class="form-horizontal js-ajax-form margin-top-20">
+        <div class="row">
+            <div class="col-md-9">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>会员(id)<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" name="uid"
+                                   id="title" required placeholder="请输入会员id" value="{$download.uid | default=''}"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th width="150">添加下载次数(次)<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" name="download"
+                                   required  placeholder="请输入下载次数" value="{$download['download']| default=''}"/>
+                        </td>
+                    </tr>
+
+
+                </table>
+                <input type="hidden" name="id" value="{$download.id | default=''}"/>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+                        <a class="btn btn-default" href="{:url('download/index')}">{:lang('BACK')}</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

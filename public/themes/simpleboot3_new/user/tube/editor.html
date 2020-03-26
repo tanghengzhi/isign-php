@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页 {$site_info.site_name|default=''}</title>
+    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
+    <meta name="description" content="{$site_info.site_seo_description|default=''}">
+    <include file="public@head"/>
+
+    <link href="__TMPL__/public/assets/simpleboot3/themes/simpleboot3/bootstrap.min.css" rel="stylesheet">
+    <link href="__TMPL__/public/assets/css/tube.css" rel="stylesheet">
+    <link rel="stylesheet" href="__STATIC__/js/layui/css/layui.css" media="all">
+
+    <hook name="before_head_end"/>
+</head>
+<body class="body-white" style="background: #ECEEEE;">
+
+
+<style type="text/css">
+            .all-top{
+                margin-top: 35px;
+                margin-bottom: 20px;
+                font-size: 18px;
+                color: #666;
+                margin-left: 1%;
+            }
+            .all-top-c{
+                color: #3BCDAE;
+            }
+        </style>
+        <!--     账户资料 -->
+        <div class="all-top">
+            <p>内测分发应用 > <span class="all-top-c">编辑</span></p>
+        </div>
+
+    <!--  我的应用右侧 概述 -->
+    
+        <!-- 编辑应用管理 --><!-- 
+        <div class="col-sm-12 tube-zil pad-left_right">{$assets.name}</div> -->
+        <div class="col-sm-12 editor-use  pad-left_right" style="margin-left: 1%;">
+            <div class="col-sm-11 editor-left">
+                <form class="reg-page sky-form" id="form" enctype="multipart/form-data" method="POST"
+                      action="{:cmf_url('tube/upd')}">
+                    <input type="hidden" name="url_name" value="{$assets.url_name}">
+                    <div class="editor-form-box">
+                        <div class="editor-left2">
+                            <span id="img">
+                                <input id="imginput" type="file" name="img" onchange="imgshow()" value="">
+                            </span>
+
+                            <!-- <img src="{$assets.img|default='/nologo.png'}"/> -->
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="form-group">
+                            <label class="form-label">名称</label>
+                            <div class="controls">
+                                <div class="input-group state-success">
+                                    <input type="text" class="form-control valid" id="name" name="name"
+                                           value="{$assets.name}" placeholder="请输入应用名称">
+                                    <span class="input-group-addon"><span class="arrow"></span><i
+                                            class="fa fa-pencil"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <if condition="$assets['url_name'] eq '1'">
+                            <div class="form-group">
+                                <label class="form-label">应用版本号：默认为1.0.0</label>
+                                <div class="controls">
+                                    <div class="input-group state-success">
+                                        <input type="text" class="form-control valid" id="version" name="version"
+                                               value="{$assets.version|default='1.0.0'}" placeholder="请输入应用版本号">
+                                        <span class="input-group-addon"><span class="arrow"></span><i
+                                                class="fa fa-pencil"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">应用构建版本：默认为1</label>
+                                <div class="controls">
+                                    <div class="input-group state-success">
+                                        <input type="text" class="form-control valid" id="build" name="build"
+                                               value="{$assets.build|default='1'}" placeholder="请输入应用构建版本">
+                                        <span class="input-group-addon"><span class="arrow"></span><i
+                                                class="fa fa-pencil"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">应用包名：<span
+                                        style="color:#f00;">例如：com.demonlive.demon</span></label>
+                                <div class="controls">
+                                    <div class="input-group state-success">
+                                        <input type="text" class="form-control valid" id="bundle" name="bundle"
+                                               value="{$assets.bundle}" placeholder="请输入应用包名">
+                                        <span class="input-group-addon"><span class="arrow"></span><i
+                                                class="fa fa-pencil"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">应用大小：<span style="color:#f00;">单位(M)</span></label>
+                                <div class="controls">
+                                    <div class="input-group state-success">
+                                        <input type="text" class="form-control valid" id="big" name="big"
+                                               value="{$assets.big|default='10'}" placeholder="请输入应用大小">
+                                        <span class="input-group-addon"><span class="arrow"></span><i
+                                                class="fa fa-pencil"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">应用地址</label>
+                                <div class="controls">
+                                    <div class="input-group state-success">
+                                        <input type="text" class="form-control valid" id="url" name="url"
+                                               value="{$assets.url}" placeholder="请输入应用地址">
+                                        <span class="input-group-addon"><span class="arrow"></span><i
+                                                class="fa fa-pencil"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </if>
+
+                        <div class="form-group">
+                            <label class="form-label">应用页面地址：不可更改</label>
+                            <div class="controls">
+                                <div class="input-group">
+                                    <span class="input-group-addon">{$assets.www_url}</span>
+                                    <input type="text" class="form-control" id="shortcutURL" name="er_logo"
+                                           value="{$assets.ym_url}" placeholder="请输入页面地址后缀" style="padding-left: 30px;"
+                                           disabled="readonly">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <if condition="$assets['name'] eq '请输入应用名字'">
+                            <div class="form-group">
+                                <label class="form-label">应用类型：<span style="color:#f00;">Android请填 0，iOS请填 1。不填默认为Android</span></label>
+                                <div class="controls">
+                                    <div class="input-group state-success">
+                                        <input type="text" class="form-control valid" id="type" name="type" value="{$assets.type}" placeholder="请输入应用类型">
+                                        <span class="input-group-addon"><span class="arrow"></span><i class="fa fa-pencil"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </if> -->
+                        <!--  <div class="form-group">
+                              <label class="form-label">安装方式</label>
+                              <div class="controls">
+                                  <select class="form-control m-bot15" name="installType" id="installType">
+                                      <option value="1" selected="">公开</option>
+                                      <option value="2">密码安装</option>
+                                      <option value="3">邀请安装</option>
+                                  </select>
+                              </div>
+                          </div>-->
+                        <div class="form-group">
+                            <label class="form-label">版本更新说明</label>
+                            <div class="controls">
+                                <textarea class="form-control" rows="3" placeholder="请输入该版本的更新说明" name="instructions">{$assets.instructions}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">应用介绍 </label>
+                            <div class="controls">
+                                <textarea class="form-control" rows="3" placeholder="请输入该版本的更新说明" name="introduce">{$assets.introduce}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <div class="editor-button-left">
+                                <input type="hidden" name="id" value="{$assets.id}">
+                                <button class="btn btn-primary btn-radius-4" type="submit" id="submitButton">修改信息
+                                </button>
+                            </div>
+                            <div class="editor-button-right">
+                                <div class="editor-left3">
+                                    <a href="{$assets.er_logo}" style="background: #3BCDAE;" target="_blank">查 看 下 载</a>
+                                </div>
+                                <div class="editor-left4">
+                                    <a href="/" target="_blank">上 传 应 用</a>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                    <style media="screen">
+                        span#img {
+                            background: url("{$assets.img|default='/nologo.png'}") center center no-repeat;
+                            background-size: cover;
+                            display: block;
+                            width: 100px;
+                            height: 100px;
+                        }
+
+                        input#imginput {
+                            width: 100px;
+                            height: 100px;
+                            opacity: 0
+                        }
+                    </style>
+                    
+                </form>
+            </div>
+        </div>
+    
+
+    <include file="public@scripts"/>
+    <script src="__TMPL__/public/assets/js/slippry.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#home-slider").slippry({
+                transition: 'fade',
+                useCSS: true,
+                captions: false,
+                speed: 1000,
+                pause: 3000,
+                auto: true,
+                preload: 'visible'
+            });
+            $("#home-slider").show();
+        });
+
+        function imgshow() {
+            var r = new FileReader();
+            f = document.getElementById('imginput').files[0];
+            r.readAsDataURL(f);
+            r.onload = function (e) {
+                //alert(this.result);
+                $("#img").css('background', 'url(' + this.result + ')');
+                $("#img").css('background-size', 'cover');
+                // document.getElementById('show').src=this.result;
+            };
+        }
+    </script>
+    <hook name="before_body_end"/>
+</body>
+</html>

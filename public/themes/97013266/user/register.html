@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="">
+    <link href="__TMPL__/public/assets/css/tube.css" rel="stylesheet">
+    <include file="public@head"/>
+</head>
+<style>
+.login-box{
+    width:1050px;
+    height:556px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+    border-radius:10px;
+    margin: 0 auto;
+    margin-top: 50px;
+    overflow: hidden;
+}
+.login-box-logo{
+    width: 221px;
+    height: 61px;
+    margin-bottom: 36px;
+}
+.login-box-bottom{
+    width: 100%;
+    margin-top: 10px;
+}
+.login-box-bottom-left{
+    width: 463px;
+    height: 361px;
+    margin-left: 29px;
+    float: left;
+    margin-top: 60px;
+}
+.login-box-bottom-right{
+    width: 450px;
+    float: right;
+    margin-right: 29px;
+}
+.form-group input{
+    width: 420px;
+    background: #fff;
+    border: 0;
+    outline:none;
+    height: 50px;
+    margin-top: 10px;
+}
+.captcha-f{
+    width: 420px;
+    height: 50px;
+    border-bottom: solid 1px #DBDBDB;
+    margin-bottom: 10px;
+}
+.captcha-f input{
+    width: 259px;
+    height: 49px;
+    background: #fff;
+    border: 0;
+    outline:none;
+}
+.form-group-ou input{
+    border-bottom: solid 1px #DBDBDB;
+}
+.register-left{
+    float: left;
+}
+.register-left a{
+    color: #3BCDAE;
+    font-size: 16px;
+}
+.findpassword-right{
+    float: right;;
+    margin-right: 29px;
+}
+.findpassword-right a{
+    color: #999;
+    font-size: 16px;
+}
+.phone-all input{
+    width: 200px;
+    height: 49px;
+    margin: 0;
+}
+.phone-all{
+    width: 420px;
+    height: 50px;
+    border-bottom: solid 1px #DBDBDB;
+}
+.form-group-p a{
+    color: #3BCDAE;
+}
+</style>
+<body class="body-white">
+
+
+    <div class="login-box">
+        <div class="login-box-bottom">
+            <div class="login-box-bottom-left">
+                <div class="login-box-logo">
+                    <img width="100%" src="/static/images/logo.png">
+                </div>
+                <img width="100%" src="/themes/simpleboot3/public/assets/images/login_bac.png">
+            </div>
+
+            <div class="login-box-bottom-right">
+                <h2 class="text-center user-login">用户注册</h2>
+                <php>
+                    $mobile_tab_active=empty($theme_vars['enable_mobile'])?'':'active';
+                    $email_tab_active=empty($theme_vars['enable_mobile'])?'active':'';
+                </php>
+                <!--            <notempty name="theme_vars.enable_mobile">-->
+                <!--                <ul class="nav nav-tabs nav-justified" id="myTab" style="margin-bottom: 15px;">-->
+                <!--                    <li class="active"><a href="#mobile" data-toggle="tab">手机注册</a></li>-->
+                <!--                    <li><a href="#email" data-toggle="tab">邮箱注册</a></li>-->
+                <!--                </ul>-->
+                <!--            </notempty>-->
+
+                <php>
+                    $is_open_registration = cmf_is_open_registration();
+                </php>
+
+                <div class="tab-content">
+                    <notempty name="theme_vars.enable_mobile">
+
+                        <div class="tab-pane {$mobile_tab_active}" id="mobile">
+                            <form class="js-ajax-form" action="{:url('user/Register/doRegister')}" method="post">
+
+                                <div class="form-group form-group-ou">
+                                    <input type="text" name="username" placeholder="手机号" id="js-mobile-input">
+                                </div>
+
+                                <empty name="is_open_registration">
+                                    <div class="form-group phone-all">
+                                        <div style="position: relative;">
+                                            <input type="text" name="code" placeholder="手机验证码">
+                                            <a class="btn btn-success js-get-mobile-code"
+                                               style="width: 130px;position: absolute;top:10px;right: 10px;background: #fff;border: 0;color: #3BCDAE;"
+                                               data-wait-msg="[second]秒后才能再次获取" data-mobile-input="#js-mobile-input"
+                                               data-url="{:url('user/VerificationCode/send')}"
+                                               data-init-second-left="60">获取手机验证码</a>
+                                        </div>
+                                    </div>
+                                </empty>
+                                <div class="form-group form-group-ou">
+                                    <input type="text" name="user_nickname" placeholder="用户名">
+                                </div>
+
+                                <div class="form-group form-group-ou">
+                                    <input type="password" name="password" placeholder="密码" >
+                                </div>
+
+                                <div class="captcha-f">
+                                    <div style="">
+                                        <input class="phone-code" type="text" name="captcha" placeholder="验证码" style="float: left;">
+                                        <captcha height="38" width="160" font-size="20"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="form-group-p">
+                                        “注册” 即表示您同意并愿意遵守 <a href="{:cmf_url('portal/index/protocol')}">服务协议</a>
+                                    </p>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary btn-block js-ajax-submit" type="submit" data-wait="1500" style="width:418px; height:56px; background:#15EBBF;border-radius:10px;border: none;font-size: 22px;">注册
+                                    </button>
+                                </div>
+
+                                <div class="form-group" style="">
+                                    <p>
+                                        已有账号? <a style="color:#3BCDAE;" href="{:cmf_url('user/Login/index')}">去登录</a>
+                                    </p>
+                                    
+                                </div>
+                            </form>
+                        </div>
+                    </notempty>
+                    <div class="tab-pane {$email_tab_active}" id="email">
+                        <form class="js-ajax-form" action="{:url('user/register/doRegister')}" method="post">
+
+                            <div class="form-group">
+                                <input type="text" name="username" placeholder="邮箱" class="form-control"
+                                       id="js-email-input">
+                            </div>
+
+                            <empty name="is_open_registration">
+                                <div class="form-group">
+                                    <div style="position: relative;">
+                                        <input type="text" name="code" placeholder="邮件验证码" style="width:170px;"
+                                               class="form-control">
+                                        <a class="btn btn-success js-get-email-code"
+                                           style="width: 163px;position: absolute;top:0;right: 0;"
+                                           data-wait-msg="[second]秒后才能再次获取" data-email-input="#js-email-input"
+                                           data-url="{:url('user/VerificationCode/send')}"
+                                           data-init-second-left="60">获取邮箱验证码</a>
+                                    </div>
+                                </div>
+                            </empty>
+
+                            <div class="form-group">
+                                <input type="password" name="password" placeholder="密码" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <div style="position: relative;">
+                                    <input type="text" name="captcha" placeholder="验证码" class="form-control"
+                                           style="width: 170px;float: left;margin-right: 30px">
+                                    <captcha height="38" width="160" font-size="20"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block js-ajax-submit" type="submit" data-wait="1500"
+                                        style="margin-left: 0px;">确定注册
+                                </button>
+                            </div>
+
+                            <div class="form-group">
+                                <p>
+                                    已有账号? <a style="color: #3BCDAE;" href="{:cmf_url('user/Login/index')}">去登录</a>
+                                </p>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- /container -->
+
+<include file="public@scripts"/>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页 {$site_info.site_name|default=''}</title>
+    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
+    <meta name="description" content="{$site_info.site_seo_description|default=''}">
+    <include file="public@head"/>
+
+    <link href="__TMPL__/public/assets/simpleboot3/themes/simpleboot3/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="__STATIC__/js/layui/css/layui.css" media="all">
+    <link href="__TMPL__/public/assets/css/tube.css" rel="stylesheet">
+    <link href="__TMPL__/public/assets/css/user-center.css" rel="stylesheet">
+
+    <hook name="before_head_end"/>
+</head>
+<body class="body-all">
+
+    <style type="text/css">
+            .all-top{
+                margin-top: 35px;
+                margin-bottom: 20px;
+                font-size: 18px;
+                color: #666;
+                margin-left: 1%;
+            }
+            .all-top-c{
+                color: #3BCDAE;
+            }
+        </style>
+        <!--     账户资料 -->
+        <div class="all-top">
+            <p>个人中心 > <span class="all-top-c">修改资料</span></p>
+        </div>
+    <div class="user-left-bottom">
+        <div class="tab-content">
+            <div class="tab-content-top">修改资料</div>
+            <div class="tab-pane active tab-content-bottom" id="one">
+                <br/>
+                <form class="js-ajax-form" action="{:url('user/profile/editPost')}" method="post">
+                    <div class="form-group">
+                        
+                        <div style="">
+                            <label>头像&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="hidden" name="avatar" id="avatar"
+                                   value="{$user['avatar'] |default=''}">
+                            <a href="javascript:uploadOneImage('图片上传','#avatar');">
+                                <if condition="!empty($avatar)">
+                                    <img src="{$avatar}" onerror="this.src='__TMPL__/public/assets/images/head3.png'" 
+                                         id="avatar-preview"
+                                         width="135" style="cursor: pointer"/>
+                                    <else/>
+                                    <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                         id="avatar-preview"
+                                         width="135" style="cursor: pointer"/>
+                                </if>
+
+                            </a>
+                            <input type="button" class="btn btn-sm btn-cancel-thumbnail" style="width:80px;" value="取消图片">
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-user">
+                        <label for="input-user_nickname" style="float: left;">昵称&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" class="form-control" id="input-user_nickname" placeholder="昵称"
+                               name="user_nickname" value="{$user_nickname}">
+                    </div>
+
+                    <div class="form-group form-group-user">
+                        <label for="input-user_url" style="float: left;">个人网址&nbsp;&nbsp;&nbsp;</label>
+                        <input class="form-control" type="text" id="input-user_url"
+                               placeholder="" name="user_url" value="{$user_url}">
+                    </div>
+                    
+                    <div class="form-group form-group-user-b">
+                        <button type="submit" class="btn btn-primary js-ajax-submit">保存</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+<include file="public@scripts"/>
+</body>
+</html>

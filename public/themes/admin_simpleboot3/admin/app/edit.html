@@ -1,0 +1,156 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('app/index')}">应用管理</a></li>
+			<!-- <li><a href="{:url('user/add')}">{:lang('ADMIN_USER_ADD')}</a></li> -->
+			<li class="active"><a>编辑应用信息</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('App/editPost')}">
+			<div class="form-group">
+				<label for="input-user_pass" class="col-sm-2 control-label"><span class="form-required">*</span>应用名称</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-name" name="name" value="{$name}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>七牛上传文件的地址</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-url" name="url" value="{$url}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>用户id</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-uid" name="uid" value="{$uid}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>版本更新说明</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-instructions" name="instructions" value="{$instructions}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>应用介绍</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-introduce" name="introduce" value="{$introduce}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>版本号</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-version" name="version" value="{$version}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>文件大小 单位MB</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-big" name="big" value="{$big}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>编译版本号</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-build" name="build" value="{$build}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>应用包名</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-bundle" name="bundle" value="{$bundle}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>结束时间</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-endtime" name="endtime" value="{$endtime}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>类型：0-android,1-iOS</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-type" name="type" value="{$type}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>图片地址|base64</label>
+				<div class="col-md-6 col-sm-10">
+					<!-- <input type="text" class="form-control" id="input-img" name="img" value="{$img}"> -->
+					<div style="text-align: center;">
+						<input type="hidden" name="img" id="thumbnail"
+							   value="{:cmf_get_image_preview_url($img)}">
+						<a href="javascript:uploadOneImage('图片上传','#thumbnail');">
+							<if condition="empty($img)">
+								<img src="__TMPL__/public/assets/images/default-thumbnail.png"
+									 id="thumbnail-preview"
+									 width="135" style="cursor: pointer"/>
+								<elseif condition="strpos($img,'base64')!==false" />
+								<img src="{$img}"
+									 id="thumbnail-preview"
+									 width="135" style="cursor: pointer"/>
+								<else/>
+	 							<img src="{:cmf_get_image_preview_url($img)}"
+	 									 id="thumbnail-preview"
+	 									 width="135" style="cursor: pointer"/>
+							</if>
+						</a>
+						<!-- <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片"> -->
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>二维码图片路径</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-er_img" name="er_img" value="{$er_img}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>二维码标识</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-er_logo" name="er_logo" value="{$er_logo}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>合并id</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-posted_id" name="posted_id" value="{$posted_id}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>文件原文件名</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-url_name" name="url_name" value="{$url_name}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>状态：1正常，2审核中，3已删除，4官方删除</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-status" name="status" value="{$status}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>0公开 1密码安装 2邀请安装</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-way" name="way" value="{$way}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>添加时间</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-addtime" name="addtime" value="{$addtime}">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$id}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('SAVE')}</button>
+					<a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

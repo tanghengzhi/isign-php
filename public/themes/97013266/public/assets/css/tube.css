@@ -1,0 +1,763 @@
+/**
+ * @Author: JokenLiu <Jason>
+ * @Date:   2018-01-15 17:44:29
+ * @Email:  190646521@qq.com
+ * @Project: Demon
+ * @Filename: tube.css
+ * @Last modified by:   Jason
+ * @Last modified time: 2018-03-22 09:18:28
+ * @License: 北京乐维世纪网络科技有限公司开发者协议
+ * @Copyright: DemonLive
+ */
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.bogo-reg-content {
+    margin: auto;
+}
+
+.bogo-user-auth-status {
+    color: red;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 0 !important;
+    margin: 0 auto;
+}
+
+.navbar-header {
+    width: 16.8%;
+}
+
+.pad-left_right {
+
+}
+
+.navbar-header a {
+    width: 100%;
+    text-align: center;
+    background: #29cead;
+    color: #fff !important;
+    font-size: 24px;
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: 0 !important;
+}
+
+#main-menu {
+    width: 60%;
+}
+
+#main-menu .menu-item {
+    width: 15%;
+}
+
+#main-menu .menu-item a {
+    width: 100%;
+    text-align: center;
+    color: #000 !important;
+    font-size: 16px;
+}
+
+#main-menu-user {
+    margin-right: 10px;
+}
+
+.tube_left {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.tube-left1 {
+    background: #fff;
+    margin-top: 70px;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* 我的左侧 */
+.tube-lgs {
+    height: 50px;
+    line-height: 50px;
+    margin-top: 30px;
+}
+
+.tube-lyy {
+    height: 50px;
+    line-height: 50px;
+}
+
+.tube-bg {
+    background: #eff2f4;
+}
+
+.tube-lgs i, .tube-lyy i {
+    color: #819199;
+    font-size: 18px;
+}
+
+.tube-lgs span, .tube-lyy span {
+    padding-left: 20px;
+    font-size: 16px;
+    color: #424242;
+}
+
+.tube-bor {
+    border: 1px solid #f4f4f4;
+    margin: 10px 0px;
+}
+
+.tube-hei {
+    height: calc(100% - 190px);
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.tube-hei::-webkit-scrollbar {
+    display: none;
+}
+
+.tube-type {
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.tube-img {
+    height: 60px;
+    padding-right: 0px !important;
+    line-height: 60px;
+}
+
+.tube-img img {
+    width: 80%;
+    border-radius: 5%;
+}
+
+.tube-title {
+    margin-top: 10px;
+    height: 50px;
+}
+
+.tube-title1 {
+    height: 25px;
+    line-height: 25px;
+    color: #5a5959;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.tube-title2 {
+    height: 25px;
+    line-height: 25px;
+    color: #9e9e9e;
+    font-size: 16px;
+}
+
+.tube-bgs:hover {
+    background: #eff2f4;
+}
+
+/* 我的应用右侧 */
+.tube-right {
+    height: 100%;
+    border-top: 1px solid #dddddd;
+    padding: 70px 30px !important;
+}
+
+.tube-zil {
+    height: 60px;
+    line-height: 60px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.tube-user {
+    height: auto;
+    padding: 0px 15px;
+}
+
+.box_card {
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.tube_user_info {
+    height: 140px;
+    line-height: 50px;
+    border-radius: 5px;
+}
+
+.tube-down-info {
+    height: 140px;
+    line-height: 140px;
+    width: 31.4%;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.tube-down-info img {
+    height: auto;
+}
+
+.tube-user-auth-info {
+    height: 120px;
+    margin-top: 25px;
+    width: 150px;
+}
+
+.tube-user-name {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #5a5959;
+}
+
+.tube-user-ren {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.boot-font {
+    font-size: 16px;
+    color: #00d5ed;
+    top: 0px !important;
+}
+
+.boot-text {
+    font-size: 14px;
+    color: #878787;
+    margin-left: 10px;
+}
+
+.tube-jpy {
+    line-height: 140px;
+    height: 140px;
+    text-align: center;
+    background: #3bca4c;
+    color: #fff;
+}
+
+.tube-jpy i {
+    font-size: 50px;
+}
+
+.glyphicon {
+    top: 15px;
+}
+
+.tube-bord {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.tube-down-count {
+    background: black;
+    line-height: 140px;
+}
+
+.tube-yu {
+    margin-top: 30px;
+    font-size: 1vw;
+    color: #686565;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.tube-yue {
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.tube-yue span, .tube-chong span {
+    font-size: 0.9vw;
+    font-weight: 600;
+}
+
+.tube-chong {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.tube-chong a {
+    padding: 1px 15px;
+    background: #3bca4c;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.tube-chong a:hover, .tube-tiz a:hover {
+    text-decoration: none;
+}
+
+.tube-jpys {
+    line-height: 140px;
+    height: 140px;
+    text-align: center;
+    background: #00c5e3;
+    color: #fff;
+}
+
+.tube-jpys i {
+    font-size: 50px;
+}
+
+/* 常用 */
+.tube-panel {
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.table {
+    margin-bottom: 0px !important;
+}
+
+.table .thead tr {
+    background: #f5f6f8;
+    color: black;
+}
+
+.table tbody tr {
+    color: #5f5b5b;
+    height: 80px;
+}
+
+.tube-row {
+    height: 50px;
+}
+
+.tube-row img {
+    height: 100%;
+    border-radius: 50%;
+}
+
+.tube-yingy {
+    height: 25px;
+    line-height: 25px;
+}
+
+.tube-ying-t {
+    height: 25px;
+    line-height: 25px;
+    color: #aeaeae;
+}
+
+.tube-tiz a {
+    color: #fff;
+    text-decoration: none !important;
+}
+
+.tube-tiz1 {
+    background: #3bca4c !important;
+}
+
+/* 应用管理详情 */
+.details-til {
+    height: 300px;
+    margin-top: 35px;
+    border-radius: 4px;
+}
+
+.details-type {
+    height: 100px;
+    margin-top: 20px;
+}
+
+.details-type-tou {
+    height: 100%;
+}
+
+.details-type-to {
+    height: 80%;
+}
+
+.details-type-to img {
+    height: 100%;
+    border-radius: 20px;
+    margin-top: 10%;
+}
+
+.details-type-p {
+    height: 60px;
+    margin-top: 25px;
+}
+
+.details-type-p1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.details-type-p2-1 {
+    border-radius: 3px;
+    border: 1px solid #22b040;
+    color: #22b040;
+    font-size: 10px;
+    padding: 0 3px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+.details-type-p2-2 {
+    color: #828282;
+    font-size: 1rem;
+}
+
+.details-type-p i {
+    color: #6a6969;
+}
+
+.details-but, .details-but2,.details-but3{
+    margin-top: 40px;
+}
+
+.details-but a {
+    padding: 5px 30px;
+    background: #42cccc;
+    color: #fff;
+
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: right;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px 0 rgba(153,172,204,.47);
+    cursor: pointer;
+    font-family: PingFang SC;
+}
+
+.details-but2 a {
+    padding: 5px 30px;
+    background: #46c691;
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: right;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px 0 rgba(153,172,204,.47);
+    cursor: pointer;
+    font-family: PingFang SC;
+}
+
+.details-ner {
+    height: 100px;
+}
+
+.details-ner-lei {
+    height: 100px;
+    border-top: 1px solid #ccc;
+}
+
+.details-ner-lei-1 {
+    height: 30px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+.details-ner-lei-2 {
+    color: #848484;
+    word-wrap: break-word
+}
+
+.details-ner-lei-3 img:hover {
+    width: 120px;
+    height: 120px;
+}
+
+.table .thead1 tr {
+    background: #fff;
+    color: #000;
+}
+
+.details-tiz a {
+    background: #ff7f14;
+}
+
+.tube-tiz12 {
+    background: #f51919 !important;
+}
+
+/* 应用管理编辑 */
+.editor-use {
+    border: none;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.editor-left {
+    margin: 50px 50px;
+}
+
+#top {
+    padding-top: 50px !important;
+}
+
+.list-group-item {
+    border: 1px solid #e6e6e6 !important;
+    padding: 20px 15px !important;
+}
+
+.posted-edit-t{
+    width: 12.5%;
+    float: left;
+    margin-top: 40px;
+    border-top: 1px #eee solid;
+}
+
+/*二维码定位*/
+.erweim {
+    position: relative;
+}
+
+.erweidw {
+    position: absolute;
+    top: 0px;
+    right: 30px;
+}
+
+.erweidw {
+    width: 80px;
+    height: 80px;
+    margin-right: -10px;
+    display: none;
+}
+
+.erweidw img {
+    width: 100%;
+}
+
+.ermxz {
+    width: 75px;
+}
+
+.ermxz img {
+    width: 100%;
+}
+
+.bor-xian {
+    border: 1px solid #ccc;
+}
+
+.erweidws {
+    position: absolute;
+    top: -50px;
+    right: 60px;
+    display: none;
+}
+
+/*修改文件名*/
+.editor-left1 {
+    background: #dfdfdf;
+    width: 100%;
+    height: 200px;
+}
+.editor-form-box{
+    width: 100%;
+    height: 120px;
+}
+.editor-left2 {
+    width: 100px;
+    height: 100px;
+    margin: 0px auto;
+    float: left;
+    
+}
+
+.editor-left2 img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.editor-left4, .editor-left3 {
+    text-align: center;
+    float: left;
+    margin-top: 10px;
+}
+.editor-left3{
+    margin-right: 50px;  
+}
+.editor-left3 a {
+    padding: 8px 12px;
+    background: #3BCDAE;
+    color: #fff;
+    text-decoration: none !important;
+    margin-top: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: right;
+    box-shadow: 0 2px 4px 0 rgba(153,172,204,.47);
+    cursor: pointer;
+    font-family: PingFang SC;
+}
+
+.editor-left4 a {
+    padding: 8px 12px;
+    background: #0097FF;
+    color: #fff;
+    text-decoration: none !important;
+
+    margin-top: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: right;
+    box-shadow: 0 2px 4px 0 rgba(153,172,204,.47);
+    cursor: pointer;
+    font-family: PingFang SC;
+}
+.user-login {
+    font-family: PingFang SC, Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, \\5FAE\8F6F\96C5\9ED1, Arial, sans-serif !important;
+    color: #082155 !important;
+    font-weight: 500 !important;
+    font-size: 20px !important;
+}
+
+.tab-pane {
+    width: 100%;
+}
+
+/*合并*/
+.hebing-img {
+    width: 100%;
+    height: 50px;
+    background: #f3f3f3;
+}
+
+.hebing-img1 {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.hebing-img1 img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.hebing-top {
+    margin-top: 20px;
+}
+
+.hebing-title {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background: #c9c7c5;
+    color: #fff;
+}
+
+.hebing-but {
+    padding-top: 50px;
+    padding-left: 37%;
+}
+
+.hebing-but a {
+    padding: 10px 100px;
+    border-radius: 10px;
+    background: #3cae35;
+    color: #fff;
+    text-decoration: none !important;
+}
+
+.bogo-global-btn{
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: right;
+    padding: 8px 10px;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px 0 rgba(153,172,204,.47);
+    background-color: #46c691;!important;
+    cursor: pointer;
+    font-family: PingFang SC;
+}
+
+.bogo-global-del-btn{
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: right;
+    padding: 8px 18px;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px 0 rgba(153,172,204,.47);
+    background-color: red;!important;
+    cursor: pointer;
+    font-family: PingFang SC;
+}
+
+.bogo-recharge-btn{
+    margin-top: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: right;
+    padding: 0px 16px;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px 0 rgba(153,172,204,.47);
+    background-color: red;!important;
+    cursor: pointer;
+    font-family: PingFang SC;
+
+}
+.add_certificate_content{
+    padding: 50px;
+    margin-top: 30px;
+}
+.btn_add_certificate{
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: right;
+    padding: 8px 18px;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px 0 rgba(153,172,204,.47);
+    background-color: #46c691;!important;
+    cursor: pointer;
+    font-family: PingFang SC;
+}
+
+.dev-aa{
+    float: left;
+    padding: 0px 10px; 
+}
+.dev-aa a{
+    width: 100%;
+    text-align: center;
+    color: #000 !important;
+    font-size: 16px;line-height: 70px;
+    text-decoration: none;
+}
+.dev-aa:hover{
+    padding: 0px 10px; 
+    background: #eff2f4;
+}
+.tube-panel-bottom{
+    border-radius:5px;
+}
+
+.body-all{
+    background: #ECEEEE
+}
+.editor-button-right{
+    float: right;
+}
+.editor-button-left{
+    float: left;
+}

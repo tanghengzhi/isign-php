@@ -1,0 +1,49 @@
+<include file="public@header"/>
+<style type="text/css">
+    .pic-list li {
+        margin-bottom: 5px;
+    }
+    .yiny{color:#f03030;height: 50px;line-height: 50px;text-align: center;}
+    .yingy-btn{padding: 15px 30px!important;background: #268df7 !important;}
+    .yingy-btn:hover{background: #163ef9 !important;}
+    .yingy-cen{text-align:center;}
+</style>
+
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a>上传应用</a></li>
+    </ul>
+    <form action="{:url('AdminArticle/addPost')}" method="post" class="form-horizontal js-ajax-form margin-top-20">
+        <div class="row">
+            <div class="col-md-12">
+            		<div class="yiny">严禁上传色情、反动、直播类、非法博彩类APP，违反该规则的 App 将被删除，屡次上传者将被封禁账号, 并上报给有关部门</div>
+                <table class="table table-bordered">
+                 
+                    <tr>
+                        <th class="col-md-5">点击按钮选择应用的安装包（支持.ipa或.apk文件，单个文件最大支持300M）</th>
+                        <td class="col-md-7 yingy-cen">
+                            <ul id="files" class="pic-list list-unstyled form-inline">
+                            </ul>
+                            <a href="javascript:uploadMultiFile('附件上传','#files','files-item-tpl','file');"
+                               class="btn btn-sm btn-default yingy-btn">选择文件</a>
+                        </td>
+                    </tr>
+                </table>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+                        <a class="btn btn-default" href="{:url('AdminArticle/index')}">{:lang('BACK')}</a>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="__STATIC__/js/admin.js"></script>
+<script type="text/javascript" src="__STATIC__/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__STATIC__/js/ueditor/ueditor.all.min.js"></script>
+</body>
+</html>

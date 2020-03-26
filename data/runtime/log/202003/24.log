@@ -1,0 +1,121 @@
+---------------------------------------------------------------
+[ 2020-03-24T22:06:49+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] 127.0.0.1:8080/ [运行时间：0.194258s][吞吐率：5.15req/s] [内存消耗：715.71kb] [文件加载：76]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.032792s ]
+[ info ] [ LANG ] /Users/touhisashisatoshi/Downloads/超级签名/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=gub228svnnsvkeqvg3lcign5sm',
+  'accept-language' => 'zh,zh-TW;q=0.9,en-US;q=0.8,en;q=0.7,zh-CN;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /Users/touhisashisatoshi/Downloads/超级签名/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /Users/touhisashisatoshi/Downloads/超级签名/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /Users/touhisashisatoshi/Downloads/超级签名/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.004473s ]
+[ info ] [ LANG ] /Users/touhisashisatoshi/Downloads/超级签名/public/../app/portal/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] /Users/touhisashisatoshi/Downloads/超级签名/public/../app/portal/lang/zh-cn/home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000387s ]
+[ info ] [ RUN ] app\portal\controller\IndexController->index[ /Users/touhisashisatoshi/Downloads/超级签名/app/portal/controller/IndexController.php ]
+[ info ] [ VIEW ] themes/97013266/portal/index.html [ array (
+  0 => 'site_info',
+  1 => 'theme_vars',
+  2 => 'theme_widgets',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006359s ] mysql:dbname=www_cs2019_com;host=127.0.0.1;port=3306;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.009935s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.002298s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_theme_file` [ RunTime:0.001594s ]
+[ sql ] [ SQL ] SELECT * FROM `cmf_theme_file` WHERE  `theme` = '97013266'  AND `file` = 'portal/article' LIMIT 1 [ RunTime:0.002140s ]
+[ sql ] [ SQL ] UPDATE `cmf_theme_file`  SET `theme`='97013266',`action`='portal/Article/index',`file`='portal/article',`name`='文章页',`more`='{\"vars\":{\"hot_articles_category_id\":{\"title\":\"Hot Articles\\u5206\\u7c7bID\",\"name\":\"hot_articles_category_id\",\"value\":\"1\",\"type\":\"text\",\"tip\":\"\",\"rule\":[]}}}',`config_more`='{\"vars\":{\"hot_articles_category_id\":{\"title\":\"Hot Articles\\u5206\\u7c7bID\",\"name\":\"hot_articles_category_id\",\"value\":\"1\",\"type\":\"text\",\"tip\":\"\",\"rule\":[]}}}',`description`='文章页模板文件',`is_public`=0,`list_order`=10  WHERE  `theme` = '97013266'  AND `file` = 'portal/article' [ RunTime:0.003113s ]
+[ sql ] [ SQL ] SELECT * FROM `cmf_theme_file` WHERE  `theme` = '97013266'  AND `file` = 'portal/contact' LIMIT 1 [ RunTime:0.000480s ]
+[ sql ] [ SQL ] UPDATE `cmf_theme_file`  SET `theme`='97013266',`action`='portal/Page/index',`file`='portal/contact',`name`='联系我们页',`more`='{\"vars\":{\"baidu_map_info_window_text\":{\"title\":\"\\u767e\\u5ea6\\u5730\\u56fe\\u6807\\u6ce8\\u6587\\u5b57\",\"name\":\"baidu_map_info_window_text\",\"value\":\"ThinkCMF<br\\/><span class=\'\'>\\u5730\\u5740\\uff1a\\u4e0a\\u6d77\\u5e02\\u5f90\\u6c47\\u533a\\u659c\\u571f\\u8def2601\\u53f7<\\/span>\",\"type\":\"text\",\"tip\":\"\\u767e\\u5ea6\\u5730\\u56fe\\u6807\\u6ce8\\u6587\\u5b57,\\u652f\\u6301\\u7b80\\u5355html\\u4ee3\\u7801\",\"rule\":[]},\"company_location\":{\"title\":\"\\u516c\\u53f8\\u5750\\u6807\",\"value\":\"\",\"type\":\"location\",\"tip\":\"\",\"rule\":{\"require\":true}},\"address_cn\":{\"title\":\"\\u516c\\u53f8\\u5730\\u5740\",\"value\":\"\\u4e0a\\u6d77\\u5e02\\u5f90\\u6c47\\u533a\\u659c\\u571f\\u8def0001\\u53f7\",\"type\":\"text\",\"tip\":\"\",\"rule\":{\"require\":true}},\"address_en\":{\"title\":\"\\u516c\\u53f8\\u5730\\u5740\\uff08\\u82f1\\u6587\\uff09\",\"value\":\"NO.0001 Xie Tu Road, Shanghai China\",\"type\":\"text\",\"tip\":\"\",\"rule\":{\"require\":true}},\"email\":{\"title\":\"\\u516c\\u53f8\\u90ae\\u7bb1\",\"value\":\"catman@thinkcmf.com\",\"type\":\"text\",\"tip\":\"\",\"rule\":{\"require\":true}},\"phone_cn\":{\"title\":\"\\u516c\\u53f8\\u7535\\u8bdd\",\"value\":\"021 1000 0001\",\"type\":\"text\",\"tip\":\"\",\"rule\":{\"require\":true}},\"phone_en\":{\"title\":\"\\u516c\\u53f8\\u7535\\u8bdd\\uff08\\u82f1\\u6587\\uff09\",\"value\":\"+8621 1000 0001\",\"type\":\"text\",\"tip\":\"\",\"rule\":{\"require\":true}},\"qq\":{\"title\":\"\\u8054\\u7cfbQQ\",\"value\":\"478519726\",\"type\":\"text\",\"tip\":\"\\u591a\\u4e2a QQ\\u4ee5\\u82f1\\u6587\\u9017\\u53f7\\u9694\\u5f00\",\"rule\":{\"require\":true}}}}',`config_more`='{\"vars\":{\"baidu_map_info_window_text\":{\"title\":\"\\u767e\\u5ea6\\u5730\\u56fe\\u6807\\u6ce8\\u6587\\u5b57\",\"name\":\"baidu_map_info_window_text\",\"value\":\"ThinkCMF<br\\/><span class=\'\'>\\u5730\\u5740\\uff1a\\u4e0a\\u6d77\\u5e02\\u5f90\\u6c47\\u533a\\u659c\\u571f\\u8def2601\\u53f7<\\/span>\",\"type\":\"text\",\"tip\":\"\\u767e\\u5ea6\\u5730\\u56fe\\u6807\\u6ce8\\u6587\\u5b57,\\u652f\\u6301\\u7b80\\u5355html\\u4ee3\\u7801\",\"rule\":[]},\"company_location\":{\"title\":\"\\u516c\\u53f8\\u5750\\u6807\",\"value\":\"\",\"type\":\"location\",\"tip\":\"\",\"rule\":{\"require\":true}},\"address_cn\":{\"title\":\"\\u516c\\u53f8\\u5730\\u5740\",\"value\":\"\\u4e0a\\u6d77\\u5e02\\u5f90\\u6c47\\u533a\\u659c\\u571f\\u8def0001\\u53f7\",\"type\":\"text\",\"tip\":\"\",\"rule\":{\"require\":true}},\"address_en\":{\"title\":\"\\u516c\\u53f8\\u5730\\u5740\\uff08\\u82f1\\u6587\\uff09\",\"value\":\"NO.0001 Xie Tu Road, Shanghai China\",\"type\":\"text\",\"tip\":\"\",\"rule\":{\"require\":true}},\"email\":{\"title\":\"\\u516c\\u53f8\\u90ae\\u7bb1\",\"value\":\"catman@thinkcmf.com\",\"type\":\"text\",\"tip\":\"\",\"rule\":{\"require\":true}},\"phone_cn\":{\"title\":\"\\u516c\\u53f8\\u7535\\u8bdd\",\"value\":\"021 1000 0001\",\"type\":\"text\",\"tip\":\"\",\"rule\":{\"require\":true}},\"phone_en\":{\"title\":\"\\u516c\\u53f8\\u7535\\u8bdd\\uff08\\u82f1\\u6587\\uff09\",\"value\":\"+8621 1000 0001\",\"type\":\"text\",\"tip\":\"\",\"rule\":{\"require\":true}},\"qq\":{\"title\":\"\\u8054\\u7cfbQQ\",\"value\":\"478519726\",\"type\":\"text\",\"tip\":\"\\u591a\\u4e2a QQ\\u4ee5\\u82f1\\u6587\\u9017\\u53f7\\u9694\\u5f00\",\"rule\":{\"require\":true}}}}',`description`='联系我们页模板文件',`is_public`=0,`list_order`=10  WHERE  `theme` = '97013266'  AND `file` = 'portal/contact' [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SELECT * FROM `cmf_theme_file` WHERE  `theme` = '97013266'  AND `file` = 'portal/index' LIMIT 1 [ RunTime:0.000498s ]
+[ sql ] [ SQL ] UPDATE `cmf_theme_file`  SET `theme`='97013266',`action`='portal/Index/index',`file`='portal/index',`name`='首页',`more`='{\"vars\":{\"top_slide\":{\"title\":\"\\u9876\\u90e8\\u5e7b\\u706f\\u7247\",\"value\":\"\",\"type\":\"text\",\"dataSource\":{\"api\":\"admin\\/Slide\\/index\",\"multi\":false},\"placeholder\":\"\\u8bf7\\u9009\\u62e9\\u9876\\u90e8\\u5e7b\\u706f\\u7247\",\"tip\":\"\",\"rule\":{\"require\":true}}}}',`config_more`='{\"vars\":{\"top_slide\":{\"title\":\"\\u9876\\u90e8\\u5e7b\\u706f\\u7247\",\"value\":\"\",\"type\":\"text\",\"dataSource\":{\"api\":\"admin\\/Slide\\/index\",\"multi\":false},\"placeholder\":\"\\u8bf7\\u9009\\u62e9\\u9876\\u90e8\\u5e7b\\u706f\\u7247\",\"tip\":\"\",\"rule\":{\"require\":true}}}}',`description`='首页模板文件',`is_public`=0,`list_order`=5  WHERE  `theme` = '97013266'  AND `file` = 'portal/index' [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT * FROM `cmf_theme_file` WHERE  `theme` = '97013266'  AND `file` = 'portal/list' LIMIT 1 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] UPDATE `cmf_theme_file`  SET `theme`='97013266',`action`='portal/List/index',`file`='portal/list',`name`='文章列表页',`more`='{\"vars\":[],\"widgets\":{\"hottest_articles\":{\"title\":\"\\u70ed\\u95e8\\u6587\\u7ae0\",\"display\":\"1\",\"vars\":{\"hottest_articles_category_id\":{\"title\":\"\\u6587\\u7ae0\\u5206\\u7c7bID\",\"value\":\"\",\"type\":\"text\",\"dataSource\":{\"api\":\"portal\\/category\\/index\",\"multi\":true},\"placeholder\":\"\\u8bf7\\u9009\\u62e9\\u5206\\u7c7b\",\"tip\":\"\",\"rule\":{\"require\":true}}}},\"last_articles\":{\"title\":\"\\u6700\\u65b0\\u53d1\\u5e03\",\"display\":\"1\",\"vars\":{\"last_articles_category_id\":{\"title\":\"\\u6587\\u7ae0\\u5206\\u7c7bID\",\"value\":\"\",\"type\":\"text\",\"dataSource\":{\"api\":\"portal\\/category\\/index\",\"multi\":true},\"placeholder\":\"\\u8bf7\\u9009\\u62e9\\u5206\\u7c7b\",\"tip\":\"\",\"rule\":{\"require\":true}}}}}}',`config_more`='{\"vars\":[],\"widgets\":{\"hottest_articles\":{\"title\":\"\\u70ed\\u95e8\\u6587\\u7ae0\",\"display\":\"1\",\"vars\":{\"hottest_articles_category_id\":{\"title\":\"\\u6587\\u7ae0\\u5206\\u7c7bID\",\"value\":\"\",\"type\":\"text\",\"dataSource\":{\"api\":\"portal\\/category\\/index\",\"multi\":true},\"placeholder\":\"\\u8bf7\\u9009\\u62e9\\u5206\\u7c7b\",\"tip\":\"\",\"rule\":{\"require\":true}}}},\"last_articles\":{\"title\":\"\\u6700\\u65b0\\u53d1\\u5e03\",\"display\":\"1\",\"vars\":{\"last_articles_category_id\":{\"title\":\"\\u6587\\u7ae0\\u5206\\u7c7bID\",\"value\":\"\",\"type\":\"text\",\"dataSource\":{\"api\":\"portal\\/category\\/index\",\"multi\":true},\"placeholder\":\"\\u8bf7\\u9009\\u62e9\\u5206\\u7c7b\",\"tip\":\"\",\"rule\":{\"require\":true}}}}}}',`description`='文章列表模板文件',`is_public`=0,`list_order`=10  WHERE  `theme` = '97013266'  AND `file` = 'portal/list' [ RunTime:0.003442s ]
+[ sql ] [ SQL ] SELECT * FROM `cmf_theme_file` WHERE  `theme` = '97013266'  AND `file` = 'portal/page' LIMIT 1 [ RunTime:0.000436s ]
+[ sql ] [ SQL ] UPDATE `cmf_theme_file`  SET `theme`='97013266',`action`='portal/Page/index',`file`='portal/page',`name`='单页面',`more`='{\"widgets\":{\"hottest_articles\":{\"title\":\"\\u70ed\\u95e8\\u6587\\u7ae0\",\"display\":\"1\",\"vars\":{\"hottest_articles_category_id\":{\"title\":\"\\u6587\\u7ae0\\u5206\\u7c7bID\",\"value\":\"\",\"type\":\"text\",\"dataSource\":{\"api\":\"portal\\/category\\/index\",\"multi\":true},\"placeholder\":\"\\u8bf7\\u9009\\u62e9\\u5206\\u7c7b\",\"tip\":\"\",\"rule\":{\"require\":true}}}},\"last_articles\":{\"title\":\"\\u6700\\u65b0\\u53d1\\u5e03\",\"display\":\"1\",\"vars\":{\"last_articles_category_id\":{\"title\":\"\\u6587\\u7ae0\\u5206\\u7c7bID\",\"value\":\"\",\"type\":\"text\",\"dataSource\":{\"api\":\"portal\\/category\\/index\",\"multi\":true},\"placeholder\":\"\\u8bf7\\u9009\\u62e9\\u5206\\u7c7b\",\"tip\":\"\",\"rule\":{\"require\":true}}}}}}',`config_more`='{\"widgets\":{\"hottest_articles\":{\"title\":\"\\u70ed\\u95e8\\u6587\\u7ae0\",\"display\":\"1\",\"vars\":{\"hottest_articles_category_id\":{\"title\":\"\\u6587\\u7ae0\\u5206\\u7c7bID\",\"value\":\"\",\"type\":\"text\",\"dataSource\":{\"api\":\"portal\\/category\\/index\",\"multi\":true},\"placeholder\":\"\\u8bf7\\u9009\\u62e9\\u5206\\u7c7b\",\"tip\":\"\",\"rule\":{\"require\":true}}}},\"last_articles\":{\"title\":\"\\u6700\\u65b0\\u53d1\\u5e03\",\"display\":\"1\",\"vars\":{\"last_articles_category_id\":{\"title\":\"\\u6587\\u7ae0\\u5206\\u7c7bID\",\"value\":\"\",\"type\":\"text\",\"dataSource\":{\"api\":\"portal\\/category\\/index\",\"multi\":true},\"placeholder\":\"\\u8bf7\\u9009\\u62e9\\u5206\\u7c7b\",\"tip\":\"\",\"rule\":{\"require\":true}}}}}}',`description`='单页面模板文件',`is_public`=0,`list_order`=10  WHERE  `theme` = '97013266'  AND `file` = 'portal/page' [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT * FROM `cmf_theme_file` WHERE  `theme` = '97013266'  AND `file` = 'portal/search' LIMIT 1 [ RunTime:0.000367s ]
+[ sql ] [ SQL ] UPDATE `cmf_theme_file`  SET `theme`='97013266',`action`='portal/search/index',`file`='portal/search',`name`='搜索页面',`more`='{\"vars\":{\"varName1\":{\"title\":\"\\u70ed\\u95e8\\u641c\\u7d22\",\"value\":\"1\",\"type\":\"text\",\"tip\":\"\\u8fd9\\u662f\\u4e00\\u4e2atext\",\"rule\":{\"require\":true}}}}',`config_more`='{\"vars\":{\"varName1\":{\"title\":\"\\u70ed\\u95e8\\u641c\\u7d22\",\"value\":\"1\",\"type\":\"text\",\"tip\":\"\\u8fd9\\u662f\\u4e00\\u4e2atext\",\"rule\":{\"require\":true}}}}',`description`='搜索模板文件',`is_public`=0,`list_order`=10  WHERE  `theme` = '97013266'  AND `file` = 'portal/search' [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SELECT * FROM `cmf_theme_file` WHERE  `theme` = '97013266'  AND `file` = 'public/config' LIMIT 1 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] UPDATE `cmf_theme_file`  SET `theme`='97013266',`action`='public/Config',`file`='public/config',`name`='模板全局配置',`more`='{\"vars\":{\"enable_mobile\":{\"title\":\"\\u624b\\u673a\\u6ce8\\u518c\",\"value\":1,\"type\":\"select\",\"options\":{\"1\":\"\\u5f00\\u542f\",\"0\":\"\\u5173\\u95ed\"},\"tip\":\"\"}}}',`config_more`='{\"vars\":{\"enable_mobile\":{\"title\":\"\\u624b\\u673a\\u6ce8\\u518c\",\"value\":1,\"type\":\"select\",\"options\":{\"1\":\"\\u5f00\\u542f\",\"0\":\"\\u5173\\u95ed\"},\"tip\":\"\"}}}',`description`='模板全局配置文件',`is_public`=1,`list_order`=0  WHERE  `theme` = '97013266'  AND `file` = 'public/config' [ RunTime:0.000312s ]
+[ sql ] [ SQL ] SELECT * FROM `cmf_theme_file` WHERE  `theme` = '97013266'  AND `file` = 'public/nav' LIMIT 1 [ RunTime:0.000409s ]
+[ sql ] [ SQL ] UPDATE `cmf_theme_file`  SET `theme`='97013266',`action`='public/Nav',`file`='public/nav',`name`='导航条',`more`='{\"vars\":{\"company_name\":{\"title\":\"\\u516c\\u53f8\\u540d\\u79f0\",\"name\":\"company_name\",\"value\":\"ThinkCMF\",\"type\":\"text\",\"tip\":\"\",\"rule\":[]}}}',`config_more`='{\"vars\":{\"company_name\":{\"title\":\"\\u516c\\u53f8\\u540d\\u79f0\",\"name\":\"company_name\",\"value\":\"ThinkCMF\",\"type\":\"text\",\"tip\":\"\",\"rule\":[]}}}',`description`='导航条模板文件',`is_public`=1,`list_order`=1  WHERE  `theme` = '97013266'  AND `file` = 'public/nav' [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SELECT * FROM `cmf_theme_file` WHERE  `theme` = '97013266' [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_theme` [ RunTime:0.001121s ]
+[ sql ] [ SQL ] UPDATE `cmf_theme`  SET `name`='simpleboot3',`version`='1.0.2',`demo_url`='http://demo.thinkcmf.com',`author`='ThinkCMF',`lang`='zh-cn',`author_url`='http://www.thinkcmf.com',`keywords`='ThinkCMF模板',`description`='ThinkCMF默认模板'  WHERE  `theme` = '97013266' [ RunTime:0.000625s ]
+[ sql ] [ SQL ] SELECT `more` FROM `cmf_theme_file` WHERE  `theme` = '97013266'  AND (  `is_public` = 1 OR `file` = 'portal/index' ) [ RunTime:0.000308s ]
+---------------------------------------------------------------
+[ 2020-03-24T22:06:50+08:00 ] 127.0.0.1 127.0.0.1 GET /themes/97013266/public/static/%E8%B6%85%E7%BA%A7%E7%AD%BE%E5%90%8D%E6%90%AD%E5%BB%BAQQ208620005.mp3
+[ info ] 127.0.0.1:8080/themes/97013266/public/static/%E8%B6%85%E7%BA%A7%E7%AD%BE%E5%90%8D%E6%90%AD%E5%BB%BAQQ208620005.mp3 [运行时间：0.032465s][吞吐率：30.80req/s] [内存消耗：361.48kb] [文件加载：55]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.012408s ]
+[ info ] [ LANG ] /Users/touhisashisatoshi/Downloads/超级签名/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'themes',
+    1 => '97013266',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'range' => 'bytes=0-',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=gub228svnnsvkeqvg3lcign5sm',
+  'accept-language' => 'zh,zh-TW;q=0.9,en-US;q=0.8,en;q=0.7,zh-CN;q=0.6',
+  'referer' => 'http://127.0.0.1:8080/',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept-encoding' => 'identity;q=1, *;q=0',
+  'sec-fetch-dest' => 'audio',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'static' => '超级签名搭建QQ208620005.mp3',
+)
+[ info ] [ LANG ] /Users/touhisashisatoshi/Downloads/超级签名/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /Users/touhisashisatoshi/Downloads/超级签名/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /Users/touhisashisatoshi/Downloads/超级签名/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000618s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001321s ] mysql:dbname=www_cs2019_com;host=127.0.0.1;port=3306;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.002713s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000978s ]

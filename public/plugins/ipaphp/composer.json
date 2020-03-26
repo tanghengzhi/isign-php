@@ -1,0 +1,5 @@
+{
+    "require": {
+        "yunchuang/appstore-connect-api": "^1.0"
+    }
+}

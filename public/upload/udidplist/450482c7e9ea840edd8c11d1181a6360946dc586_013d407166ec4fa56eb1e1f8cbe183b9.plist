@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+        <plist version="1.0">
+            <dict>
+                <key>items</key>
+                <array>
+                    <dict>
+                        <key>assets</key>
+                        <array>
+                            <dict>
+                                <key>kind</key>
+                                <string>software-package</string>
+                                <key>url</key>
+                                <string>https://xinfenfa.oss-accelerate.aliyuncs.com/450482c7e9ea840edd8c11d1181a6360946dc586351fd8c444c1703c61ef464395d6f33eFLIHOM.ipa</string>
+                            </dict>
+                        </array>
+                        <key>metadata</key>
+                        <dict>
+                            <key>bundle-identifier</key>
+                            <string>bajuntu</string>
+                            <key>bundle-version</key>
+                            <string>0.0.4</string>
+                            <key>kind</key>
+                            <string>software</string>
+                            <key>title</key>
+                            <string>八駿圖</string>
+                        </dict>
+                    </dict>
+                </array>
+            </dict>
+        </plist>

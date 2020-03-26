@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>合并选择</title>
+    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
+    <meta name="description" content="{$site_info.site_seo_description|default=''}">
+    <include file="public@head"/>
+
+    <link href="__TMPL__/public/assets/simpleboot3/themes/simpleboot3/bootstrap.min.css" rel="stylesheet">
+    <link href="__TMPL__/public/assets/css/tube.css" rel="stylesheet">
+
+    <hook name="before_head_end"/>
+</head>
+<body style="padding-top:0px!important;">
+<div class="col-sm-12">
+    <div class="row">
+        <foreach name="type" id="vo">
+        <div class="col-sm-4 hebing-top">
+            <div class="input-group hebing-img">
+                <div class="hebing-img1">
+                  <img src="{$vo.img}"/>
+                </div>
+            </div>
+              <div class="hebing-title">{$vo.name}</div>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <input type="radio" name="posted_id" value="{$vo.id}">
+              </span>
+              <input type="text" class="form-control" value="{$vo.er_logo}">
+            </div>
+        </div>
+        </foreach>
+    </div>
+    <input type="hidden" name="id" value="{$result.id}" id="id"/>
+    <div class="col-sm-12 hebing-but"><a>合 并</a></div>
+</div>
+<script src="/static/js/layer/layer.js"></script>
+<script>
+    $(function(){
+        $(".hebing-but a").click(function(){
+            var sid=$('input:radio:checked').val();
+            var id=$("#id").val();
+            if(sid){
+                $.ajax({
+                    type: 'POST',
+                    url: "{:cmf_url('user/tube/hebing_add')}",
+                    data: {id:id,sid:sid},
+                    success:  function(data) {
+                       if(data =='1'){
+                           layer.msg('合并文件成功',{ icon: 1,time:1000},function(){
+                               var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+                               parent.layer.close(index);
+                           });
+
+                       }else{
+                           layer.msg('合并文件失败，请重新合并',{ icon: 2,time:1000});
+                       }
+                    }
+                });
+            }else{
+                layer.msg('请选择要合并的文件');
+            }
+        })
+    })
+</script>
+    <hook name="before_body_end"/>
+</body>
+</html>
+
+
+
+

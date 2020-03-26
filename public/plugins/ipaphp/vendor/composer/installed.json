@@ -1,0 +1,161 @@
+[
+    {
+        "name": "php-curl-class/php-curl-class",
+        "version": "8.6.0",
+        "version_normalized": "8.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-curl-class/php-curl-class.git",
+            "reference": "73bf10e2652ad2261cbab7fbf242b76f0e7ee359"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-curl-class/php-curl-class/zipball/73bf10e2652ad2261cbab7fbf242b76f0e7ee359",
+            "reference": "73bf10e2652ad2261cbab7fbf242b76f0e7ee359",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": ">=5.3"
+        },
+        "require-dev": {
+            "ext-gd": "*",
+            "phpunit/phpunit": "*",
+            "squizlabs/php_codesniffer": "*"
+        },
+        "suggest": {
+            "ext-mbstring": "*"
+        },
+        "time": "2019-05-12T08:22:01+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Curl\\": "src/Curl/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Unlicense"
+        ],
+        "authors": [
+            {
+                "name": "Zach Borboa"
+            }
+        ],
+        "description": "PHP Curl Class makes it easy to send HTTP requests and integrate with web APIs.",
+        "homepage": "https://github.com/php-curl-class/php-curl-class",
+        "keywords": [
+            "API-Client",
+            "api",
+            "class",
+            "client",
+            "curl",
+            "framework",
+            "http",
+            "http-client",
+            "http-proxy",
+            "json",
+            "php",
+            "php-curl",
+            "php-curl-library",
+            "proxy",
+            "requests",
+            "restful",
+            "web-scraper",
+            "web-scraping ",
+            "web-service",
+            "xml"
+        ]
+    },
+    {
+        "name": "rmccue/requests",
+        "version": "v1.7.0",
+        "version_normalized": "1.7.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/rmccue/Requests.git",
+            "reference": "87932f52ffad70504d93f04f15690cf16a089546"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/rmccue/Requests/zipball/87932f52ffad70504d93f04f15690cf16a089546",
+            "reference": "87932f52ffad70504d93f04f15690cf16a089546",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2"
+        },
+        "require-dev": {
+            "requests/test-server": "dev-master"
+        },
+        "time": "2016-10-13T00:11:37+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Requests": "library/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "ISC"
+        ],
+        "authors": [
+            {
+                "name": "Ryan McCue",
+                "homepage": "http://ryanmccue.info"
+            }
+        ],
+        "description": "A HTTP library written in PHP, for human beings.",
+        "homepage": "http://github.com/rmccue/Requests",
+        "keywords": [
+            "curl",
+            "fsockopen",
+            "http",
+            "idna",
+            "ipv6",
+            "iri",
+            "sockets"
+        ]
+    },
+    {
+        "name": "yunchuang/appstore-connect-api",
+        "version": "1.0.3",
+        "version_normalized": "1.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/myappcloud/appstore-connect-api.git",
+            "reference": "cb7a7ee96bf1625beaad5bb842e7e42d396cc642"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/myappcloud/appstore-connect-api/zipball/cb7a7ee96bf1625beaad5bb842e7e42d396cc642",
+            "reference": "cb7a7ee96bf1625beaad5bb842e7e42d396cc642",
+            "shasum": ""
+        },
+        "require": {
+            "php-curl-class/php-curl-class": "^8.6",
+            "rmccue/requests": "^1.7"
+        },
+        "time": "2019-07-03T10:35:55+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "MingYuanYun\\AppStore\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "zengbin",
+                "email": "zengb02@mingyuanyun.com"
+            }
+        ],
+        "description": "sdk for appstore connect api"
+    }
+]

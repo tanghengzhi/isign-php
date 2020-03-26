@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页 {$site_info.site_name|default=''}</title>
+    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
+    <meta name="description" content="{$site_info.site_seo_description|default=''}">
+    <include file="public@head"/>
+
+    <link href="__TMPL__/public/assets/simpleboot3/themes/simpleboot3/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="__STATIC__/js/layui/css/layui.css" media="all">
+    <link href="__TMPL__/public/assets/css/tube.css" rel="stylesheet">
+
+    <hook name="before_head_end"/>
+</head>
+<body class="body-white" style="background: #ECEEEE;">
+<include file="public@nav_new"/>
+
+<div class="tube_left pad-left_right">
+    <!--  我的应用左侧 -->
+    <include file="public@tube"/>
+
+    <!--  我的应用右侧 概述 -->
+    <div class="col-sm-10 pad-left_right tube-right" style="overflow: hidden;width: 80%;">
+        <iframe name="my_iframe" id="iframepage"   style="width: 104%;height: 101%;" src="./overview.html" scrolling="auto" frameborder="0"></iframe>
+    </div>
+    <include file="public@scripts"/>
+        
+</body>
+
+</html>
+<script type="text/javascript">
+    
+</script>

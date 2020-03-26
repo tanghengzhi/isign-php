@@ -1,0 +1,107 @@
+.secou{
+    width: 60%;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 5px;
+    float: left;
+}
+.secou input{
+    width: 95%;
+    height: 29px;
+    padding: 5px 5px;
+    border: none;
+}
+.secou-button{
+    width: 9%;
+    float: left;
+}
+.secou-button input {
+    width: 100%;
+    height: 45px;
+    border: none;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 3px 17px 0px #c0c0c0;
+    border-radius:10px;
+    color: #3BCDAE;
+    margin-left: 20px;
+}
+.secou-right{
+    width: 14%;
+    height: 45px;
+    background:rgba(59,205,174,1);
+    box-shadow:0px 3px 17px 0px rgba(0, 0, 0, 0.07);
+    border-radius:10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    float: right;
+    cursor: pointer;
+}
+.secou-fleft{
+    width: 10%;
+    height: 45px;
+    background:#0097FF;
+    box-shadow:0px 3px 17px 0px rgba(0, 0, 0, 0.07);
+    border-radius:10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    float: left;
+    cursor: pointer;
+    margin-left: 4%;
+}
+.supindex-right-top{
+    width: 47.5%;
+    height: 158px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 15px 10px;
+    float: left;
+}
+.supindex-right-top-text{
+    font-size: 18px;
+}
+.supindex-right-bottom{
+    width: 80%;
+    margin: 0  auto;
+    margin-top: 30px;
+}
+.sup-index-public-text{
+    font-size:22px; 
+    color: #0097ff;
+    font-weight: bold;
+    float: left;
+}
+.sup-index-public-text2{
+    font-size: 16px;
+    float: right;
+    color: #999;
+    margin-top: 10px;
+}
+.supindex-right-bottom-a{
+    height: 40px;
+}
+.supindex-right-bottom-b{
+    width: 100%;
+    background: #ccc;
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.supindex-right-bottom-b-a{
+    width: 80%;
+    height: 6px;
+    background: #0097FF;
+}
+.sup-index-public-textp{
+    font-size:22px; 
+    color: #FD9705;
+    font-weight: bold;
+    float: left;
+}
+
+.supindex-right-bottom-b-b{
+    width: 80%;
+    height: 6px;
+    background: #FD9705;
+}

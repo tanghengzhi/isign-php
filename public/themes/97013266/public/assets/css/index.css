@@ -1,0 +1,88 @@
+.bogo-banner-text {
+    position: absolute;
+    margin-left: 150px;
+}
+
+.banner-index{
+    width: 100%;
+    height: 570px;
+    background: url('../images/banner_bac.png') no-repeat;
+    background-size: 100% 100%;
+}
+.bogo-index-tiyan {
+    background: #29cead;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+    width: 160px;
+    height: 48px;
+    line-height: 48px;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.tech-module{
+    height: 599px;
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+}
+.tech-module-box{
+    width: 1200px;
+    height: 447px;
+    background: url('../images/abg.png') no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+}
+.tech-module-box-a{
+    width: 25%;
+    float: left;
+    margin-top: 70px;
+}
+.tech-module-box-b{
+    width:260px;
+    height:274px;
+    background:rgba(255,255,255,1);
+    border-radius:20px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 5px #c0c0c0;
+    text-align: center;
+}
+.tech-module-box-b img{
+    width: 141px;
+    height: 141px;
+    margin-top: 39px;
+}
+.tech-module-box-b p{
+    font-size:22px;
+    font-family:Microsoft YaHei;
+    font-weight:bold;
+    color:rgba(52,52,52,1);
+}
+.tech-top{
+    text-align: center;
+    margin-top: 40px;
+}
+.tech-top p{
+    font-size: 20px;
+}
+.bogo-chengji{
+    width: 100%;
+    height:740px;
+    background:rgba(244,250,249,1);
+    overflow: hidden;
+}
+.bogo-chengji-left{
+    float: left;
+    margin-top: 200px;
+}
+

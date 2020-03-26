@@ -1,0 +1,20 @@
+body {
+  font-family: "Lucida Sans", Arial, Helvetica, sans-serif;
+  color: #666;
+}
+
+div {
+  width: 700px;
+  margin: 80px auto;
+}
+pre {
+  padding: 40px 10px;
+  width: 600px;
+  background: #eef;
+  overflow: scroll;
+  color: #333
+}
+
+span {
+  color: #333;
+}

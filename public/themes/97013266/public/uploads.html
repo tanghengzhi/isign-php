@@ -1,0 +1,180 @@
+<style>
+    .posted {
+        width: 80%;
+        margin: 70px auto 0px;
+    }
+
+    .posted_h3 {
+        font-size: 30px;
+        font-weight: 500;
+        color: #3c3c3c !important;
+    }
+
+    .posted_red {
+        color: #f13636;
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+    }
+
+    table .info a {
+        color: #ff1616 !important;
+        padding: 10px;
+    }
+
+    #success div {
+        text-align: center !important;
+    }
+
+</style>
+<link href="__TMPL__/public/assets/css/demo.css" rel="stylesheet">
+<link href="__TMPL__/public/assets/css/uploader.css" rel="stylesheet">
+
+
+<div class="posted">
+    <h3 class="posted_h3">发布应用</h3>
+    <div class="posted_red">严禁上传色情、反动、直播类、非法博彩类APP，违反该规则的 App 将被删除，屡次上传者将被封禁账号, 并上报给有关部门
+    </div>
+
+    <div class="main">
+        <div class="content">
+            <div class="contentin">
+                <div>
+                    <a id="upload-target" class="x-button">选择文件并上传</a>
+                </div>
+
+                <div id="upload-view"></div>
+                <div id="log"></div>
+            </div>
+        </div>
+        <div id="sidebar" class="sidebar"></div>
+    </div>
+    <include file="public@footer"/>
+</div>
+<script src="__TMPL__/public/assets/js/demo.js"></script>
+<script src="__TMPL__/public/assets/js/Q.js"></script>
+<script src="__TMPL__/public/assets/js/Q.Uploader.js"></script>
+<script src="__TMPL__/public/assets/js/Q.Uploader.UI.File.js"></script>
+<script src="/static/js/layer/layer.js"></script>
+<script type="text/javascript">
+
+    var hasConfig = false;
+
+    function log(msg) {
+        document.getElementById("log").innerHTML += (msg != undefined ? msg : "") + "<br />";
+    }
+
+    $.ajax({
+        type: 'POST',
+        url: "{:cmf_url('user/profile/find_buts')}",
+        async: false,
+        success: function (data) {
+            if (data == '0') {
+                hasConfig = false;
+            } else {
+                hasConfig = true;
+            }
+        }
+    });
+
+    var Uploader = Q.Uploader;
+
+    var uploader = new Uploader({
+        url: UPLOAD_URL + "?type=file", // url: UPLOAD_URL + "?type=file",
+        target: document.getElementById("upload-target"),
+        view: document.getElementById("upload-view"),
+        workerThread: 1,
+        allows: ".ipa,.apk", //允许上传的文件格式
+        maxSize: 0,                //允许上传的最大文件大小,字节,为0表示不限(仅对支持的浏览器生效)2 * 1024 * 1024
+
+        //每次上传都会发送的参数(POST方式)
+        data: {user: "Devin"},
+
+        /*
+            上传回调事件：
+            init,          //上传管理器初始化完毕后触发
+
+            select,        //点击上传按钮准备选择上传文件之前触发,返回false可禁止选择文件
+            add[Async],    //添加任务之前触发,返回false将跳过该任务
+            upload[Async], //上传任务之前触发,返回false将跳过该任务
+            send[Async],   //发送数据之前触发,返回false将跳过该任务
+
+            cancel,        //取消上传任务后触发
+            remove,        //移除上传任务后触发
+
+            progress,      //上传进度发生变化后触发(仅html5模式有效)
+            complete       //上传完成后触发
+        */
+        on: {
+            //添加之前触发
+            add: function (task) {
+                //task.limited存在值的任务不会上传，此处无需返回false
+                switch (task.limited) {
+                    case 'ext':
+                        return alert("允许上传的文件格式为：" + this.ops.allows);
+                    case 'size':
+                        return alert("允许上传的最大文件大小为：" + Q.formatSize(this.ops.maxSize));
+                }
+
+                /*if(hasConfig ===false)
+                {
+                    layer.msg('上传配置不为空，请重新配置上传文件',{ icon: 2,time:5000});
+
+                }*/
+
+
+                //自定义判断，返回false时该文件不会添加到上传队列
+
+                //  log(task.name + ": 已添加!");
+
+            },
+
+            //任务移除后触发
+            remove: function (task) {
+                log(task.name + ": 已移除!");
+            },
+
+            //上传之前触发
+            upload: function (task) {
+                //exe文件可以添加，但不会上传
+                if (task.ext == ".exe") return false;
+                $("#upload-target").css("display", "none");
+                //可针对单独的任务配置参数(POST方式)
+
+                task.data = {name: task.name + "_" + Date.now()};
+
+            },
+
+            //上传完成后触发
+            complete: function (task) {
+                if (task.json.msg !== "上传成功") {
+                    alert(task.json.msg);
+                    window.location.reload();
+                } else {
+
+                    if (task.state != Uploader.COMPLETE) return log(task.name + ": " + Uploader.getStatusText(task.state) + "!");
+
+                    var json = task.json;
+                    if (!json) return log(task.name + ": 服务器未返回正确的数据！<br />");
+
+                    log(task.name + ": 服务器返回 " + (task.response || ""));
+                    log();
+
+                    //this.list  为上传任务列表
+                    //this.index 为当前上传任务索引
+                    if (this.index >= this.list.length - 1) {
+                        //所有任务上传完成
+                        log("所有任务上传完成：" + new Date());
+
+                        // window.location.href="/user/install/add_success/id/"+task.json.id ;
+                        window.location.href = "/user/tube/editor/id/" + task.json.id;
+                    }
+                }
+
+            }
+        }
+    });
+</script>
+
+
+

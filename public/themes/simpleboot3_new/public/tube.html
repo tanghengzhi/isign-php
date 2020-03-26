@@ -1,0 +1,79 @@
+<!--  我的应用左侧 -->
+<link href="__TMPL__/public/assets/css/user-center.css" rel="stylesheet">
+<div class="col-sm-2 pad-left_right tube-left1" style="background: #fff;">
+    
+    <a class="tube-a" href="{:cmf_url('user/tube/overview')}" target="my_iframe" data-id="1">
+        <div class="col-sm-12 tube-lgs tube-bgs">
+            <i class="fa">
+                <img class="tube-img-a1" src="__TMPL__/public/assets/images/summarya.png">
+    
+            </i>
+            <span class="tube-a-span tube-a-span1" style="color:#3BCDAE;">概述</span>
+        </div>
+    </a>
+    <a href="/user/profile/user_nav.html" class="tube-a" target="my_iframe" data-id="3">
+        <div class="col-sm-12 tube-lyy tube-bgs">
+            <i class="fa"><img src="__TMPL__/public/assets/images/me.png"></i><span>个人中心</span>
+            
+        </div>
+        <div class="user-center" style="display: none;">
+            <div class="user-center-c user-center-c-a user-center-c1" data-id="1">
+                <a href="{:cmf_url('user/Profile/user_nav')}" target="my_iframe">修改资料</a>
+            </div>
+            <div class="user-center-c-a user-center-c2" data-id="2">
+                <a href="{:cmf_url('user/Profile/real_name_auth')}" target="my_iframe">实名认证</a>
+            </div>
+            <div class="user-center-c-a user-center-c3" data-id="3">
+                <a href="{:cmf_url('user/Profile/password')}" target="my_iframe">修改密码</a>
+            </div>
+            <div class="user-center-c-a user-center-c4" data-id="4">
+                <a href="{:cmf_url('user/Profile/binding')}" target="my_iframe">绑定账号</a>
+            </div>
+            
+        </div>
+    </a>
+    <!-- <a href="/portal/index/posted">
+        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa fa-plus-circle"></i><span>发布应用</span></div>
+    </a> -->
+    <a href="/portal/posted/index" class="tube-a" data-id="2"  target="my_iframe">
+        <div class="col-sm-12 tube-lyy tube-bgs">
+            <i class="fa">
+                <img class="tube-img-a2" src="__TMPL__/public/assets/images/publish.png">
+                
+            </i>
+            <span class="tube-a-span tube-a-span2">内测分发应用</span>
+        </div>
+    </a>
+    
+    <a href="/portal/posted/supindex" target="my_iframe" class="tube-a" data-id="4">
+        <div class="col-sm-12 tube-lyy tube-bgs">
+            <i class="fa">
+                <img src="__TMPL__/public/assets/images/qianming.png">
+            </i>
+            <span class="tube-a-span tube-a-span4">超级签名应用</span>
+        </div>
+    </a>
+    <a href="/user/certificate/index">
+        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa"><img src="__TMPL__/public/assets/images/summary.png"></i><span>证书管理</span></div>
+    </a>
+</div>
+<script type="text/javascript">
+    $('.tube-a').click(function(){
+        var id = $(this).attr('data-id');
+        $('.tube-a-span').css('color','#424242');
+        $('.tube-a-span'+id).css('color','#3BCDAE');
+        if(id==3){
+            $('.user-center').css('display','block');
+        }else{
+            $('.user-center').css('display','none');
+        }
+    })
+
+    $('.user-center-c-a').click(function(){
+        //alert(1);
+        var id = $(this).attr('data-id');
+        $('.user-center-c-a').removeClass('user-center-c');
+        $('.user-center-c'+id).addClass('user-center-c');
+
+    })
+</script>

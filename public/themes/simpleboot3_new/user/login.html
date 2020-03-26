@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="">
+    <link href="__TMPL__/public/assets/css/tube.css" rel="stylesheet">
+    <include file="public@head"/>
+</head>
+<style>
+.login-box{
+    width:1050px;
+    height:556px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+    border-radius:10px;
+    margin: 0 auto;
+    margin-top: 50px;
+    overflow: hidden;
+}
+.login-box-logo{
+    width: 221px;
+    height: 61px;
+    margin-bottom: 36px;
+}
+.login-box-bottom{
+    width: 100%;
+    margin-top: 36px;
+}
+.login-box-bottom-left{
+    width: 463px;
+    height: 361px;
+    margin-left: 29px;
+    float: left;
+}
+.login-box-bottom-right{
+    width: 450px;
+    float: right;
+    margin-right: 29px;
+}
+.form-group input{
+    width: 420px;
+    background: #fff;
+    border: 0;
+    outline:none;
+    height: 50px;
+    
+    margin-top: 10px;
+}
+.captcha-f{
+    width: 420px;
+    height: 50px;
+    border-bottom: solid 1px #DBDBDB;
+    margin-bottom: 10px;
+}
+.captcha-f input{
+    width: 259px;
+    height: 49px;
+    background: #fff;
+    border: 0;
+    outline:none;
+}
+.form-group-ou input{
+    border-bottom: solid 1px #DBDBDB;
+}
+.register-left{
+    float: left;
+}
+.register-left a{
+    color: #3BCDAE;
+    font-size: 16px;
+}
+.findpassword-right{
+    float: right;;
+    margin-right: 29px;
+}
+.findpassword-right a{
+    color: #999;
+    font-size: 16px;
+}
+</style>
+
+<body class="body-white">
+
+
+<div class="login-box">
+    <div class="login-box-bottom">
+        <div class="login-box-bottom-left">
+            <div class="login-box-logo">
+                <img width="100%" src="/static/images/logo.png">
+            </div>
+            <img width="100%" src="/themes/simpleboot3/public/assets/images/login_bac.png">
+        </div>
+        <div class="login-box-bottom-right">
+            <h2 class="text-center user-login">用户登录</h2>
+            <form class="js-ajax-form" action="{:url('user/login/doLogin')}" method="post">
+                <div class="form-group form-group-ou">
+                    <input type="text" id="input_username" name="username" placeholder="手机号">
+                </div>
+
+                <div class="form-group form-group-ou">
+                    <input type="password" id="input_password" name="password" placeholder="密码">
+                </div>
+
+                <div class="captcha-f">
+                    <div class="">
+                        <input type="text" name="captcha" placeholder="验证码" class="captcha" style="float: left;">
+                        <captcha height="38" width="160" font-size="20"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="register-left">
+                        <a href="{:cmf_url('user/Register/index')}">免费注册</a>
+                    </div>
+                    <div class="findpassword-right">
+                        <a href="{:cmf_url('user/Login/findPassword')}">忘记密码 ？</a>
+                    </div>
+                    
+                </div>
+                <div class="form-group">&nbsp;</div>
+                <div class="form-group" style="margin-top:50px;">
+                    <input type="hidden" name="redirect" value="">
+                    <button class="btn btn-primary btn-block js-ajax-submit" type="submit" style="width:418px; height:56px; background:rgba(21,235,191,1);border-radius:10px;border: none;font-size: 22px;">
+                        登录
+                    </button>
+                </div>
+
+               
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- /container -->
+
+<include file="public@scripts"/>
+</body>
+</html>

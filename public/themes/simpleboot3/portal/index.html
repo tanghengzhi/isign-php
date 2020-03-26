@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页 {$site_info.site_name|default=''}</title>
+    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
+    <meta name="description" content="{$site_info.site_seo_description|default=''}">
+    <include file="public@head"/>
+    <link href="__TMPL__/public/assets/css/slippry/slippry.css" rel="stylesheet">
+    <link href="__TMPL__/public/assets/css/index.css" rel="stylesheet">
+
+    <hook name="before_head_end"/>
+</head>
+<body class="body-white">
+<include file="public@nav"/>
+<include file="public@banner"/>
+
+
+<div class="tech-module">
+    <div class="tech-top">
+        <h2>价格</h2>
+        <img src="__TMPL__/public/assets/images/xian.png">
+        <p>Service Projects</p>
+    </div>
+    <div class="tech-module-box">
+        <div class="tech-module-box-a">
+            <div class="tech-module-box-b">
+                <img src="__TMPL__/public/assets/images/project1.png">
+                <p>私有版<br/>0.9元/台</p>
+            </div>
+        </div>
+        <div class="tech-module-box-a">
+            <div class="tech-module-box-b">
+                <img src="__TMPL__/public/assets/images/project2.png">
+                <p>普通版<br/>12元/台 起</p>
+            </div>
+        </div>
+        <div class="tech-module-box-a">
+            <div class="tech-module-box-b">
+                <img src="__TMPL__/public/assets/images/project3.png">
+                <p>高级版<br/>20元/台 起</p>
+            </div>
+        </div>
+        <div class="tech-module-box-a">
+            <div class="tech-module-box-b">
+                <img src="__TMPL__/public/assets/images/project3.png">
+                <p>接口版<br/>0.9元/台 起</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tech-module">
+    <div class="tech-top">
+        <h2>服务</h2>
+        <img src="__TMPL__/public/assets/images/xian.png">
+        <p>Service Projects</p>
+    </div>
+    <div class="tech-module-box">
+        <div class="tech-module-box-a">
+            <div class="tech-module-box-b">
+                <img src="__TMPL__/public/assets/images/project1.png">
+                <p>免费合并应用</p>
+            </div>
+        </div>
+        <div class="tech-module-box-a">
+            <div class="tech-module-box-b">
+                <img src="__TMPL__/public/assets/images/project2.png">
+                <p>奇偶猫超级签名</p>
+            </div>
+        </div>
+        <div class="tech-module-box-a">
+            <div class="tech-module-box-b">
+                <img src="__TMPL__/public/assets/images/project3.png">
+                <p>注册即送免费<br/>下载次数</p>
+            </div>
+        </div>
+        <div class="tech-module-box-a">
+            <div class="tech-module-box-b">
+                <img src="__TMPL__/public/assets/images/project4.png">
+                <p>客服在线解答</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style type="text/css">
+    .bogo-chengji-left{
+    float: left;
+    margin-top: 220px;
+}
+.bogo-chengji-center{
+    width: 752px;
+    height: 592px;
+    background: url("__TMPL__/public/assets/images/achievement_bc.png") no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    margin-top: 32px;
+}
+.bogo-chengji-center-a{
+    width: 120px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+}
+.bogo-chengji-center-a p{
+    font-size: 14px;
+}
+.bogo-chengji-center-a h4{
+    font-size: 30px;
+}
+.bogo-chengji-a{
+    margin-top: 186px;
+    margin-left: 40px;
+}
+.bogo-chengji-b{
+    margin-top: 430px;
+    margin-left: 160px;
+}
+.bogo-chengji-c{
+    width: 160px;
+    margin-top: 440px;
+    margin-left: 420px;
+}
+.bogo-chengji-d{
+    margin-top: 190px;
+    margin-left: 600px;
+}
+</style>
+<div class="bogo-chengji">
+    <div class="tech-top">
+        <h2>成绩</h2>
+        <img src="__TMPL__/public/assets/images/xian.png">
+        <p>ACHIEVEMENT</p>
+    </div>
+    <div class="bogo-chengji-left">
+        <img src="__TMPL__/public/assets/images/background3.png">
+    </div>
+    <div class="bogo-chengji-center">
+        <div class="bogo-chengji-center-a bogo-chengji-a">
+            <h4>160000+</h4>
+            <p>上传应用数</p>
+        </div>
+        <div class="bogo-chengji-center-a bogo-chengji-b">
+            <h4>50000+</h4>
+            <p>签名应用数</p>
+        </div>
+        <div class="bogo-chengji-center-a bogo-chengji-c">
+            <h4>28000000+</h4>
+            <p>累计下载次数</p>
+        </div>
+        <div class="bogo-chengji-center-a bogo-chengji-d">
+            <h4>100%</h4>
+            <p>客户满意度</p>
+        </div>
+    </div>
+</div>
+
+
+<include file="public@footer"/>
+<!-- /container -->
+<include file="public@scripts"/>
+<script src="__TMPL__/public/assets/js/slippry.min.js"></script>
+<script>
+    $(function () {
+        $("#home-slider").slippry({
+            transition: 'fade',
+            useCSS: false,
+            captions: false,
+            speed: 1000,
+            pause: 10000,
+            auto: true,
+            preload: 'visible'
+        });
+        $("#home-slider").show();
+    });
+</script>
+<hook name="before_body_end"/>
+</body>
+</html>

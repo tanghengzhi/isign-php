@@ -1,0 +1,66 @@
+<nav class="navbar navbar-default navbar-fixed-top active" style="box-shadow: 0px 1px 10px #ccc;">
+    <div class=" active" style="width: 90%;margin: 0 auto;">
+
+        <div class="navbar-header">
+            <a style="background: transparent;margin-top: -15px" class="navbar-brand" href="__ROOT__/">
+                <img height="50" src="/static/images/logo.png">
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse active" id="bs-example-navbar-collapse-1">
+            
+            
+            <ul class="nav navbar-nav navbar-right" id="main-menu-user">
+                <!--
+                <li class="login">
+                    <a class="dropdown-toggle notifactions" href="/index.php/user/notification/index"> <i
+                            class="fa fa-envelope"></i> <span class="count">0</span></a>
+                </li>
+                -->
+                <php>
+                    $user=cmf_get_current_user();
+                    if($user){
+                    $is_login = 1;
+                    }else{
+                    $is_login = 0;
+                    }
+                </php>
+                        
+            
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <if condition="$is_login eq 1">
+                    <li class="dropdown user login" style="display: block">
+                        <a class="dropdown-toggle user" data-toggle="dropdown" href="#">
+                            <if condition="empty($user['avatar'])">
+                                <img src="__TMPL__/public/assets/images/admin1.png" class="headicon">
+                                <else/>
+                                <img src="{$user['avatar']}" onerror='this.src="__TMPL__/public/assets/images/admin1.png"' class="headicon" width="30"/>
+                            </if>
+                            <span class="user-nickname"></span><b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="{:cmf_url('user/Profile/center')}"><i class="fa fa-user"></i> &nbsp;个人中心</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="{:cmf_url('user/Index/logout')}"><i class="fa fa-sign-out"></i> &nbsp;退出</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <else/>
+                    <li class="dropdown user offline" style="display: list-item;">
+                        <a class="dropdown-toggle user" data-toggle="dropdown" href="#">
+                            <img width="30" height="30" src="__TMPL__/public/assets/images/admin1.png" class="headicon">
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="{:cmf_url('user/Login/index')}"><i class="fa fa-sign-in"></i> &nbsp;登录</a></li>
+                            <li class="divider"></li>
+                            <li><a href="{:cmf_url('user/Register/index')}"><i class="fa fa-user"></i> &nbsp;注册</a></li>
+                        </ul>
+                    </li>
+                </if>
+
+
+            </ul>
+        </div>
+    </div>
+</nav>

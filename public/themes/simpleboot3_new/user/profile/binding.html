@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页 {$site_info.site_name|default=''}</title>
+    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
+    <meta name="description" content="{$site_info.site_seo_description|default=''}">
+    <include file="public@head"/>
+
+    <link href="__TMPL__/public/assets/simpleboot3/themes/simpleboot3/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="__STATIC__/js/layui/css/layui.css" media="all">
+    <link href="__TMPL__/public/assets/css/tube.css" rel="stylesheet">
+    <link href="__TMPL__/public/assets/css/user-center.css" rel="stylesheet">
+
+    <hook name="before_head_end"/>
+</head>
+<body class="body-all">
+
+    <style type="text/css">
+            .all-top{
+                margin-top: 35px;
+                margin-bottom: 20px;
+                font-size: 18px;
+                color: #666;
+                margin-left: 1%;
+            }
+            .all-top-c{
+                color: #3BCDAE;
+            }
+        </style>
+        <!--     账户资料 -->
+        <div class="all-top">
+            <p>个人中心 > <span class="all-top-c">账号绑定</span></p>
+        </div>
+    <div class="user-left-bottom">
+        <div class="tab-content">
+        	<div class="tab-content-top">账号绑定</div>
+            <div class="password-box">
+               <if condition="!$mobile">
+                            <form class="js-ajax-form" action="{:url('user/Profile/bindingMobile')}" method="post">
+                                <div class="form-group">
+                                    <label for="js-mobile-input">手机号</label>
+                                    <div style="position: relative;height: 38px;">
+                                        <input type="text" class="form-control" placeholder="手机号" id="js-mobile-input"
+                                               name="username" style="width: 180px;float: left;margin-right: 30px">
+                                        <input type="text" class="form-control" placeholder="手机验证码"
+                                               name="verification_code"
+                                               style="width: 180px;float: left;margin-right: 30px">
+                                        <a class="btn btn-success js-get-mobile-code"
+                                           style="width: 180px;float: left;margin-right: 30px"
+                                           data-wait-msg="[second]后才能再次获取" data-mobile-input="#js-mobile-input"
+                                           data-url="{:url('user/VerificationCode/send')}">获取手机验证码</a>
+                                        <button type="submit" class="btn btn-primary js-ajax-submit"
+                                                style="width: 170px;position: absolute;top:0;right: 0;">验证
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <else/>
+                            <div class="form-group">
+                                <label for="js-mobile">手机号</label>
+                                <div style="position: relative;height: 38px;">
+                                    <input type="text" class="form-control" placeholder="手机" id="js-mobile"
+                                           name="mobile" value="{$mobile}" disabled>
+                                    <button type="submit" class="btn"
+                                            style="width: 170px;position: absolute;top:0;right: 0;">已绑定手机号
+                                    </button>
+                                </div>
+                            </div>
+                        </if>
+           </div>
+
+        </div>
+    </div>
+        
+
+<include file="public@scripts"/>
+</body>
+</html>

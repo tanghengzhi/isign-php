@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页 {$site_info.site_name|default=''}</title>
+    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
+    <meta name="description" content="{$site_info.site_seo_description|default=''}">
+    <include file="public@head"/>
+
+    <link href="__TMPL__/public/assets/simpleboot3/themes/simpleboot3/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="__STATIC__/js/layui/css/layui.css" media="all">
+    <link href="__TMPL__/public/assets/css/tube.css" rel="stylesheet">
+    <link href="__TMPL__/public/assets/css/user-center.css" rel="stylesheet">
+
+    <hook name="before_head_end"/>
+</head>
+<body class="body-all">
+<include file="public@nav_new"/>
+
+    <!--  我的应用左侧 -->
+    <div class="col-sm-2 pad-left_right tube-left1" >
+    <a href="{:cmf_url('user/tube/index')}">
+        <div class="col-sm-12 tube-lgs tube-bgs"><i class="fa"><img src="__TMPL__/public/assets/images/summarya.png"></i><span>概述</span></div>
+    </a>
+    <a href="/user/profile/center.html">
+        <div class="col-sm-12 tube-lyy tube-bgs">
+        	<i class="fa"><img src="__TMPL__/public/assets/images/me.png"></i><span>个人中心</span>
+        </div>
+        <div class="user-center">
+        	<div>
+        		<a href="{:cmf_url('user/Profile/center')}">修改资料</a>
+        	</div>
+        	<div class="user-center-c">
+        		<a href="{:cmf_url('user/Profile/real_name_auth')}">实名认证</a>
+        	</div>
+        	<div>
+        		<a href="{:cmf_url('user/Profile/password')}">修改密码</a>
+        	</div>
+        	<div>
+        		<a href="{:cmf_url('user/Profile/binding')}">绑定账号</a>
+        	</div>
+        	
+        	
+        </div>
+    </a>
+    <!-- <a href="/portal/index/posted">
+        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa fa-plus-circle"></i><span>发布应用</span></div>
+    </a> -->
+    <a href="/portal/posted/index">
+        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa"><img src="__TMPL__/public/assets/images/publish.png"></i><span>内测分发应用</span></div>
+    </a>
+    <a href="/portal/posted/supindex">
+        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa"><img src="__TMPL__/public/assets/images/qianming.png"></i><span>超级签名应用</span></div>
+    </a>
+    <a href="/user/certificate/index">
+        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa"><img src="__TMPL__/public/assets/images/summary.png"></i><span>证书管理</span></div>
+    </a>
+    <!--todo 暂时没想好什么作用-->
+    <!--    <a href="/user/tube/editor/id/0.html">-->
+    <!--        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa fa-plus-circle"></i><span>发布空应用</span></div>-->
+    <!--    </a>-->
+    <div class="col-sm-12 tube-bor"></div>
+    
+</div>
+
+<div class="user-left">
+	<div class="user-left-top">
+		<p>个人中心> <span class="span-c">实名认证</span></p>
+	</div>
+    <div class="user-left-bottom">
+        <div class="tab-content">
+        	<div class="tab-content-top">实名认证  <span>{$status}</span></div>
+            
+                <div class="tab-content">
+                    <div class="tab-pane active" id="one">
+                        
+                        <form class="js-ajax-form" action="{:url('user/profile/editAuthInfoPost')}" method="post">
+                            <div class="auth-user-input-box">
+                                <label for="input-user_nickname" class="auth-user-l">真实姓名</label>
+                                <input type="text" class="form-control auth-user-i" id="input-user_nickname" placeholder="真实姓名"
+                                       name="user_real_name" value="{$auth_info['user_real_name'] |default=''}">
+                            </div>
+
+                            <div class="auth-user-input-box">
+                                <label for="input-user_num" class="auth-user-l">身份证号</label>
+                                <input class="form-control auth-user-i" type="text" id="input-user_num"
+                                       placeholder="" name="user_card_number"
+                                       value="{$auth_info['card_number'] |default=''}">
+                            </div>
+
+                            <div class="auth-user-car-box">
+                                <label class="auth-user-l">身份证正面</label>
+                                <div style="">
+                                    <input type="hidden" name="card_img1" id="card_img1"
+                                           value="{$auth_info['card_img1'] |default=''}">
+                                    <a href="javascript:uploadOneImage('图片上传','#card_img1');">
+                                        <if condition="!empty($auth_info['card_img1'])">
+                                            <img src="{$auth_info['card_img1']}"
+                                                 id="card_img1-preview"
+                                                 width="135" style="cursor: pointer"/>
+                                            <else/>
+                                            <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                                 id="card_img1-preview"
+                                                 width="135" style="cursor: pointer"/>
+                                        </if>
+
+                                    </a>
+                                    <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片">
+                                </div>
+
+                            </div>
+                            <div class="auth-user-car-box">
+                                <label class="auth-user-l">身份证反面</label>
+                                <div style="">
+                                    <input type="hidden" name="card_img2" id="card_img2"
+                                           value="{$auth_info['card_img2'] |default=''}">
+                                    <a href="javascript:uploadOneImage('图片上传','#card_img2');">
+                                        <if condition="!empty($auth_info['card_img1'])">
+                                            <img src="{$auth_info['card_img1']}"
+                                                 id="card_img2-preview"
+                                                 width="135" style="cursor: pointer"/>
+                                            <else/>
+                                            <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                                 id="card_img2-preview"
+                                                 width="135" style="cursor: pointer"/>
+                                        </if>
+
+                                    </a>
+                                    <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片">
+                                </div>
+                            </div>
+
+
+                            <div class="auth-user-button">
+                                <button type="submit" class="btn btn-primary js-ajax-submit">提交</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+        
+</div>
+<include file="public@scripts"/>
+</body>
+</html>

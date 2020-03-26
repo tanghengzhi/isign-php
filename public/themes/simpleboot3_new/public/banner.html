@@ -1,0 +1,166 @@
+<div class="banner">
+	<div class="banner_inner">
+		<div class="banner_box">
+			<div class="banner-box-box">
+				<div class="banner-box-top">
+					<h2>内测应用发布</h2>
+					<p>一键上传Android或IOS应用，在线合并应用<br/>扫描二维码下载安装</p>
+					<a href="/portal/posted/index">立即体验</a>
+				</div>
+				<img src="http://ffqiniu.bugukj.com/banner_tu1.png">
+			</div>
+		</div>
+		<div class="banner_box">
+			<div class="banner-box-box">
+				<div class="banner-box-top">
+					<h2>奇偶猫超级签名</h2>
+					<p>告别掉线烦恼<br/>
+                        每台设备下载多个应用，只扣费一次</p>
+					<a href="/portal/posted/supindex">立即体验</a>
+				</div>
+				<img src="http://ffqiniu.bugukj.com/banner_tu1.png">
+			</div>
+		</div>
+		<div class="banner_box">
+			<div class="banner-box-box">
+				<div class="banner-box-top">
+					<h2>免邀请码安装</h2>
+					<p>告别手动填写邀请码<br/>
+                        精准客户来源分析</p>
+					<a href="">立即体验</a>
+				</div>
+				<img src="http://ffqiniu.bugukj.com/banner_tu1.png">
+			</div>
+		</div>
+		
+    </div>
+    <ul class="banner_ul">
+    	
+        	<li class="active banner_li0 banner_li" data-num="0"></li>
+        	<li class=" banner_li1 banner_li" data-num="1"></li>
+        	<li class=" banner_li2 banner_li" data-num="2"></li>
+        	<!-- <li class="banner_li2 banner_li" data-num="2"></li> 
+        	<li class="banner_li2 banner_li" data-num="3"></li>  -->
+        	
+    </ul>
+</div>
+<style type="text/css">
+	.banner{
+		width: 100%;
+		height: 570px;
+		text-align: center;
+		overflow: hidden;
+	}
+
+	.banner_inner{
+		width: 1000%;
+	}
+
+	.banner_box{
+		width: 100%;
+		height: 570px;
+		background:url('http://ffqiniu.bugukj.com/banner_bac.png') no-repeat;
+		background-size: 100% 100%;
+		float: left;
+		overflow: hidden;
+	}
+
+	.banner-box-box{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.banner-box-top{
+		float: left;
+		text-align: left;
+		columns: #fff;
+		margin-top: 113px;
+	}
+	.banner-box-top h2{
+		color: #fff;
+		margin-bottom: 48px;
+		font-size: 52px;
+	}
+
+	.banner-box-top p{
+		font-size: 22px;
+		line-height: 48px;
+		color: #fff;
+		margin-bottom: 50px;
+	}
+
+	.banner-box-top a{
+		padding: 12px 28px;
+		background: #fff;
+		color: #3BCDAE;
+		text-decoration: none;
+		border-radius:4px;
+		font-size: 22px;
+	}
+	.banner_ul{
+		height: 100px;
+		position: absolute;
+		z-index: 99;
+		margin-left: 45%;
+		
+		margin-top: 500px;
+	}
+
+	.banner_ul li{
+		width: 15px;
+		height: 15px;
+		border-radius : 50%;
+		background: #c0c0c0;
+		float: left;
+		cursor: pointer;
+		margin-left: 10px;
+		list-style: none;
+	}
+
+	.banner-box-box img{
+		height: 436px;
+		margin-top: 50px;
+		float: right;
+		margin-top: 60px;
+	}
+
+	.banner_ul .active{
+		background: #fff;
+	}
+</style>
+<script type="text/javascript">
+	var pwidth = document.body.clientWidth;
+	$('.banner_box').css('width',pwidth+"px");
+	//$('.banner_inner').css('width',1*pwidth+"px");
+	$(".banner_li").mouseover(function(){
+        //获取a元素的父级元素li的索引值存进变量num 可能的值分别为 0,1,2,3,4
+        //var num=$(this).parent().index();
+        var width_num = $('.banner_box').width();
+        var num = $(this).attr('data-num');
+        //根据索引值计算出应该移动的距离,存进变量movePx
+        var movePx=num * -width_num + "px";
+        //alert(movePx);
+        //给.inner盒子添加边距
+        $(".banner_inner").css("marginLeft",movePx);
+        //根据索引的值找到相应的a元素，并且添加一个红色背景，同时移除其他a元素的红色背景
+        /*$("ul").eq(num).find("a").addClass("active").parent().siblings().find("li").removeClass("active");*/
+        $('li').removeClass("active");
+        $(this).addClass("active");
+    })
+
+    //定时器函数  
+    var num = 0;  
+    function changeTab(){            
+        if (num<2){                
+            num++;
+        }else{
+            num=0;
+        }
+        var width_num = $('.banner_box').width();
+        var movePx=num*-width_num+"px";
+        $(".banner_inner").animate({"marginLeft":movePx},500);
+        $('.banner_li').removeClass("active");
+        $('.banner_li'+num).addClass("active");
+    }
+    //轮播定时器,3秒执行一次
+    timer=setInterval(changeTab,3000);
+</script>

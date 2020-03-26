@@ -1,0 +1,74 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:url('certificate/index')}">证书列表</a></li>
+        <li><a href="{:url('certificate/add_certificate')}">添加证书</a></li>
+    </ul>
+
+    <table class="table table-hover table-bordered margin-top-20">
+        <thead>
+        <tr>
+            <th width="50">ID</th>
+            <th>证书作者</th>
+            <th>Team ID</th>
+            <th>Iss</th>
+            <th>Kid</th>
+            <th>Tid</th>
+            <th>P12密码</th>
+            <th>剩余UDID数</th>
+            <th>已添加UDID数</th>
+            <th>备注</th>
+            <th>点击下载P12</th>
+            <th>点击下载P8</th>
+            <th>创建时间</th>
+            <th>状态</th>
+            <th width="130">{:lang('ACTIONS')}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <foreach name="list" item="vo">
+            <tr>
+                <td>{$vo.id}</td>
+                <td>{$vo.user_id}</td>
+                <td>{$vo.team_id}</td>
+                <td>{$vo.iss}</td>
+                <td>{$vo.kid}</td>
+                <td>{$vo.tid}</td>
+                <td>{$vo.p12_pwd}</td>
+                <td>{$vo.limit_count}</td>
+                <td>{$vo.total_count}</td>
+                <td>{$vo.mark}</td>
+                <td>
+                    <a>点击下载</a>
+                </td>
+                <td>
+                    <a>点击下载</a>
+                </td>
+                <td>{:date('Y-m-d H:i:s',$vo['create_time'])}</td>
+                <td>
+                    <if condition="$vo['status'] eq 1">
+                        <font color="green">启用</font>
+                        <elseif condition="$vo['status'] eq 0"/>
+                        <font color="red">未启用</font>
+                    </if>
+                </td>
+                <td>
+                    <a href='{:url("certificate/certificate_status",array("id"=>$vo["id"]))}'>启用</a>
+                    <a href='{:url("certificate/certificate_status",array("id"=>$vo["id"]))}'>禁用</a>
+                    <br/>
+                    <a href='{:url("certificate/edit_certificate",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>
+                    <br/>
+                    <a class="js-ajax-delete" href="{:url('certificate/certificate_del',array('id'=>$vo['id']))}">{:lang('DELETE')}</a>
+                </td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script src="__STATIC__/js/admin.js"></script>
+
+</body>
+</html>

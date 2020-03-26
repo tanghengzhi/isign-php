@@ -1,0 +1,156 @@
+<admintpl file="header" />
+<style>
+.selectf{width: 50%;height: 35px;border:1px solid #dce4ec;}
+.hiden{display:none;}
+.form-required{color:#f53434;}
+.gktop{height:35px;line-height:35px;}
+.xzxz{margin-top:10px;}
+.controls input{width:50%;}
+.btn-small{width:10%!important;}
+</style>
+</head>
+<body>
+    <div class="wrap js-check-wrap">
+        <ul class="nav nav-tabs">
+            <foreach name="type" item="vo">
+                <li>
+                    <a href="{:U('systems/index')}#{$key}" >{$vo.group_id}</a>
+                </li>
+            </foreach>
+            <li class="active" >
+                <a href="{:U('systems/add_sys')}" >添加配置</a>
+            </li>
+        </ul>
+        <form class="form-horizontal js-ajax-form" action="{:U('systems/add_post')}" method="post">
+            <div class="tabbable">
+                <div class="tab-content">          
+                        <div class="tab-pane active">         
+                            <fieldset>
+                              
+                                    <div class="control-group">
+                                        <label class="control-label">系统配置标识</label>
+                                        <div class="controls">
+                                            <input type="text" class="form-control" name="code" placeholder="输入系统配置标识">
+                                            <span class="form-required">*</span>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">系统配置名称</label>
+                                        <div class="controls">
+                                            <input type="text" class="form-control" name="title" placeholder="输入系统配置名称">
+                                            <span class="form-required">*</span>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">系统配置分类</label>
+                                        <div class="controls">
+                                            <input type="text" class="form-control" name="group_id" placeholder="输入系统配置分类">
+                                            <span class="form-required">*</span>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">系统配置注释</label>
+                                        <div class="controls">
+                                            <input type="text" class="form-control" name="desc" placeholder="输入系统配置注释">
+                                            <span class="form-required">*</span>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">系统配置分类</label>
+                                        <div class="controls">
+                                            <select name="type" class="selectf">
+                                                    <option value="0">文本框</option>
+                                                    <option value="1">文本域</option>
+                                                    <option value="2">图片</option>
+                                                    <option value="3">多选框</option>
+                                                    <option value="4">单选框框</option>
+                                                    <option value="5">时间选择</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+
+                                    <div>
+                                        <div class="control-group" id="0">
+                                            <label class="control-label">系统配置值</label>
+                                            <div class="controls">
+                                                <input type="text" class="form-control" name="val[]" placeholder="输入系统配置值">
+                                                <span class="form-required">*</span>
+                                            </div>
+                                        </div>
+                                        <div class="control-group hiden" id="1">
+                                            <label class="control-label">文本域的值</label>
+                                            <div class="controls">
+                                                <textarea name="val[]"></textarea>
+                                            </div>
+                                        </div>                                                                                           
+                                       <div class="form-group hiden" id="2">
+                                            <label class="control-label">缩略图</label>
+                                                <div  class="controls">
+                                                        <input type="hidden" name="val[]" id="thumb" value="1">
+                                                        <a href="javascript:upload_one_image('图片上传','#thumb');">     
+                                                            <img src="__TMPL__Public/assets/images/default-thumbnail.png"
+                                                                id="thumb-preview" width="135" style="cursor: hand"/>
+                                                        </a>
+                                                        <input type="button" class="btn btn-small"
+                                                               onclick="$('#thumb-preview').attr('src','__TMPL__Public/assets/images/default-thumbnail.png');$('#thumb').val('');return false;"
+                                                               value="取消图片">
+                                                </div>    
+                                        </div>
+                                        <div class="control-group hiden" id="3">
+                                            <label class="control-label">多选框中的名称</label>
+                                            <div class="controls">
+                                                <input type="text" class="form-control"  name="title_scope[]"  placeholder="输入多选框中的名称">
+                                                 <span class="form-required">*多个值用,隔开</span>
+                                            </div>
+                                            <label class="control-label xzxz">选择第几个选中</label>
+                                            <div class="controls xzxz">
+                                                <input type="number" class="form-control"  name="val[]"  placeholder="输入要选中数字的值">
+                                                <span class="form-required">*多个值用,隔开</span>
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="control-group hiden" id="4">
+                                            <label class="control-label">单选框中的名称</label>
+                                            <div class="controls">
+                                                <input type="text" class="form-control"  name="title_scope[]"  placeholder="输入单选框中的名称">
+                                                 <span class="form-required">*多个值用,隔开</span>
+                                            </div>
+                                            <label class="control-label xzxz">选择第几个选中</label>
+                                            <div class="controls xzxz">
+                                                <input type="number" class="form-control"  name="val[]"  placeholder="输入要选中数字的值">
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="control-group hiden" id="5">
+                                            <label class="control-label">系统配置时间值</label>
+                                            <div class="controls">
+                                                <input type="text" name="val[]" class="js-datetime" value="{$formget.start_time|default=''}" style="width: 140px;" autocomplete="off">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                            </fieldset>    
+                      </div>
+             
+                </div>
+            </div>
+            <div class="form-actions">
+                <button class="btn btn-primary js-ajax-submit"type="submit">{:L('ADD')}</button>
+                <a class="btn" href="javascript:history.back(-1);">{:L('BACK')}</a>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+        <script>
+   $(function(){
+        $('select').change(function(){
+            var val=$(this).val();
+            $("#"+val).removeClass('hiden');
+            $("#"+val).siblings().addClass('hiden');
+            
+        })
+    })
+    </script>
+</body>
+</html>

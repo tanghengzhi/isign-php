@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页 {$site_info.site_name|default=''}</title>
+    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
+    <meta name="description" content="{$site_info.site_seo_description|default=''}">
+    <include file="public@head"/>
+    <!-- <link rel="stylesheet" href="/aboutfiles/header_include_fashion.min.css"> -->
+    <link href="__TMPL__/public/assets/css/slippry/slippry.css" rel="stylesheet">
+    <style>
+        .caption-wraper {
+            position: absolute;
+            left: 50%;
+            bottom: 2em;
+        }
+
+        .caption-wraper .caption {
+            position: relative;
+            left: -50%;
+            background-color: rgba(0, 0, 0, 0.54);
+            padding: 0.4em 1em;
+            color: #fff;
+            -webkit-border-radius: 1.2em;
+            -moz-border-radius: 1.2em;
+            -ms-border-radius: 1.2em;
+            -o-border-radius: 1.2em;
+            border-radius: 1.2em;
+        }
+
+        .tc-gridbox {
+            margin: 0;
+        }
+
+        @media (max-width: 767px) {
+            .caption-wraper {
+                left: 0;
+                bottom: 0.4em;
+            }
+
+            .caption-wraper .caption {
+                left: 0;
+                padding: 0.2em 0.4em;
+                font-size: 0.92em;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                -ms-border-radius: 0;
+                -o-border-radius: 0;
+                border-radius: 0;
+            }
+        }
+
+    </style>
+    <style>
+        .service_content p {
+            color: #878F92;
+            line-height: 28px;
+        }
+
+        .service_content .font-18 {
+            color: #333;
+            line-height: 25px;
+        }
+
+        .service_content li {
+            line-height: 30px;
+            list-style: none;
+            color: #878F92;
+        }
+
+        .service_content ul {
+            padding-left: 0px;
+        }
+
+        .service_content h3 {
+            font-size: 24px;
+            color: #333333;
+            line-height: 33px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .service_content a, a:hover {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+
+        p.item-title {
+            margin: 10px 0 10px 0;
+            font-size: 24px;
+            color: #333;
+            line-height: 50px;
+        }
+
+    </style>
+    <hook name="before_head_end"/>
+</head>
+<body class="body-white">
+<include file="public@nav"/>
+
+<div class="container service_content">
+    <div class="row" style="width: 1200px;margin: 0 auto;">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10">
+            <h1 class="text-center mb-60 color-333 font-36">多肉应用审核规范</h1>
+
+            <p style="margin:20px 0;" class="item-title"> 目录（Contents）</p>
+            <ul><a href="/portal/index/about#01">1、条款（Terms and Conditions）</a>
+                <li><a href="/portal/index/about#02">2、应用功能（Functionality）</a></li>
+                <li><a href="/portal/index/about#03">3、应用展示（App Properties）和广告（AD）</a></li>
+                <li><a href="/portal/index/about#04">4、应用内容（Contents of App）</a></li>
+                <li><a href="/portal/index/about#05">5、损坏设备（Damage to Device）</a></li>
+                <li><a href="/portal/index/about#06">6、法律要求（Legal Requirements）</a></li>
+                <li style="margin-bottom:100px;"><a href="/portal/index/about#07">7、应用视频预览审核（Video Demo Review）</a></li>
+            </ul>
+
+            <a name="01"></a>
+            <div style="height:80px;">
+
+            </div>
+            <p class="item-title">1、概述（Overview）</p>
+            <p>
+                多肉是国内领先的应用内测分发平台，我们希望为全球的开发者提供一个能够有效提高应用内测分发效率的平台。我们很高兴您参与到多肉内测分发开发者行列中来，我们愿与开发者一起学习、交流与成长，并不断更好的为您提供方便、快捷的应用分发测试服务，共同打造良好的开发者生态圈！
+
+                这个文档会及时更新并完善，请每位多肉开发者密切关注。我们的每一次修改将根据最新法律法规，以保证开发者及用户的合法权益为基准，做到公平对待所有开发者，努力营造积极、健康的移动互联网应用环境。我们期望得到优质、可靠、健康的应用，希望您也如我们一样，所以开发者们需要了解，多肉内测分发平台收录应用的一些原则：
+            </p>
+            <a name="02"></a>
+            <div style="height:80px;">
+
+            </div>
+            <p class="item-title">2、应用功能（Functionality）</p>
+            <p class="color-333 font-18">2.1 应用功能存在问题</p>
+            <p>2.1.1 应用强制或诱导修改系统默认设置</p>
+            <p>2.1.2 应用功能需要依赖于第三方应用才能实现</p>
+            <p>2.1.3 应用需要登录，但应用内不提供注册通道，请在完善资料处填写测试账号。</p>
+            <p>2.1.4 注册账号功能不可用，应用审核时尝试3次都无法成功注册</p>
+            <p>2.1.5 应用登录账号功能不可用，应用审核时尝试3次都无法成功登录</p>
+            <p>2.1.6 应用需要其他硬件设备支持，审核人员无法进行测试</p>
+            <p class="color-333 font-18">2.2 应用描述和实际功能不符</p>
+            <p>2.2.1 应用存在欺骗用户下载使用的行为</p>
+            <p class="color-333 font-18">2.3 申请危险权限或权限和功能不符</p>
+            <p>2.3.1 应用申请的权限和其实际功能不符</p>
+            <p>2.3.2 应用实际功能不需常驻通知栏却常驻通知栏</p>
+            <p>2.3.3 应用无法关闭常驻通知提示</p>
+            <p>2.3.4 应用实际功能不需开机启动却开机启动</p>
+            <p>2.3.5 应用在安装或者运行前强制重启设备</p>
+            <p class="color-333 font-18">2.4 应用功能存在使用限制</p>
+            <p>2.4.1 应用功能仅供部分用户使用，比如限制用户的地域或仅供组织内部使用等，请在应用介绍内说明具体限制范围</p>
+            <p class="color-333 font-18">2.5 应用存在恶意行为</p>
+            <p>2.5.1 应用存在恶意行为</p>
+            <p>2.5.2 应用未经用户许可发送短信，建议使用返回验证码等方式</p>
+            <p>2.5.3 应用存在病毒</p>
+            <p>2.5.4 应用存在吸费行为</p>
+            <p>2.5.5 应用消耗过多的网络流量</p>
+            <p>2.5.6 应用未经用户许可拨打电话</p>
+            <p>2.5.7 应用修改主叫号码，主要功能用于欺骗被叫用户</p>
+            <p>2.5.8 应用未运行，但是仍会启动GPS、蓝牙等系统功能</p>
+
+            <a name="03"></a>
+            <div style="height:80px;">
+
+            </div>
+            <p class="item-title">3、应用展示和广告（App Properties &amp; AD）</p>
+            <p class="color-333 font-18">3.1 应用展示内容存在问题</p>
+            <p>3.1.1 应用内容存在侵权行为</p>
+            <p>3.1.2 应用名称包含非法内容</p>
+            <p>3.1.3 应用名称存在侵权行为</p>
+            <p>3.1.4 应用介绍或更新说明包含非法内容</p>
+            <p>3.1.5 应用介绍或更新说明中包含侵权内容</p>
+            <p>3.1.6 简介中使用了极限词或虚假承诺等违反新广告法的内容（如“最”“第一”“唯一”“NO.1”“必备”“免费送”“100%” “全球”“顶尖”“首”等）；</p>
+            <p>3.1.7 简介中包含违规内容（如侵权、色情、恐怖暴力、反动等）</p>
+            <p class="color-333 font-18">3.2 应用展示的图片资源存在问题</p>
+            <p>3.2.1 应用截图和应用实际的界面不符</p>
+            <p>3.2.2 应用截图模糊不清，无法分辨截图内容</p>
+            <p>3.2.3 应用截图存在非法内容</p>
+            <p>3.2.4 应用截图存在侵权行为</p>
+            <p>3.2.5 应用截图的通知栏中包含与应用功能无关内容，请仅保留手机系统自带的信号、运营商信息等提示</p>
+            <p>3.2.6 应用展示的ICON和安装到设备上的ICON不一致，请您自行对比应用在页面展示和手机端展示的ICON</p>
+            <p>3.2.7 应用ICON存在非法内容</p>
+            <p>3.2.8 应用ICON存在侵权行为</p>
+            <p class="color-333 font-18">3.3 广告相关</p>
+            <p>3.3.1 应用未经用户许可或默认勾选创建桌面快捷方式</p>
+            <p>3.3.2 应用未经用户许可默认安装或默认勾选安装第三方应用</p>
+            <p>3.3.3 应用未经用户许可修改系统默认设置</p>
+            <p>3.3.4 应用存在诱导用户点击广告的行为</p>
+            <p>3.3.5 应用存在通知栏广告</p>
+            <p>3.3.6 应用多次发现存在通知栏广告行为，将不再收录</p>
+            <p>3.3.7 应用存在强制积分墙，在启动时强制要求换取积分才能使用</p>
+            <p>3.3.8 应用存在强制积分墙，在使用时强制要求换取积分</p>
+            <p>3.3.9 应用具有诱导用户赚取积分兑换货币或奖品的功能</p>
+            <p>3.3.10 暂不收录：赚取积分以兑换话费、现金等奖品的应用</p>
+            <p>3.3.11 应用存在抢占锁屏的行为</p>
+            <p>3.3.12 应用广告存在模仿系统通知或警告的行为</p>
+            <p>3.3.13 应用的主要目的是展示广告或者市场营销</p>
+            <p>3.3.14 应用使用过程中频繁弹出悬浮窗广告，中断用户操作，影响用户体验</p>
+            <p>3.3.15 应用包含空广告栏位</p>
+            <p>3.3.16 应用广告中包含不良或违法信息</p>
+
+            <a name="04"></a>
+            <div style="height:80px;">
+
+            </div>
+            <p class="item-title">4、应用内容（Contents of App）</p>
+            <p class="color-333 font-18">4.1 应用存在暴力内容</p>
+            <p>4.1.1 任何带有诽谤、人身攻击或者侮辱个人或者团体的应用</p>
+            <p>4.1.2 应用存在人类或动物被杀、被虐待、被伤害等图片或内容</p>
+            <p>4.1.3 应用过分描述暴力或虐待儿童</p>
+            <p>4.1.4 应用对武器进行过于逼真的表述（如不能涉及武器的制造工艺和参数等），并鼓励违法或滥用武器</p>
+            <p class="color-333 font-18">4.2 应用存在色情内容</p>
+            <p>4.2.1 应用包含色情内容或者过分展现性器官，但又不是旨在艺术审美或情感</p>
+            <p>4.2.2 应用中存在允许用户提交色情内容，如允许用户发布色情照片、文字等</p>
+            <p>4.2.3 情趣用品商城类应用禁止存在社区、论坛等允许用户发布帖子、信息和评论帖子等功能和模块，请您将以上模块进行删除</p>
+            <p>4.2.4 应用介绍、应用截图、描述语等含有色情内容</p>
+            <p class="color-333 font-18">4.3 应用存在非法金钱交易或内容</p>
+            <p>4.3.1 应用具有现金或者流通货币赌博功能</p>
+            <p class="color-333 font-18">4.4 政治问题</p>
+            <p>4.4.1 应用不能包含对国家领导人诽谤、人身攻击或者侮辱性的内容</p>
+            <p>4.4.2 应用包含反政府、反社会内容</p>
+            <p>4.4.3 存在政治错误的应用</p>
+            <p class="color-333 font-18">4.5 用户使用感受</p>
+            <p>4.5.1 多肉内测平台暂不收录：游戏类应用，包括单机游戏、网络游戏或H5游戏的应用</p>
+            <p>4.5.2 多肉内测平台暂不收录：彩票类应用，含有购买彩票、代购彩票等彩票交易功能的应用</p>
+            <p>4.5.3 多肉内测平台暂不收录：主要功能需要获取Root权限后才可使用的应</p>
+            <p>4.5.4 应用设计的功能不能为主要是令用户厌恶、恐惧</p>
+            <p>4.5.5 应用不能具有易引起用户不适或者比较粗俗的内容，如对血腥和色情场面的过分展现</p>
+            <p>4.5.6 应用中所有的“敌人”角色，都不能针对任何一个现实的种族、文化、政府或公司，以及任何一个真实的个体</p>
+            <p>4.5.7 应用中涉及的宗教内容都应该是翻译准确和使用恰当的，并且不存在误导行为。使用这些内容的目的应该是教育意义的而不是煽动性的</p>
+            <p>4.5.8 存在针对某一宗教、文化或种族的诽谤、侮辱或攻击的内容，或有可能让这部分群体人们造成情感伤害的内容</p>
+            <p class="color-333 font-18">4.6 应用内抽奖相关功能及内容</p>
+            <p>4.6.1 应用中的竞赛和抽奖活动必须由该应用开发者来发起</p>
+            <p>4.6.2 竞赛和抽奖活动必须在应用的用户协议中有清晰详细的描述，且这些竞赛或抽奖活动和多肉应用内测专家无关，多肉应用内测专家不承担任何相关法律责任</p>
+            <p class="color-333 font-18">4.7 开发者行为不当</p>
+            <p>4.7.1 开发者对已经明确版权归属的应用私自进行破解、汉化、反编译或重新打包，应用将被驳回且开发者将被取消多肉账户</p>
+            <p>4.7.2 开发者提交的应用存在问题或开发者自身原因，开发者应主动申请驳回、删除或下架</p>
+
+            <a name="05"></a>
+            <div style="height:80px;">
+
+            </div>
+            <p class="item-title">5、损坏设备（Damage to Device）</p>
+            <p class="color-333 font-18">5.1 用户运行该应用有可能损坏设备</p>
+            <p class="color-333 font-18">5.2 应用如会迅速消耗电量或者造成设备过热</p>
+            <p>5.2.1 应用未启动，但不断使用GPS等功能导致用户电量迅速消耗</p>
+            <p>5.2.2 应用未启动，但会长时间占用CPU、内存等导致设备过热</p>
+
+            <a name="06"></a>
+            <div style="height:80px;">
+
+            </div>
+            <p class="item-title">6、法律要求（Legal Requirements）</p>
+            <p class="color-333 font-18">6.1 违反国家法律法规</p>
+            <p>6.1.1 应用都必须遵守当地的所有法律法规，开发者都有义务熟悉并遵守相关的法律法规</p>
+            <p class="color-333 font-18">6.2 应用允许共享违法的文件或内容</p>
+            <p>6.2.1 应用怂恿或鼓励犯罪或暴力行为</p>
+            <p>6.2.2 应用鼓励酒驾或公布没有经过交通管理部门允许的酒驾检测点数据</p>
+            <p>6.2.3 应用过度宣传酒精或者危险物品（如毒药、爆炸物等），或者鼓励未成年人消费香烟和酒精饮料</p>
+            <p class="color-333 font-18">6.3 应用存在侵犯版权行为</p>
+            <p>6.3.1 应用为破解、盗版或未获得版权所有者授权的应用</p>
+            <p>6.3.3 单本图书类应用请提供版权证明 ，书城类应用请提供免责声明，以上文件均需以附件形式发送到审核邮箱：190646521@qq.com。</p>
+            <p class="color-333 font-18">6.4 应用存在欺诈行为</p>
+            <p>6.4.1 应用存在欺骗、伪造或者误导用户的行为</p>
+            <p class="color-333 font-18">6.5 隐私保护</p>
+            <p>6.5.1 应用未提示用户或未经用户授权情况下不得搜集、传输或者使用用户的位置信息</p>
+            <p>6.5.2 应用未经用户许可且在用户不知情的情况下不得传输和使用用户的隐私数据，如通讯录、照片和短信记录等</p>
+            <p>6.5.3 应用不得强制要求用户共享其个人信息，如邮件地址或生日等信息</p>
+            <p>6.5.4 应用不得搜集未成年人信息数据</p>
+            <p>6.5.5 开发者的应用会窃取用户密码或者其他用户个人数据的将被取消多肉账户</p>
+
+            <a name="07"></a>
+            <div style="height:80px;">
+
+            </div>
+            <p class="item-title">7、应用视频预览审核（Video Demo Review）</p>
+            <p class="color-333 font-18">7.1 视频内容存在问题</p>
+            <p>7.1.1 应用视频内容过于简单，未突出应用特点，宣传价值较小</p>
+            <p>7.1.2 应用视频中，操作演示过快，请放慢演示</p>
+            <p>7.1.3 应用视频内容与应用功能或介绍信息不符</p>
+            <p>7.1.4 应用视频存在侵权内容</p>
+            <p>7.1.5 应用视频存在色情、血腥暴力、政治、赌博等内容</p>
+            <p class="item-title">8、提交之后：</p>
+            <p>在您将应用上传至多肉内测分发平台后，您的应用随时会进入审核流程，还请您密切关注您应用的审核状态，并谨记以下几点：</p>
+            <ul>
+                <li>(1) 时间安排：多肉审核团队将会全年全日无休，按照《多肉应用审核规范》检查您的应用。</li>
+                <li>(2) 状态更新：若您的应用被下架，您可在「应用管理」中查看到下架状态，或收到多肉的短信和邮件通知。</li>
+                <li>(3)
+                    应用下架：我们的目标是公平、持续地遵循这些准则，但是金无足赤、人无完人。如果您的应用被下架，但您存在疑问，或希望提供其他信息，请您前往多肉「应用管理」中心，点击申诉可直接与我们联系。或以邮件的形式联系我方申诉邮箱：190646521@qq.com，邮件内容需包含您的多肉账号信息（无需提供密码），方便我们查询具体情况，我们的审核团队会尽快与您取得联络。
+                </li>
+                <li>(4) 下架反馈：多肉愿与开发者积极交流，请您配合我方审核要求提供有效材料信息接受应用重审，若您的应用确实存在误封情况，我们会第一时间为您恢复应用上架，同时也可帮助我们改进多肉应用审核流程。</li>
+                <li>(5) 游戏审核：多肉为更好的服务广大开发者，保障开发者和我方的利益，多肉现支持合规的游戏类应用分发，需附有该应用的游戏文网文，软件著作权登记证，ICP
+                    许可证等相关文件。当审核判定应用为游戏类应用时，将在您的「应用管理」及邮箱中提供补充相关文件的说明，点击链接上传相关文件即可。多肉审核团队将尽快对您的游戏应用和资质证明进行审核。一旦通过审核，您的游戏应用将自动恢复上架，之后您可以继续上传您的更新版本。
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-1"></div>
+</div>
+<include file="public@footer"/>
+
+
+<include file="public@scripts"/>
+<script src="__TMPL__/public/assets/js/slippry.min.js"></script>
+
+<script>
+    $(function () {
+        $("#home-slider").slippry({
+            transition: 'fade',
+            useCSS: true,
+            captions: false,
+            speed: 1000,
+            pause: 3000,
+            auto: true,
+            preload: 'visible'
+        });
+        $("#home-slider").show();
+    });
+</script>
+<hook name="before_body_end"/>
+</body>
+</html>

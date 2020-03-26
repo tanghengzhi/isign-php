@@ -1,0 +1,321 @@
+<include file="public@header"/>
+<link href="__TMPL__/public/assets/simpleboot3/css/main.css" rel="stylesheet">
+
+<hook name="admin_before_head_end"/>
+</head>
+<body>
+
+<div class="main-box">
+    <div class="main-box-left">
+        <div class="main-box-left-top">分发托管</div>
+        <div class="main-box-left-center">
+            <div class="main-box-left-center-left">
+                <i class="glyphicon glyphicon-calendar"></i>
+            </div>
+            <p class="main-box-left-center-right">{$fent}个应用</p>
+        </div>
+        <div class="main-box-left-bottom">
+            
+            <div class="main-box-left-bottom-box">
+                <div>{$fendow}</div>
+                <p>总下载</p>
+            </div>
+            <div class="main-box-left-bottom-box">
+                <div>{$fent_day}</div>
+                <p>今日上传</p>
+            </div>
+            <div class="main-box-left-bottom-box">
+                <div>{$fendow_day}</div>
+                <p>今日下载</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="main-box-right">
+          <div id="chart-composite-1">
+
+          </div>
+        
+    </div>
+</div>
+
+<div class="main-box">
+    <div class="main-box-left">
+        <div class="main-box-left-top">超级签名</div>
+        <div class="main-box-left-center">
+            <div class="main-box-left-center-left">
+                <i class="glyphicon glyphicon-pencil"></i>
+            </div>
+            <p class="main-box-left-center-right">{$super}个应用</p>
+        </div>
+        <div class="main-box-left-bottom">
+            <div class="main-box-left-bottom-box">
+                <div>{$superdow}</div>
+                <p>总下载</p>
+            </div>
+            <div class="main-box-left-bottom-box">
+                <div>{$super_day}</div>
+                <p>今日上传</p>
+            </div>
+            <div class="main-box-left-bottom-box">
+                <div>{$superdow_day}</div>
+                <p>今日下载</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="main-box-right">
+          <div id="chart-composite-2">
+
+          </div>
+        
+    </div>
+</div>
+<div class="main-box">
+    <div class="main-box-left">
+        <div class="main-box-left-top">总充值</div>
+        <div class="main-box-left-center">
+            <div class="main-box-left-center-left" style="background: #3886D4;">
+                <i class="glyphicon glyphicon-yen"></i>
+            </div>
+            <p class="main-box-left-center-right">¥{$new.coin}</p>
+        </div>
+        <div class="main-box-left-bottom">
+            <div class="main-box-left-bottom-box">
+                <div>¥{$new.down_goods}</div>
+                <p>下载充值</p>
+            </div>
+            <div class="main-box-left-bottom-box">
+                <div>¥{$new.sup_goods}</div>
+                <p>超级签名充值</p>
+            </div>
+            <div class="main-box-left-bottom-box">
+                <div>¥{$new.day_coin}</div>
+                <p>今日充值</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="main-box-right">
+          <div id="chart-composite-3">
+
+          </div>
+        
+    </div>
+</div>
+<div class="main-box">
+    <div class="main-box-left">
+        <div class="main-box-left-top">总注册</div>
+        <div class="main-box-left-center">
+            <div class="main-box-left-center-left" style="background: #64D57C;">
+                <i class="glyphicon glyphicon-yen"></i>
+            </div>
+            <p class="main-box-left-center-right">{$new.user}</p>
+        </div>
+        <div class="main-box-left-bottom">
+            <div class="main-box-left-bottom-box">
+                <div>{$new.user}</div>
+                <p>&#x603B;&#x6CE8;&#x518C;&#xFF0C;&#x66F4;&#x591A;&#x6E90;&#x7801;&#x8BF7;&#x767E;&#x5EA6;&#x641C;&#x7D22;&#x8BBF;&#x95EE;&#xFF1A;&#x7C73;&#x7C92;&#x5C0F;&#x5C4B;</p>
+            </div>
+            <div class="main-box-left-bottom-box">
+                <div>{$new.day_user}</div>
+                <p>今日注册</p>
+            </div>
+            <!-- <div class="main-box-left-bottom-box">
+                <div>{$new.day_coin}</div>
+                <p>今日充值</p>
+            </div> -->
+        </div>
+
+    </div>
+    <div class="main-box-right">
+          <div id="chart-composite-4">
+
+          </div>
+        
+    </div>
+</div>
+<!-- <div class="col-sm-6">
+    <div class="col-sm-6">
+        <div class="col-sm-12 main">
+        <div class="col-sm-12 main-when1"><i class="glyphicon glyphicon-download-alt"></i></div>
+        <div class="col-sm-12 main-when2">下载总量 : <span> {$new.download} 次</span></div>
+        <div class="col-sm-12 main-when3">当日下载总量 : <span> {$new.day_download} 次</span></div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="col-sm-12 main2">
+            <div class="col-sm-12 main-when1"><i class="glyphicon glyphicon-yen"></i></div>
+            <div class="col-sm-12 main-when2">充值总金额 : <span> {$new.coin} 元</span></div>
+            <div class="col-sm-12 main-when3">当日充值金额 : <span> {$new.day_coin} 元</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6">
+
+    <div class="col-sm-6">
+        <div class="col-sm-12 main3">
+            <div class="col-sm-12 main-when1"><i class="glyphicon glyphicon-user"></i></div>
+            <div class="col-sm-12 main-when2">当日注册用户 : <span> {$new.user} </span></div>
+            <div class="col-sm-12 main-when3">当日注册用户 : <span> {$new.day_user} </span></div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="col-sm-12 main4">
+            <div class="col-sm-12 main-when1"><i class="glyphicon glyphicon-open-file"></i></div>
+            <div class="col-sm-12 main-when2">上传总应用 : <span> {$new.posted} 次</span></div>
+            <div class="col-sm-12 main-when3">当日上传应用 : <span> {$new.day_posted} 次</span></div>
+        </div>
+    </div>
+</div> -->
+
+<script src="__STATIC__/js/admin.js"></script>
+<script src="__TMPL__/public/assets/simpleboot3/js/frappe-charts.min.js"></script>
+
+<hook name="admin_before_body_end"/>
+</body>
+</html>
+
+<script type="text/javascript">
+
+    var reportCountList = {$fendow_week};
+
+    var reportCountList2 = {$superdow_week};
+    var reportCountList3 = {$coin_week};
+    var reportCountList4 = {$user_week};
+
+    var lineCompositeData = {
+        labels: {$week},
+
+        /*yMarkers: [
+            {
+                label: "Average 100 reports/month",
+                value: 1200,
+            }
+        ],*/
+
+        datasets: [{
+            "name": "Events",
+            "values": reportCountList
+        }]
+    };
+
+    var lineCompositeData2 = {
+        labels: {$week},
+
+        /*yMarkers: [
+            {
+                label: "Average 100 reports/month",
+                value: 1200,
+            }
+        ],*/
+
+        datasets: [{
+            "name": "Events",
+            "values": reportCountList2
+        }]
+    };
+
+    var lineCompositeData3 = {
+        labels: {$week},
+
+        /*yMarkers: [
+            {
+                label: "Average 100 reports/month",
+                value: 1200,
+            }
+        ],*/
+
+        datasets: [{
+            "name": "Events",
+            "values": reportCountList3
+        }]
+    };
+
+    var lineCompositeData4 = {
+        labels: {$week},
+
+        /*yMarkers: [
+            {
+                label: "Average 100 reports/month",
+                value: 1200,
+            }
+        ],*/
+
+        datasets: [{
+            "name": "Events",
+            "values": reportCountList4
+        }]
+    };
+
+
+var c1 = document.querySelector("#chart-composite-1");
+var c2 = document.querySelector("#chart-composite-2");
+var c3 = document.querySelector("#chart-composite-3");
+var c4 = document.querySelector("#chart-composite-4");
+
+var lineCompositeChart = new Chart (c1, {
+    title: "分发托管一周下载",
+    data: lineCompositeData,
+    type: 'line',
+    height: 130,
+    colors: ['#2E6EE6'],
+    isNavigable: 1,
+    valuesOverPoints: 1,
+
+    lineOptions: {
+        dotSize: 6
+    },
+    // yAxisMode: 'tick'
+    // regionFill: 1
+});
+
+var lineCompositeChart = new Chart (c2, {
+    title: "超级签名一周下载",
+    data: lineCompositeData2,
+    type: 'line',
+    height: 130,
+    colors: ['#2E6EE6'],
+    isNavigable: 1,
+    valuesOverPoints: 1,
+
+    lineOptions: {
+        dotSize: 6
+    },
+    // yAxisMode: 'tick'
+    // regionFill: 1
+});
+
+var lineCompositeChart = new Chart (c3, {
+    title: "一周充值",
+    data: lineCompositeData3,
+    type: 'line',
+    height: 130,
+    colors: ['#3886D4'],
+    isNavigable: 1,
+    valuesOverPoints: 1,
+
+    lineOptions: {
+        dotSize: 6
+    },
+    // yAxisMode: 'tick'
+    // regionFill: 1
+});
+
+var lineCompositeChart = new Chart (c4, {
+    title: "一周注册",
+    data: lineCompositeData4,
+    type: 'line',
+    height: 130,
+    colors: ['#64D57C'],
+    isNavigable: 1,
+    valuesOverPoints: 1,
+
+    lineOptions: {
+        dotSize: 6
+    },
+    // yAxisMode: 'tick'
+    // regionFill: 1
+});
+</script>

@@ -1,0 +1,85 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascript:;">充值记录</a></li>
+    </ul>
+    <form class="well form-inline margin-top-20" method="post" action="{:url('members/charge')}">
+        会员id:
+        <input type="text" class="form-control" name="id" style="width: 200px;"
+               value="{$charge['id']|default=''}" placeholder="请输入会员id...">
+        分类:
+        <select class="form-control" name="status" style="width: 140px;">
+            <option value='0'>全部</option>
+            <option value='1' <if condition="$charge['status'] eq '1'">selected="selected"</if>>充值成功</option>
+            <option value='2' <if condition="$charge['status'] eq '2'">selected="selected"</if>>充值失败</option>
+        </select> &nbsp;&nbsp;
+        时间:
+        <input type="text" class="form-control js-bootstrap-datetime" name="start_time"
+               value="{$charge['start_time']|default=''}"
+               style="width: 140px;" autocomplete="off">-
+        <input type="text" class="form-control js-bootstrap-datetime" name="end_time"
+               value="{$charge['end_time']|default=''}"
+               style="width: 140px;" autocomplete="off"> &nbsp; &nbsp;
+        <input type="submit" class="btn btn-primary" value="搜索"/>
+    </form>
+    <form class="js-ajax-form" action="" method="post">
+        <table class="table table-hover table-bordered table-list">
+            <thead>
+            <tr>
+                <th width="50">ID</th>
+                <th>会员名称(id)</th>
+                <th>本站订单号</th>
+                <th>商家订单ID</th>
+                <th>支付成功时间</th>
+                <th>充值金额</th>
+                <th>下载次数</th>
+                <th>充值时间</th>
+                <th>充值来源</th>
+                <th>充值商品</th>
+                <th width="90">状态</th>
+            </tr>
+            </thead>
+            <foreach name="user" item="vo">
+                <tr>
+                    <td><b>{$vo.id}</b></td>
+                    <td>{$vo.name}({$vo.uid})</td>
+                    <td>{$vo.order_id}</td>
+                    <td>{$vo.trade_id}</td>
+                    <td>{$vo.trade_time}</td>
+                    <td>{$vo.download_coin}元</td>
+                    <td>{$vo.download_download}</td>
+                    <td>{$vo.addtime |date="Y-m-d H:i:s",###}</td>
+                    <td>{$vo.type}</td>
+                    <td>
+                        <switch name="$vo['goods_type']" >
+                            <case value="1">普通下载</case>
+                            <case value="2">超级签名下载</case>
+                            
+                            <default />普通下载
+                        </switch>
+                    </td>
+                    <!-- 1充值成功 2充值失败 3订单未支付 4订单支付失败 5订单支付成功 -->
+                    <td>
+                        <switch name="$vo['status']" >
+                            <case value="1">充值成功</case>
+                            <case value="2">充值失败</case>
+                            <case value="3">订单未支付</case>
+                            <case value="4">订单支付失败</case>
+                            <case value="5">订单支付成功</case>
+                            <default />订单未支付
+                        </switch>
+                    </td>
+                </tr>
+            </foreach>
+
+        </table>
+
+        <ul class="pagination">{$page|default=''}</ul>
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+
+</body>
+</html>

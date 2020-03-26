@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>控制台 {$site_info.site_name|default=''}</title>
+    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
+    <meta name="description" content="{$site_info.site_seo_description|default=''}">
+    <include file="public@head"/>
+    <link href="/QQ97013266/assets/css/slippry/slippry.css" rel="stylesheet">
+    
+
+    <hook name="before_head_end"/>
+</head>
+<body class="body-white">
+<include file="public@nav"/>
+<style>
+    .posted {
+        width: 80%;
+        margin: 120px auto 0px;
+    }
+
+    .posted_h3 {
+        font-size: 30px;
+        font-weight: 500;
+        color: #3c3c3c !important;
+    }
+
+    .posted_red {
+        color: #f13636;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .posted_z {
+        color: #f13636;
+    }
+
+    .posted_fb {
+        border: 1px solid #ccc;
+        min-height: 400px;
+    }
+
+    .btn-default {
+        background-color: #28caad !important;
+        border-color: #28caad !important;
+    }
+
+    .info {
+        color: #FF7518 !important;
+    }
+
+    .container {
+        width: 100% !important;
+    }
+
+    table .info a {
+        color: #ff1616 !important;
+        padding: 10px;
+    }
+
+    #success div {
+        text-align: center !important;
+    }
+    .button{
+        background: #61C7AE;
+        color: #fff;
+        border: none;
+        width: 145px;
+        height: 46px;
+        margin-left: 45%;
+    }
+</style>
+<div class="posted">
+    <h3 class="posted_h3">发布超级签名应用</h3>
+    <div class="posted_red">{$config['system_message']}
+    </div>
+    <div class="posted_fb">
+        <div class="container" style="padding-top: 60px;">
+            <div class="tab-content">
+                <div role="tabpanel" style="margin: auto" class="tab-pane fade in active" id="demo"
+                     aria-labelledby="demo-tab">
+
+                   <form action="" enctype="multipart/form-data" method="post">
+                        <input type="button" class="button green" value="上传" onclick= "$('#upload1').click();" >
+                        <input type="file" id="upload1" name="upload" onchange="uploadFile(this);" style="display: none;">
+                    </form>
+                    <div class="col-md-12" style="text-align:center;" id="details">
+                        <div> 您所在会员组剩余可上传 {$config.app_file_max_size} MB，超过此额度的应用将上传失败【联系客服：{$config.service_qq}】
+                        </div>
+                        <div>（仅支持.ipa文件，不支持IE与safari浏览器）</div>
+                    </div>
+                    <div style="display:none;" id="success" class="col-md-12">
+                            <div class="alert-success">
+                                队列全部文件处理完毕
+                            </div>
+                        </div>
+                        <div class="col-md-12 table_a" style="display: none;">
+                            <table class="table table-striped table-hover text-left" style="margin-top:40px;">
+                                <thead>
+                                <tr>
+                                    <th class="col-md-4">文件</th>
+                                    <th class="col-md-2">大小</th>
+                                    <th class="col-md-6">上传进度</th>
+                                </tr>
+                                </thead>
+                                <tbody id="fsUploadProgress">
+                                    <td class="file_n">文件</td>
+                                    <td class="file_s">大小</td>
+                                    <td class="">
+                                        <div style="width: 100%;height: 20px;background: #c0c0c0;">
+                                            <div class="file_bg" style="height: 100%;width: 0%;background: #8F5BB5">
+                                                <div class="file_num" style="float: right;color: #fff;"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div style="width: 100%;position: fixed;bottom: 0;">
+   <include file="public@footer"/> 
+</div>
+
+</body>
+
+<!--引入JS-->
+<link href="/static/js/layui/css/layui.css" rel="stylesheet">
+<script src="/static/js/layui/layui.all.js"></script>
+<script src="/dist/app-info-parser.js"></script>
+<script type="text/javascript">
+
+function uploadFile(obj) {
+
+        var fd = new FormData();
+
+        var file = obj['files'][0];
+        if(!file){
+            return;
+        }
+        var ipa = file.name;
+        if(ipa.indexOf('ipa')==-1){
+            layer.msg('请上传正确的ipa包！');
+            return;
+        }
+        
+        //console.log(file);
+        var num = file.size/1024/1024;
+        if(num>150){
+            layer.msg('您上传的文件为'+num+'MB');
+            return;
+        }
+        
+        var parser = new AppInfoParser(file);
+        parser.parse().then(result=>{
+            var appInfo = result;
+            var provisionedDevices = appInfo.mobileProvision.ProvisionedDevices;
+            var name = appInfo.CFBundleDisplayName;
+            var bundle = appInfo.CFBundleIdentifier;
+
+			// // layer.msg(appInfo);
+   ////         return;
+   //         if(!provisionedDevices){
+   //             layer.msg('请上传内测版ipa包！');
+   //             return;
+   //         }
+
+            fd.append("file", file);
+            fd.append("name", appInfo.CFBundleDisplayName);
+            fd.append("build", appInfo.MinimumOSVersion);//编译版本号
+            fd.append("version", appInfo.CFBundleShortVersionString);//编译版本号
+            fd.append("icon", appInfo.icon);//图标
+            fd.append("bundle", appInfo.CFBundleIdentifier);//包名
+
+            $('.table_a').css('display','block');
+            $('.table').css('width','99%');
+            $('.file_n').text(file.name);
+            
+            $('.file_s').text(num.toFixed(2)+'MB');
+            var i = 0;
+            var id = setInterval(function(){
+                i++;
+
+                $('.file_bg').css('width',1*i+'%');
+                $('.file_num').text(1*i+'%');
+                if(i==99){
+                    clearInterval(id);
+                }
+            }, 80);
+            $.ajax({
+                url: "{:cmf_url('portal/index/testb')}",
+                type: 'POST',
+                processData: false,
+                contentType: false,
+                dataType:'json',
+                data: fd,
+                success: function (res) {
+                    //console.log(res);
+                    //return;
+                    if(res.code==1){
+                        clearInterval(id);
+                        $('.file_bg').css('width','100%');
+                        $('.file_num').text('100%');
+                        setTimeout(function(){
+                            window.location.href = "{:cmf_url('user/tube/index')}";
+                        },1000);
+                        
+                    }else if(res.code == 2){
+                        $('.table_a').css('display','none');
+                        layer.msg('请上传ipa格式文件');
+                        return;
+                    }else if(res.code==4){
+                        $('.table_a').css('display','none');
+                        layer.msg('该APP名已被屏蔽！');
+                        setTimeout(function(){
+                            window.location.href = "{:cmf_url('portal/index/supposted')}";
+                        },1500);
+                        
+                        return;
+                    }else if(res.code==5){
+                        $('.table_a').css('display','none');
+                        layer.msg('该包名已被屏蔽！');
+                        setTimeout(function(){
+                            window.location.href = "{:cmf_url('portal/index/supposted')}";
+                        },1500);
+
+                        return;
+                    }
+                    //console.log(res);
+                }
+            })
+
+        }).catch(err => {
+            console.log('err ----> ', err);
+            layer.msg('文件上传失败');
+        });
+        //fileSelect();
+        //console.log(appInfo);
+        return;
+
+}
+    var appInfo;
+
+    function fileSelect() {
+        var files = document.getElementsByName('file')
+        console.log(files);
+        return;
+        var parser = new AppInfoParser(files[0])
+        parser.parse().then(result => {
+            appInfo = result;
+            console.log('app info ----> ', result)
+            console.log('icon base64 ----> ', result.icon)
+            fd.append("name", result);
+        }).catch(err => {
+            console.log('err ----> ', err)
+        })
+    }
+</script>
+</html>

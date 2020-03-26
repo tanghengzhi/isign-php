@@ -1,0 +1,80 @@
+<include file="public@header"/>
+<style type="text/css">
+    .pic-list li {
+        margin-bottom: 5px;
+    }
+    .form-control{width:30%!important;}
+</style>
+
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li><a href="{:url('download/index')}">下载管理</a></li>
+        <li class="active"><a href="javascript:;">添加购买下载类型</a></li>
+    </ul>
+    <form action="{:url('download/upd')}" method="post" class="form-horizontal js-ajax-form margin-top-20">
+        <div class="row">
+            <div class="col-md-9">
+                <table class="table table-bordered">
+                    <tr>
+                        <th width="150">购买下载次数(次)<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" name="download"
+                                   required  placeholder="请输入购买下载次数" value="{$download['download']| default=''}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>购买金额(元)<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" name="coin"
+                                   id="title" required placeholder="请输入购买金额" value="{$download.coin | default=''}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>赠送次数<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" name="gift"
+                                   id="title" required placeholder="请输入赠送次数：0为不赠送，默认0" value="{$download.gift | default=''}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>推荐购买状态<span class="form-required">*</span></th>
+                        <td>
+                            <if !empty($download) && $download.recommend gt 0>
+                            <input type="checkbox" name="recommend" checked="checked"  value="1">
+                            <else>
+                            <input type="checkbox" name="recommend"  value="1">
+                            </if>
+                            选中展示为推荐，默认不推荐
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>下载购买状态<span class="form-required">*</span></th>
+                        <td>
+                            <if !empty($download) && $download.status gt 0>
+                            <input type="checkbox" name="status" checked="checked"  value="1">
+                            <else>
+                            <input type="checkbox" name="status"  value="1">
+                            </if>
+                            选中将在购买页面显示，默认不显示
+                        </td>
+                    </tr>
+
+
+                </table>
+                <input type="hidden" name="id" value="{$download.id | default=''}"/>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('SAVE')}</button>
+                        <a class="btn btn-default" href="{:url('download/index')}">{:lang('BACK')}</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

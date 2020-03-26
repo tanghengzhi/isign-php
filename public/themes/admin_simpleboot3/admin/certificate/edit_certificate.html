@@ -1,0 +1,76 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li><a href="{:url('certificate/index')}">证书列表</a></li>
+        <li class="active"><a href="#}">编辑证书</a></li>
+    </ul>
+
+    <div class="wrap js-check-wrap">
+        <form class="form-horizontal" action="{:url('certificate/edit_certificate_post')}" method="post"
+              enctype="multipart/form-data">
+            <input name="id" type="hidden" value="{$certificate.id|default=''}">
+            <div class="form-group">
+                <label>备注信息</label>
+                <input type="text" class="form-control" name="mark" id="mark" placeholder="请输入备注信息"
+                       value="{$certificate.mark|default=''}">
+            </div>
+            <div class="form-group">
+                <label>用户 <i>*不选择默认公有</i> </label>
+                <select name="user_id" class="form-control selectuser">
+                    <option value="1">无</option>
+                    <foreach name="userAll" id="val">
+                        <option value="{$val.id}">{$val.user_nickname}</option>
+                    </foreach>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Team ID</label>
+                <input type="text" class="form-control" name="team_id" id="team_id" placeholder="请输入Team ID"
+                       value="{$certificate.team_id|default=''}">
+            </div>
+            <div class="form-group">
+                <label>Iss</label>
+                <input type="text" class="form-control" name="iss" id="iss" placeholder="请输入Iss"
+                       value="{$certificate.iss|default=''}">
+            </div>
+            <div class="form-group">
+                <label>Kid</label>
+                <input type="text" class="form-control" name="kid" id="kid" placeholder="请输入Kid"
+                       value="{$certificate.kid|default=''}">
+            </div>
+            <div class="form-group">
+                <label>Tid</label>
+                <input type="text" class="form-control" name="tid" id="tid" placeholder="请输入与Tid"
+                       value="{$certificate.tid|default=''}">
+            </div>
+            <div class="form-group">
+                <label>P12 密码</label>
+                <input type="text" class="form-control" name="p12_pwd" id="p12_pwd" placeholder="请输入P12密码"
+                       value="{$certificate.p12_pwd|default=''}">
+            </div>
+
+            <div class="form-group">
+                <label>P12文件上传</label>
+                <input type="file" id="p12_file" name="p12_file">
+                <p class="help-block">请上传P12文件</p>
+            </div>
+
+            <div class="form-group">
+                <label>P8文件上传</label>
+                <input type="file" id="p8_file" name="p8_file">
+                <p class="help-block">请上传P8文件</p>
+            </div>
+            <button type="submit" class="btn btn-default">保存</button>
+        </form>
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script src="__STATIC__/js/admin.js"></script>
+<script type="text/javascript">
+    $('.selectuser').val({$certificate.user_id});
+</script>
+</body>
+</html>

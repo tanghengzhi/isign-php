@@ -1,0 +1,111 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:url('app/index')}">{:lang('ADMIN_USER_INDEX')}</a></li>
+        <!-- <li><a href="{:url('app/add')}">{:lang('ADMIN_USER_ADD')}</a></li> -->
+    </ul>
+    <form class="well form-inline margin-top-20" method="post" action="{:url('App/index')}">
+        应用名字:
+        <input type="text" class="form-control" name="name" style="width: 222px;" value="{:input('request.name/s','')}"
+               placeholder="请输入应用名称">
+
+        应用包名:
+        <input type="text" class="form-control" name="bundle" style="width: 222px;"
+               value="{:input('request.bundle/s','')}" placeholder="请输入应用包名">
+        应用类型:
+        <select name="type" class="select-type form-control">
+            <option value="0">无</option>
+            <option value="2">内测分发</option>
+            <option value="1">超级签名</option>
+        </select>
+        <input type="submit" class="btn btn-primary" value="搜索"/>
+        <a class="btn btn-danger" href="{:url('App/index')}">清空</a>
+    </form>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th width="50">ID</th>
+            <th>发布人</th>
+            <th>应用</th>
+            <th>应用名字</th>
+            <th>复制地址</th>
+            <th>应用版本</th>
+            <th>应用大小</th>
+            <th>应用包名</th>
+            <th>应用类型</th>
+            <th>应用发布时间</th>
+            <th>状态</th>
+            <th width="130">{:lang('ACTIONS')}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <foreach name="app" item="vo">
+
+            <tr>
+                <td>{$vo.id}</td>
+                <td>{$vo.user_nickname}</td>
+                <td>
+                    <img width="30" src="{$vo.img}">
+                </td>
+                <td>{$vo.name}</td>
+                <td><a class="bogo-copy-url{$vo.id}" onclick="clickCopyUrl('{$vo.id}')" data-clipboard-text="{$vo.url}">点击复制</a>
+                </td>
+                <td>{$vo.version}</td>
+                <td>{$vo.big|default='0'}M</td>
+                <td>{$vo.bundle}</td>
+                <td>
+                    <if condition="$vo['type'] eq 1">
+                        <font color="#cccccc" class="fa fa-apple">&nbsp;&nbsp;IOS
+                        <if condition="$vo.is_open_super_sign eq 1">(超级签名)</if>
+                        </font>
+                        <else/>
+                        <font color="#cccccc" class="fa fa-android">&nbsp;&nbsp;安卓</font>
+                    </if>
+                </td>
+                <td>{:date('Y-m-d H:i:s',$vo['addtime'])}</td>
+                <td>
+                    <if condition="$vo['status'] eq 1">
+                        <font color="#cccccc">正常</font>
+                        <elseif condition="$vo['status'] eq 2"/>
+                        <font color="#cccccc">审核中</font>
+                        <elseif condition="$vo['status'] eq 3"/>
+                        <font color="#cccccc">已删除</font>
+                        <elseif condition="$vo['status'] eq 4"/>
+                        <font color="#cccccc">官方删除</font>
+                    </if>
+                </td>
+                <td>
+                    <a href="/{$vo.er_logo}" target="view_window">打开链接</a>
+                    <br/>
+
+                    <a href='{:url("app/edit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>
+                    <br/>
+                    <if condition="$vo['status'] eq 1">
+                        <a href='{:url("app/delete",array("id"=>$vo["id"]))}'>禁用</a>
+                        <elseif condition="$vo['status'] eq 4"/>
+                        <a href='{:url("app/edit_app_status",array("id"=>$vo["id"],"status"=>1))}'>启用</a>
+                        </else>
+                    </if>
+                    <br/>
+                    <a class="js-ajax-delete"
+                       href="{:url('app/delete_file',array('id'=>$vo['id']))}">{:lang('DELETE')}</a>
+                </td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+    <div class="pagination">{$page}</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script src="__STATIC__/js/admin.js"></script>
+<script type="text/javascript">
+    function clickCopyUrl(id) {
+        new ClipboardJS('.bogo-copy-url' + id);
+    }
+
+    $('.select-type').val({:input('request.type/s','')});
+</script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页 {$site_info.site_name|default=''}</title>
+    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
+    <meta name="description" content="{$site_info.site_seo_description|default=''}">
+    <include file="public@head"/>
+
+    <link href="__TMPL__/public/assets/simpleboot3/themes/simpleboot3/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="__STATIC__/js/layui/css/layui.css" media="all">
+    <link href="__TMPL__/public/assets/css/tube.css" rel="stylesheet">
+    <link href="__TMPL__/public/assets/css/posted.css" rel="stylesheet">
+
+</head>
+<body class="body-white" style="background: #ECEEEE;">
+
+    
+    <!--  我的应用右侧 概述 -->
+   
+        <!--     账户资料 -->
+        
+        <style type="text/css">
+            .all-top{
+                margin-top: 35px;
+                margin-bottom: 20px;
+                font-size: 18px;
+                color: #666;
+                margin-left: 1%;
+            }
+            .all-top-c{
+                color: #3BCDAE;
+            }
+        </style>
+        <!--     账户资料 -->
+        <div class="all-top">
+            <p>超级签名应用 > <span class="all-top-c">超级签名应用</span></p>
+        </div>
+        <div class="col-sm-12   pad-left_right ">
+            <div class="box_card supindex-right-top" style="">
+                <p class="supindex-right-top-text">公有池剩余下载数量</p>
+                <div class="supindex-right-bottom">
+                    <div class="supindex-right-bottom-a">
+                        <p class="sup-index-public-text">{$sup_down_public}次</p>
+                        <p class="sup-index-public-text2">共{$public_all}次</p>
+                    </div>
+                    <div class="supindex-right-bottom-b">
+                        <div class="supindex-right-bottom-b-a"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box_card supindex-right-top" style="margin-left: 5%;">
+                <p class="supindex-right-top-text">私有池剩余下载数量</p>
+                <div class="supindex-right-bottom">
+                    <div class="supindex-right-bottom-a">
+                        <p class="sup-index-public-textp">{$sup_down_prive}次</p>
+                        <p class="sup-index-public-text2">共{$prive_all}次</p>
+                    </div>
+                    <div class="supindex-right-bottom-b">
+                        <div class="supindex-right-bottom-b-b"></div>
+                    </div>
+                </div>
+            </div>
+
+            <form action="{:url('Portal/posted/supindex')}" method="post">
+            <div class="box_card secou" >
+                    <input type="text" name="key" value="{$key}" placeholder="搜索应用名称">
+                    <img width="20" height="20" src="__TMPL__/public/assets/images/seach.png">
+            </div>
+            <div class="secou-button">
+                <input type="submit" name="" value="搜索">
+            </div>
+                
+            </form>
+            <div class="secou-fleft" onclick="location.href='/portal/posted/supernumber'">
+                购买设备
+            </div>
+            <div class="secou-right" onclick="location.href='/portal/index/supposted'">
+                发布应用
+            </div>
+            
+            <div class="col-sm-12 tube-zil pad-left_right">&nbsp;</div>
+            <div class="col-sm-12 tube-panel panel-default pad-left_right box_card tube-panel-bottom">
+                <table class="table">
+                    <thead style="">
+                    <tr>
+                        <th>应用名称</th>
+                        <th>版本</th>
+                        <th>下载方式</th>
+                        <th>下载渠道</th>
+                        <th>更新时间</th>
+                        <th>扣量信息</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <foreach name="assets" id="v">
+                        <tr>
+                            <th scope="row">
+                                <div class="col-sm-3 pad-left_right tube-row">
+                                    <img src="{$v.img}" class="headicon">
+                                </div>
+                                <div class="col-sm-8 pad-left_right">
+                                    <div class="col-sm-12 pad-left_right tube-yingy">{$v.name}</div>
+                                    <div class="col-sm-12 pad-left_right tube-ying-t ">
+                                        <if condition="$v.type neq '0'">
+                                            <i class="fa fa-apple"></i>&nbsp;&nbsp;苹果
+                                            <else/>
+                                            <i class="fa fa-android"></i>&nbsp;&nbsp;安卓
+                                        </if>
+                                    </div>
+                                </div>
+                            </th>
+                            <td>{$v.version}</td>
+                            <!-- <td class="erweim" date-url="{$v.er_logo}">{$v.url} <i class="fa fa-qrcode " aria-hidden="true"></i><div  class="erweidw" ><img src="{$v.er_img}"/></div>  </td>-->
+                            <td class="erweim" date-url="{:getsite()}/{$v.er_logo}">{:getsite()}/{$v.er_logo} <i
+                                    class="fa fa-qrcode " aria-hidden="true"></i>
+                                <div class="erweidw"></div>
+                            </td>
+                            <td>
+                                <if condition="$v.download_type eq 1">公有池<else/>私有池</if>
+                            </td>
+                            <td>{$v['addtime'] | date="Y-m-d",###}</td>
+                            <td><a style="color:#0097FF;text-decoration: none;" href="{:cmf_url('portal/posted/deduction',array('appid'=>$v['id']))}">查看详情</a></td>
+                            <td class="tube-tiz">
+                                <a class="bogo-global-btn" style="background: #0095FC;" 
+                                   href="{:cmf_url('user/tube/sup_details',array('id'=>$v['id'],'bundle'=>$v['bundle'],'type'=>$v['type']))}">详情</a>
+                                <a href="{:cmf_url('user/tube/sup_editor',array('id'=>$v['id']))}"
+                                   class="bogo-global-btn">编辑</a>
+                                <if condition="$v.only_download eq 1">
+                                    <a id="dow-link" data-id="{$v.id}" date-url="{:getsite()}/{$v.er_logo}" class="bogo-global-btn">生成唯一链接</a>
+                                </if>
+                            </td>
+                            
+                        </tr>
+                    </foreach>
+                    
+                  
+                    
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    
+    <input class="sup-textarea" type="hidden" value="">
+
+</body>
+<script src="__TMPL__/public/assets/simpleboot3/bootstrap/js/bootstrap.min.js"></script>
+<script src="__STATIC__/js/layui/layui.all.js"></script>
+
+<script type="text/javascript">
+
+    $('.supindex-right-bottom-b-b').css('width',{$prive_y}+'%');
+    $('.supindex-right-bottom-b-a').css('width',{$public_y}+'%');
+    $('#dow-link').click(function(){
+        var appid = $(this).attr('data-id');
+        var url = $(this).attr('date-url');
+        //date-url
+        $.ajax({
+            url: '/portal/posted/download_link',
+            type: 'POST', //GET
+            async: true,    //或false,是否异步
+            data: {
+                appid: appid,
+                url: url,
+            },
+            timeout: 5000,    //超时时间
+            dataType: 'json',    //返回的数据格式：json/xml/html/script/jsonp/text
+            /*beforeSend: function (xhr) {
+                log(xhr)
+                log('发送前')
+            },*/
+            success: function (data) {
+
+                log(data)
+                layer.open({
+                    type: 1
+                    //,offset: type //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+                    //,id: 'layerDemo' //防止重复弹出
+                    ,content: '<div style="padding: 20px 10px;">'+ data.url +'</div>'
+                    ,btn: '关闭'
+                    ,btnAlign: 'c' //按钮居中
+                    ,shade: 0 //不显示遮罩
+                    ,yes: function(){
+                      layer.closeAll();
+                    }
+                });
+
+            },
+            error: function (xhr, textStatus) {
+                log('错误')
+                //log(xhr)
+                //log(textStatus)
+            },
+            complete: function () {
+                log('结束')
+            }
+        });
+    })
+
+    
+
+</script>
+</html>
+

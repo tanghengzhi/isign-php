@@ -1,0 +1,42 @@
+<!--  我的应用左侧 -->
+<div class="col-sm-2 pad-left_right tube-left1">
+    <a href="{:cmf_url('user/tube/index')}">
+        <div class="col-sm-12 tube-lgs tube-bgs  tube-bg"><i class="fa fa-home"></i><span>概述</span></div>
+    </a>
+    <a href="/user/profile/center.html">
+        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa fa-cog"></i><span>个人中心</span></div>
+    </a>
+    <a href="/portal/index/posted">
+        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa fa-plus-circle"></i><span>发布应用</span></div>
+    </a>
+
+    <!--todo 暂时没想好什么作用-->
+<!--    <a href="/user/tube/editor/id/0.html">-->
+<!--        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa fa-plus-circle"></i><span>发布空应用</span></div>-->
+<!--    </a>-->
+    <div class="col-sm-12 tube-bor"></div>
+    <div class="col-sm-15 tube-hei pad-left_right">
+        <foreach name="zuoc" id="vo">
+            <a href="{:cmf_url('user/tube/details',array('id'=>$vo['id'],'bundle'=>$vo['bundle'],'type'=>$vo['type']))}">
+                <div class="col-sm-20 tube-type pad-left_right tube-bgs">
+                    <div class="col-sm-3 tube-img">
+                        <img src="{$vo.img}" class="headicon">
+                    </div>
+                    <div class="col-sm-9 tube-title  pad-left_right">
+                        <div class="col-sm-12 tube-title1">{$vo.name}</div>
+                        <div class="col-sm-12 tube-title2">
+                            <if condition="$vo['type'] neq '0'">
+                                <i class="fa fa-apple"></i>
+                                <span class="details-type-p2-2"> iOS 应用</span>
+                                <else/>
+                                <i class="fa fa-android"></i>
+                                <span class="details-type-p2-2"> Android 应用</span>
+                            </if>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </foreach>
+
+    </div>
+</div>

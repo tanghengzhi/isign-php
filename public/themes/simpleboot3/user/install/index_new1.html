@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <title>{$result.name} 下载</title>
+    <link href="/themes/simpleboot3/public/assets/css/install.css" rel="stylesheet">
+    <link href="/themes/simpleboot3/public/assets/simpleboot3/font-awesome/4.4.0/css/font-awesome.min.css"
+          rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="install">
+    <div class="install-top"><img src="{$result.img}"/></div>
+    <div class="install-title">
+        <if condition="$result['type'] eq '1'">
+            <i class="fa fa-apple"></i>
+            <else/>
+            <i class="fa fa-android"></i>
+        </if>
+        <span class="install-details">{$result.name}</span>
+        <!-- <span class="install-details2">内测版</span> -->
+    </div>
+</div>
+<div class="install2">
+    <span>版本 &nbsp;{$result.version}</span>
+    <span>大小 &nbsp;{$result.big}MB</span>
+</div>
+<div class="install2">更新时间：{$result['addtime'] | date="Y-m-d",###}</div>
+
+
+<div class="install4">
+    <input type="hidden" name="id" id="id" value="{$result.id}"/>
+    <if condition="$result['type'] eq '1'">
+        <!--<a href="itms-services://?action=download-manifest&url=https://down.svcode.net/down.plist" date-url="itms-services://?action=download-manifest&url={$ios}">点 击 安 装</a>-->
+        <!--<a href="itms-services://?action=download-manifest&url={$ios}" date-url="itms-services://?action=download-manifest&url={$ios}">点 击 安 装</a>-->
+        <a id="btn-install-app" date-url="itms-services://?action=download-manifest&url={$ios}">点 击 安 装</a>
+        <a href="itms-services://?action=download-manifest&url={$ios}" style="display:none;" id="iosdownc">点 击 安 装</a>
+        <else/>
+        <a id="btn-install-app" date-url="{$result.url}">点 击 安 装</a>
+        <a href="{$result.url}" style="display:none;" id="iosdownc">点 击 安 装</a>
+    </if>
+
+</div>
+
+
+<div class="install3 erweim" date-url="{$result.er_logo}">
+    <div class="erweidws"></div>
+</div>
+
+<div class="install5">或者用手机扫描二维码安装</div>
+<if condition="!empty($result['instructions'])">
+    <div class="installinfo">
+        <h2>版本更新说明</h2>
+        <p>{$result.instructions}</p>
+    </div>
+</if>
+<if condition="!empty($result['introduce'])">
+    <div class="installinfo">
+        <h2>应用介绍</h2>
+        <p>{$result.introduce}</p>
+    </div>
+</if>
+
+<div class="install-report">
+    <a id="a-report">举报应用</a>
+    <a style="margin-left: 20px" id="a-disclaimer">免责声明</a>
+</div>
+<script src="/themes/simpleboot3/public/assets/js/jquery-1.10.2.min.js"></script>
+<script src="/themes/simpleboot3/public/assets/js/slippry.min.js"></script>
+<script src="/themes/simpleboot3/public/assets/js/jquery.qrcode.min.js"></script>
+<if condition="$result['status'] neq 1">
+    <script type="text/javascript">
+        $("body").html('<div class="install0" style="font-size:22px;text-align:center;width:100vw;height:100vh;padding:0;margin:0;"><div style="padding:20px;">该应用被拒绝或已删除</div></div>');
+    </script>
+</if>
+
+<script src="/static/js/layer/layer.js"></script>
+<script>
+    $(function () {
+
+        $('#a-report').click(function () {
+            layer.open({
+                type: 2,
+                title: '举报不良应用',
+                shadeClose: true,
+                shade: 0.8,
+                area: ['380px', '80%'],
+                content: '/user/install/report?app_id=' + '{$result.id}' //iframe的url
+            });
+        });
+
+        $('#a-disclaimer').click(function () {
+            window.location.href = '/user/install/disclaimer'
+        });
+
+        var url = $(".erweim").attr("date-url");
+        $(".erweidws").qrcode({
+            render: "canvas", //table方式
+            width: 140, //宽度
+            height: 140, //高度
+            text: url //任意内容
+        });
+
+        var is_wx = '{$is_wx|default=false}';
+        var is_qq = '{$is_qq|default=false}';
+        var is_ios = '{$is_ios|default=0}';
+        var app_type = '{$result.type|default=0}';
+        var is_super_sign = '{$result.is_super_sign|default=0}';
+        var app_id = '{$result.id|default=0}';
+
+        $(".install4 a#btn-install-app").click(function () {
+            if (is_wx || is_qq) {
+                layer.confirm('如果您使用微信或QQ打开的本链接，请点击右上角按钮，然后在弹出的菜单中，点击在浏览器中打开，即可安装', {
+                    btn: ['我知道'] //按钮
+                });
+                return;
+            }
+
+            if (app_type == 0 && is_ios != 1) {
+                layer.confirm('Android应用，需要在Android设备上下载', {
+                    btn: ['我知道'] //按钮
+                });
+                return;
+            }
+            if (app_type == 1 && is_ios != 0) {
+                layer.confirm('IOS应用，需要在IOS设备上下载', {
+                    btn: ['我知道'] //按钮
+                });
+                return;
+            }
+
+            // if (app_type == 1 && is_ios == 0 && is_super_sign) {
+            //     //下载描述文件
+            //     window.location.href = "/user/install/getudid_mobileconfig?id=" + app_id;
+            //     return;
+            // }
+
+            var jurl = $(this).attr("date-url");
+            $(this).html('正在安装，返回桌面查看进度');
+            //window.location.href = url;
+            var id = $("#id").val();
+            $.ajax({
+                type: 'POST',
+                url: "{:cmf_url('user/install/buts')}",
+                data: {id: id},
+                success: function (data) {
+                    //alert(data);
+
+                    if (data == '1') {
+                        //alert('asdf');
+                        //document.getElementById("iosdownc").click();
+                        $("#iosdownc")[0].click();
+                        //window.location = $("#iosdownc")[0];
+                        //return false;
+                        //console.log(url);
+                        //console.log('1');
+                        //window.location.href=jurl;
+                    } else if (data == '3') {
+                        //console.log('3');
+                        alert("下载失败，可用下载点数不足");
+                        return false;
+                        layer.msg('下载失败，可用下载点数不足', {icon: 2, time: 1000});
+                    } else {
+                        alert("下载文件失败，请联系管理员");
+                        return false;
+                        //console.log('error');
+                        layer.msg('下载文件失败，请联系管理员', {icon: 2, time: 1000});
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert('error');
+                }
+            });
+        })
+    });
+</script>
+</body>
+
+</html>

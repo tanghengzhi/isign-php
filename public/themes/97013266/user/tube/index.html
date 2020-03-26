@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页 {$site_info.site_name|default=''}</title>
+    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
+    <meta name="description" content="{$site_info.site_seo_description|default=''}">
+    <include file="public@head"/>
+
+    <link href="__TMPL__/public/assets/simpleboot3/themes/simpleboot3/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="__STATIC__/js/layui/css/layui.css" media="all">
+    <link href="__TMPL__/public/assets/css/tube.css" rel="stylesheet">
+
+    <hook name="before_head_end"/>
+</head>
+<body class="body-white" style="background: #ECEEEE;">
+<include file="public@nav_new"/>
+
+<div class="tube_left pad-left_right">
+    <!--  我的应用左侧 -->
+    <include file="public@tube"/>
+
+    <!--  我的应用右侧 概述 -->
+    <div class="col-sm-10 pad-left_right tube-right">
+        <!--     账户资料 -->
+        <div class="col-sm-12 tube-zil pad-left_right">账户资料</div>
+        <div class="col-sm-12 tube-user  pad-left_right ">
+
+            <div class="col-sm-4 tube_user_info pad-left_right box_card">
+                <div class="col-sm-4 tube-down-info pad-left_right">
+                    <if condition="empty($user['avatar'])">
+                        <img src="__TMPL__/public/assets/images/headicon.png" class="headicon">
+                        <else/>
+                        <img src="{$user['avatar']}" onerror='this.src="__TMPL__/public/assets/images/head.png"' class="headicon" width="100"/>
+                    </if>
+                </div>
+                <div class="col-sm-8 tube-user-auth-info pad-left_right">
+                    <div class="col-sm-12 tube-user-name">{$user['user_nickname']}</div>
+                    <div class="col-sm-12 tube-user-ren">
+                        <i class="glyphicon glyphicon-erase boot-font"></i>
+                        <span class="boot-text">{$status}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 tube-down-info  pad-left_right box_card">
+                <div class="col-sm-4 pad-left_right">
+                    <img width="100" height="100" src="__TMPL__/public/assets/images/user_na.png">
+                </div>
+                <div class="col-sm-8 ">
+                    <div class="col-sm-12 tube-yu">用户总下载数量</div>
+                    <div class="col-sm-12 tube-yue"><span>{$user['downloads']}</span></div>
+                    <div class="col-sm-12 tube-chong">
+                        <!-- <a href="">充值</a> -->
+                        <button id="btn-recharge" data-method="notice" class="bogo-recharge-btn">充值</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 tube-down-info tube-bord pad-left_right box_card">
+                <div class="col-sm-4 pad-left_right">
+                    <img width="100" height="100" src="__TMPL__/public/assets/images/download.png">
+                </div>
+                <div class="col-sm-8">
+                    <div class="col-sm-12 tube-yu">已下载的次数</div>
+                    <div class="col-sm-12 tube-yue">总下载 ：<span>{$cishu['gong']}</span> 次</div>
+                    <div class="col-sm-12 tube-chong">今日下载：<span>{$cishu['day']}</span> 次</div>
+                </div>
+            </div>
+            <div class="col-sm-12 tube-zil pad-left_right">常用应用</div>
+            <div class="col-sm-12 tube-panel panel-default pad-left_right box_card tube-panel-bottom">
+                <table class="table">
+                    <thead style="">
+                    <tr>
+                        <th>应用名称</th>
+                        <th>版本</th>
+                        <th>下载方式</th>
+                        <th>更新时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <foreach name="assets" id="v">
+                        <tr>
+                            <th scope="row">
+                                <div class="col-sm-3 pad-left_right tube-row">
+                                    <img src="{$v.img}" class="headicon">
+                                </div>
+                                <div class="col-sm-8 pad-left_right">
+                                    <div class="col-sm-12 pad-left_right tube-yingy">{$v.name}</div>
+                                    <div class="col-sm-12 pad-left_right tube-ying-t ">
+                                        <if condition="$v.type neq '0'">
+                                            <i class="fa fa-apple"></i>&nbsp;&nbsp;苹果
+                                            <else/>
+                                            <i class="fa fa-android"></i>&nbsp;&nbsp;安卓
+                                        </if>
+                                    </div>
+                                </div>
+                            </th>
+                            <td>{$v.version}</td>
+                            <!-- <td class="erweim" date-url="{$v.er_logo}">{$v.url} <i class="fa fa-qrcode " aria-hidden="true"></i><div  class="erweidw" ><img src="{$v.er_img}"/></div>  </td>-->
+                            <td class="erweim" date-url="{:getsite()}/{$v.er_logo}">{:getsite()}/{$v.er_logo} <i
+                                    class="fa fa-qrcode " aria-hidden="true"></i>
+                                <div class="erweidw"></div>
+                            </td>
+                            <td>{$v['addtime'] | date="Y-m-d",###}</td>
+                            <td class="tube-tiz">
+                                <a class="bogo-global-btn" style="background: #0095FC;" 
+                                   href="{:cmf_url('user/tube/details',array('id'=>$v['id'],'bundle'=>$v['bundle'],'type'=>$v['type']))}">详情</a>
+                                <a href="{:cmf_url('user/tube/editor',array('id'=>$v['id']))}"
+                                   class="bogo-global-btn">编辑</a></td>
+                        </tr>
+                    </foreach>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <include file="public@scripts"/>
+        <script src="__TMPL__/public/assets/js/slippry.min.js"></script>
+        <script src="__STATIC__/js/layui/layui.js"></script>
+
+        <script>
+            $(function () {
+
+                $(".erweim").click(function () {
+                    var url = $(this).attr("date-url");
+                    $(".erweim").find("div").html("");
+                    $(this).find("div").qrcode({
+                        render: "canvas", //table方式
+                        width: 80, //宽度
+                        height: 80, //高度
+                        text: url //任意内容
+                    });
+                    $(this).find("div").toggle();
+                });
+
+                $("#home-slider").slippry({
+                    transition: 'fade',
+                    useCSS: true,
+                    captions: false,
+                    speed: 1000,
+                    pause: 3000,
+                    auto: true,
+                    preload: 'visible'
+                });
+                $("#home-slider").show();
+            });
+        </script>
+        <script>
+            layui.use('layer', function () { //独立版的layer无需执行这一句
+                var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+
+                //触发事件
+                var active = {
+                    notice: function () {
+                        //示范一个公告层
+                        layer.open({
+                            type: 1
+                            , title: false //不显示标题栏
+                            , closeBtn: true
+                            , area: '750px;'
+                            , shade: 0.8
+                            , id: 'LAY_layuipro' //设定一个id，防止重复弹出
+                            // ,btn: ['火速围观', '残忍拒绝']
+                            // ,btnAlign: 'c'
+                            , moveType: 1 //拖拽模式，0或者1
+                            , content: $("#buybox")
+                            , success: function (layero) {
+                                // var btn = layero.find('.layui-layer-btn');
+                                // btn.find('.layui-layer-btn0').attr({
+                                //   href: 'http://www.layui.com/'
+                                //   ,target: '_blank'
+                                // });
+                            }
+                        });
+                    }
+
+                };
+
+                $('#btn-recharge').on('click', function () {
+                    var othis = $(this), method = othis.data('method');
+                    active[method] ? active[method].call(this, othis) : '';
+                });
+
+            });
+        </script>
+        <hook name="before_body_end"/>
+</body>
+<style media="screen">
+    .pricing-dialog.dialog .packages {
+        /* display:-webkit-box;
+        display:-ms-flexbox; */
+        display: block;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 32px;
+        zoom: 1;
+        overflow: hidden;
+    }
+
+    .pricing-dialog.dialog .package-item {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        border-right: 1px solid transparent;
+        padding: 8px 48px;
+        text-align: center;
+        position: relative;
+        float: left;
+        margin-bottom: 20px;
+    }
+
+    .pricing-dialog.dialog .package-item {
+        border-right-color: #DBE0E3;
+    }
+
+    .pricing-dialog.dialog .package-item.threeaction {
+        border-right: 0;
+    }
+
+    .pricing-dialog.dialog .package-item .money {
+        font-size: 30px;
+        color: #F8BA0B;
+        line-height: 42px
+    }
+
+    .pricing-dialog.dialog .package-item .times {
+        font-size: 24px;
+        line-height: 28px;
+        color: #4F5156
+    }
+
+    .pricing-dialog.dialog .package-item .unit {
+        font-size: 14px;
+        color: #869096
+    }
+
+    .pricing-dialog.dialog .package-item .package-content {
+        margin-bottom: 0
+    }
+
+    .text-gift {
+        height: 22px;
+        color: #f00;
+    }
+
+    .pricing-dialog.dialog .package-actions .btn {
+        background-color: #fff;
+        border: 1px solid #B6BDC1;
+        border-radius: 30px;
+        min-width: 120px;
+        height: 40px
+    }
+
+    .pricing-dialog.dialog .package-actions .btn:hover {
+        color: #fff;
+        background-color: #F8BA0B;
+        border-color: #F8BA0B
+    }
+
+    .pricing-dialog.dialog .package-loading {
+        width: 100%
+    }
+
+    .pricing-dialog.dialog .package-dialog-footer {
+        color: #333;
+        clear: both;
+    }
+
+    .pricing-dialog.dialog .package-dialog-footer a {
+        color: #1AA79A;
+        text-decoration: none
+    }
+
+    .pricing-dialog.dialog .package-dialog-footer a:hover {
+        text-decoration: none
+    }
+
+    .pricing-dialog.dialog .arraw-badge {
+        position: absolute;
+        background-color: #F87335;
+        color: #fff;
+        left: -1px;
+        top: 0;
+        width: 30px;
+        height: 40px;
+        text-align: center;
+        padding-top: 5px;
+        font-weight: bold;
+    }
+
+    .pricing-dialog.dialog .arraw-badge .arraw {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        border: 15px solid transparent;
+        border-bottom: 10px solid #fff;
+        border-top: none;
+        position: absolute;
+        bottom: 0;
+        left: 0
+    }
+
+</style>
+<div id="buybox" class="pricing-dialog dialog"
+     style="display:none;padding: 50px; line-height: 22px; background-color: #fff; color: #333; font-weight: 300;border-radius:5px;">
+    <h2 style="text-align:center;line-height:3;">购买下载次数包</h2>
+    <div class="packages">
+        <foreach name="buylist" id="v">
+            <div class="package-item ng-scope" ng-repeat="package in packages track by $index">
+                <if $v.recommend gt 0>
+                    <div class="arraw-badge ng-scope">
+                        <span>荐</span>
+                        <span class="arraw"></span>
+                    </div>
+                </if>
+                <div class="package-content">
+                    <div class="money ng-binding">￥{$v.coin}</div>
+                    <div class="times ng-binding">{$v.download}</div>
+                    <div class="unit">累计下载次数</div>
+                    <div class="text-gift">
+                        <if $v.gift gt 0>
+                            赠 <span class="ng-binding">{$v.gift}</span> 次
+                        </if>
+                    </div>
+                </div>
+                <div class="package-actions">
+                    <button type="button" class="btn" onclick="buy({$v.id},{$v.coin},{$v.download},{$v.gift})">购买
+                    </button>
+                </div>
+            </div>
+        </foreach>
+    </div>
+    <div class="package-dialog-footer">
+        <p class="text-center">
+            企业客户需要包年方案，私有定制方案，请联系QQ：
+            <a href="http://wpa.qq.com/msgrd?v=3&uin={$config.service_qq}&site=qq&menu=yes">
+                {$config.service_qq}
+            </a>
+        </p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $(".package-item:eq(2),.package-item:eq(5),.package-item:eq(8)").addClass("threeaction");
+    });
+
+    function GetDateNow() {
+        var vNow = new Date();
+        var sNow = "";
+        sNow += String(vNow.getFullYear());
+        sNow += String(vNow.getMonth() + 1);
+        sNow += String(vNow.getDate());
+        sNow += String(vNow.getHours());
+        sNow += String(vNow.getMinutes());
+        sNow += String(vNow.getSeconds());
+        sNow += String(vNow.getMilliseconds());
+        return sNow;
+    }
+
+    function buy(did, price, down, gift) {
+        //log(GetDateNow());return false;
+        $.ajax({
+            url: '/user/pay/',
+            type: 'POST', //GET
+            async: true,    //或false,是否异步
+            data: {
+                download_id: did,
+                download_coin: price,
+                download_download: down,
+                d_gift: gift,
+                type: '支付宝',
+                order_id: GetDateNow()
+            },
+            timeout: 5000,    //超时时间
+            dataType: 'html',    //返回的数据格式：json/xml/html/script/jsonp/text
+            beforeSend: function (xhr) {
+                log(xhr)
+                log('发送前')
+            },
+            success: function (data, textStatus, jqXHR) {
+
+                $("body").append(data);
+                log(data)
+                //log(textStatus)
+                //log(jqXHR)
+            },
+            error: function (xhr, textStatus) {
+                log('错误')
+                //log(xhr)
+                //log(textStatus)
+            },
+            complete: function () {
+                log('结束')
+            }
+        });
+    }
+</script>
+</html>

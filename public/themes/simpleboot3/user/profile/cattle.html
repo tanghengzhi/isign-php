@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{$user_login} - 七牛配置</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="">
+    <include file="public@head"/>
+</head>
+<body class="body-white" id="top">
+<include file="public@nav"/>
+
+<div class="container tc-main  pad-left_right">
+    <div class="col-md-12 pad-left_right">
+        <div class="col-md-2 pad-left_right">
+            <include file="public@usernav"/>
+        </div>
+        <div class="col-md-10">
+            <div class="tabs">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#one" data-toggle="tab"><i class="glyphicon glyphicon-cog"></i> 七牛配置</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="one">
+                        <br>
+                        <form class="js-ajax-form" action="{:url('user/profile/cattle_upd')}" method="post">
+                            <div class="form-group">
+                                <label for="input-user_accessKey">accessKey密钥</label>
+                                <input type="text" class="form-control" id="input-user_accessKey"
+                                       placeholder="accessKey密钥" name="accessKey" value="{$user.accessKey}">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-user_secretKey">secretKey密钥</label>
+                                <input type="text" class="form-control" id="input-user_secretKey"
+                                       placeholder="secretKey密钥" name="secretKey" value="{$user.secretKey}">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-user_bucket">七牛储存外链默认域名 ( <span style="color:#f42b2b;font-size:12px;">例如： p2ftrp6p5.bkt.clouddn.com</span>
+                                    )</label>
+                                <input class="form-control" type="text" id="input-user_domain" placeholder="七牛储存外链默认域名"
+                                       name="domain" value="{$user.domain}">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-user_bucket">七牛储存名称</label>
+                                <input class="form-control" type="text" id="input-user_bucket" placeholder="七牛储存名称"
+                                       name="bucket" value="{$user.bucket}">
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">保存</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <include file="public@footer"/>
+</div>
+<!-- /container -->
+<include file="public@scripts"/>
+</body>
+</html>

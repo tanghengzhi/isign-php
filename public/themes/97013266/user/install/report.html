@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>举报</title>
+
+    <link href="__TMPL__/public/assets/simpleboot3/themes/simpleboot3/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .content {
+            background: white;
+            height: 100%;
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 10px;
+        }
+
+        .content-from {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <div style="font-size: 1rem">
+        <div style="padding: 10px">
+            <span>作为一个第三方内测分发平台，我们一直致力于打击违规应用，保护知识产权。</span>
+            <span>非常感谢您的举报，我们会第一时间安排专人处理您的举报问题</span>
+        </div>
+    </div>
+    <div class="content-from">
+        <form action="{:url('/user/install/add_report_post')}" method="post" enctype="multipart/form-data">
+            <input hidden value="{$app_id}" name="app_id">
+            <div class="form-group">
+                <label for="exampleInputEmail1">您的邮箱地址</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">举报原因</label>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="reason" id="optionsRadios1" value="盗版" checked>
+                        盗版
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="reason" id="optionsRadios2" value="色情">
+                        色情
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="reason" id="optionsRadios3" value="欺诈" >
+                        欺诈
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="reason" id="optionsRadios4" value="其他" >
+                        其他
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">举报内容</label>
+                <input name="content" type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入举报内容">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">上传文件</label>
+                <input name="file" type="file" id="exampleInputFile">
+                <p class="help-block">为了能够更快的处理您的举报信息，建议上传截图或其他相关文件等证据</p>
+            </div>
+
+            <button type="submit" class="btn btn-default">提交</button>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+/**
+ * @Author: JokenLiu <Jason>
+ * @Date:   2018-02-01 15:30:38
+ * @Email:  190646521@qq.com
+ * @Project: Demon
+ * @Filename: install.css
+ * @Last modified by:   Jason
+ * @Last modified time: 2018-03-17 18:52:01
+ * @License: 北京乐维世纪网络科技有限公司开发者协议
+ * @Copyright: DemonLive
+ */
+
+
+@charset "utf-8";
+body {
+    width: 100%;
+    height: 100%;
+    color: #333;
+    font-size: 12px;
+    font-family: arial, "微软雅黑", "宋体", sans-serif;
+}
+
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form {
+    margin: 0;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.install {
+    height: 14em;
+    background: #f0f0f0;
+}
+
+.install-top {
+    width: 6em;
+    height: 6em;
+    margin: 0 auto;
+    padding-top: 2em;
+}
+
+.install-top img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.install-title {
+    height: 4em;
+    text-align: center;
+    font-size: 18px;
+    line-height: 4em;
+}
+
+.install-details {
+    margin-left: 0.5em;
+}
+
+.install-details2 {
+    margin-left: 0.5em;
+    padding: 0.2em 0.5em;
+    background: #f61f7a;
+    color: #fff;
+    border-radius: 0.5em;
+    font-size: 14px;
+}
+
+.install2 {
+    height: 2em;
+    text-align: center;
+    font-size: 16px;
+    line-height: 3em;
+    color: #908f8f;
+}
+
+.install2 span {
+    margin: 0 1em;
+}
+
+.install3 {
+    margin-top: 35px
+}
+
+.erweidws {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.install4 {
+    text-align: center;
+    margin-top: 3em;
+}
+
+.install4 a {
+    padding: 0em 4em;
+    background: #00df96;
+    color: #fff;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 48px;
+    cursor: pointer;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(153, 172, 204, 0.47);
+    box-shadow: 0 2px 4px 0 rgba(153, 172, 204, 0.47);
+    border-radius: 24px;
+}
+
+.install5 {
+    text-align: center;
+    margin-top: 2em;
+    font-size: 14px;
+}
+
+.install0 {
+    background: #313131;
+    color: #b8b8b8;
+    padding: 1em 2em;
+    font-size: 13px;
+}
+
+.installinfo {
+    max-width: 700px;
+    margin: 50px auto;
+    min-height: 100px;
+    line-height: 1.5;
+    font-size: 14px;
+    border-top: #f0f0f0 solid 2px;
+    padding: 20px;
+}
+
+.installinfo h2 {
+    height: 50px;
+    line-height: 50px;
+}
+
+.install-report {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    color: #00df96;
+}

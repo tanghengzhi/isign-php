@@ -1,0 +1,32 @@
+<include file="theme/functions"/>
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap">
+    <ul class="nav nav-tabs">
+        <li>
+            <a href="{:url('theme/fileSetting',['file_id'=>$file_id,'tab'=>'widget'])}">
+                组件设置
+            </a>
+        </li>
+        <li class="active">
+            <a href="{:url('theme/fileSetting',['file_id'=>$file_id,'tab'=>'var'])}">
+                变量设置
+            </a>
+        </li>
+    </ul>
+    <form method="post" class="js-ajax-form  margin-top-20" action="{:url('theme/settingPost')}">
+        <notempty name="file['more']['vars']">
+            {:_parse_vars($file.more.vars,'vars')}
+            <else/>
+            <div>本页面没有设置任何变量</div>
+        </notempty>
+        <div class="form-group" style="display:none;">
+            <input type="hidden" name="id" value="{$file.id}">
+            <button type="submit" class="btn btn-primary js-ajax-submit" id="submit-btn">{:lang('SAVE')}</button>
+        </div>
+    </form>
+</div>
+<include file="theme/scripts"/>
+</body>
+</html>

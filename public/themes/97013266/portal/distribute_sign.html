@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>内测分发 {$site_info.site_name|default=''}</title>
+    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
+    <meta name="description" content="{$site_info.site_seo_description|default=''}">
+    <include file="public@head"/>
+    <link href="__TMPL__/public/assets/css/slippry/slippry.css" rel="stylesheet">
+    <link href="__TMPL__/public/assets/css/sup_sign.css" rel="stylesheet">
+    <link href="/static/js/layui/css/layui.css" rel="stylesheet">
+    <hook name="before_head_end"/>
+    <style>
+        .bogo-content {
+            margin-top: 100px;
+            width: 70% !important;
+        }
+
+        .bogo-title-text {
+            font-size: 2rem;
+        }
+
+        .compare-item:nth-of-type(1)>div{
+            width: 488px;
+            height: 547px;
+            left: -55px;
+            top: -20px;
+            z-index: 1;
+            background: url(/static/images/super_signature_bg_2x.png) 0 0/100% 100% no-repeat;
+            padding-top: 223px;
+            padding-left: 80px;
+        }
+
+        .compare-item:nth-of-type(2)>div{
+            width: 488px;
+            height: 547px;
+            left: 0px;
+            top: -20px;
+            z-index: 1;
+            background: url(/static/images/enterprise_signature_bg_2x.png) 0 0/100% 100% no-repeat;
+            padding-top: 223px;
+            padding-left: 80px;
+        }
+
+        .compare-title {
+            font-family: PingFangSC-Medium;
+            color: #333;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body class="body-white">
+<include file="public@nav"/>
+<div class="sup-banner">
+    <div class="sup-banner-box">
+        <div class="banner-box-top">
+            <h2>IOS内测在线下载</h2>
+            <p>个人开发者账号也能在线下载啦！！！<br/>
+                每台设备下载多个应用，只扣费一次</p>
+            <a href="/portal/posted/supindex">立即体验</a>
+        </div>
+        <img src="__TMPL__/public/assets/images/banner_tu1.png">
+    </div>
+</div>
+<div class="sup-bottom">
+    <div class="sup-bottom-box">
+        <div class="sup-bottom-box-a">
+            <p class="sup-bottom-box-apleft">不一样的 iOS 下载<br/>不一样的优点</p>
+        </div>
+        <div class="sup-bottom-box-a ">
+            <div class="sup-bottom-box-b sup-bottom-box-c">
+                <div class="sup-bottom-box-b-top">
+                    <h4>IOS 在线下载</h4>
+                    <img src="__TMPL__/public/assets/images/chaojiqianming.png">
+                </div>
+                <p>完全满足测试在线下载的需求<br>
+                    只要有网哪里都能下<br/>
+                    同一个账号有100台手机数量<br/>
+                    按设备数量收费</p>
+            </div>
+        </div>
+        <div class="sup-bottom-box-a">
+            <div class="sup-bottom-box-b">
+                <div class="sup-bottom-box-b-top">
+                    <h4>IOS 测试</h4>
+                    <img src="__TMPL__/public/assets/images/chaojiqianming.png">
+                </div>
+                <p>随时随地满足测试需求<br/>
+                    不需要自己添加udid<br/>
+                    全程自动添加<br/>
+                    告别添加udid的烦恼</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<include file="public@footer"/>
+
+<include file="public@scripts"/>
+
+</body>
+<script src="/static/js/layui/layui.all.js"></script>
+
+</html>

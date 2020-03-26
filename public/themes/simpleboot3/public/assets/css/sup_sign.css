@@ -1,0 +1,110 @@
+.sup-banner{
+	width: 100%;
+	height: 570px;
+	overflow: hidden;
+	background:url('/themes/simpleboot3/public/assets/images/banner_bac.png') no-repeat;
+	background-size: 100% 100%;
+	margin-top: 71px;
+
+}
+.sup-banner-box{
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.banner-box-top{
+	float: left;
+	text-align: left;
+	columns: #fff;
+	margin-top: 130px;
+	margin-left: 5px;
+}
+.banner-box-top h2{
+	color: #fff;
+	margin-bottom: 48px;
+	font-size: 52px;
+}
+
+.banner-box-top p{
+	font-size: 22px;
+	line-height: 48px;
+	color: #fff;
+	margin-bottom: 50px;
+}
+
+.banner-box-top a{
+	padding: 13px 28px;
+	background: #fff;
+	color: #3BCDAE;
+	text-decoration: none;
+	border-radius:4px;
+	font-size: 22px;
+	border: none;
+	margin-top: 3px;
+}
+.banner-box-top a:hover{
+	color: #3BCDAE;
+}
+.sup-banner-box img{
+	height: 436px;
+	margin-top: 70px;
+	float: right; 
+	margin-top: 60px;
+	
+}
+.sup-bottom{
+	width: 100%;
+	height: 464px;
+	background-color: #F4FAF9;
+}
+.sup-bottom-box{
+	width: 1200px;
+	margin: 0 auto;
+}
+.sup-bottom-box-a{
+	width: 33.33%;
+	float: left;
+}
+.sup-bottom-box-b{
+
+	width:361px;
+	height:274px;
+	background:rgba(255,255,255,1);
+	border-radius:10px 10px 10px 10px;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-top: 94px;
+}
+.sup-bottom-box-b-top {
+	width: 297px;
+	height: 100px;
+	margin: 0 auto;
+	margin-top: 38px;
+}
+.sup-bottom-box-b-top h4{
+	font-size: 22px;
+	line-height: 40px;
+	margin-top: 30px;
+	float: left;
+}
+.sup-bottom-box-b-top img{
+	float: right;
+	margin-top: 20px;
+}
+.sup-bottom-box-b p{
+	width: 297px;
+	color: #999;
+	margin: 0 auto;
+}
+.sup-bottom-box-apleft{
+	font-size: 36px;
+	columns: #333;
+	line-height: 57px;
+	font-weight: bold;
+	margin-top: 180px;
+}
+.sup-bottom-box-c{
+	border:2px solid rgba(55,205,173,1);
+box-shadow:0px 15px 20px 0px rgba(62,105,116,0.1);
+}

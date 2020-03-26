@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>实名认证</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="">
+    <link href="__TMPL__/public/assets/css/tube.css" rel="stylesheet">
+    <include file="public@head"/>
+</head>
+<body class="body-white" id="top">
+<include file="public@nav"/>
+
+<div class="container tc-main  pad-left_right">
+    <div class="col-md-12 pad-left_right">
+        <div class="col-md-2 pad-left_right">
+            <include file="public@usernav"/>
+        </div>
+        <div class="col-md-10">
+            <div class="tabs">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#one" data-toggle="tab"><i class="fa fa-list-alt"></i> 实名认证</a></li>
+                </ul>
+                <div class="bogo-user-auth-status"><label>{$status}</label></div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="one">
+                        <br>
+                        <form class="js-ajax-form" action="{:url('user/profile/editAuthInfoPost')}" method="post">
+                            <div class="form-group">
+                                <label for="input-user_nickname">真实姓名</label>
+                                <input type="text" class="form-control" id="input-user_nickname" placeholder="真实姓名"
+                                       name="user_real_name" value="{$auth_info['user_real_name'] |default=''}">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-user_num">身份证号</label>
+                                <input class="form-control" type="text" id="input-user_num"
+                                       placeholder="" name="user_card_number"
+                                       value="{$auth_info['card_number'] |default=''}">
+                            </div>
+
+                            <div class="tab-content">
+                                <label>身份证正面</label>
+                                <div style="text-align: center;">
+                                    <input type="hidden" name="card_img1" id="card_img1"
+                                           value="{$auth_info['card_img1'] |default=''}">
+                                    <a href="javascript:uploadOneImage('图片上传','#card_img1');">
+                                        <if condition="!empty($auth_info['card_img1'])">
+                                            <img src="{$auth_info['card_img1']}"
+                                                 id="card_img1-preview"
+                                                 width="135" style="cursor: pointer"/>
+                                            <else/>
+                                            <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                                 id="card_img1-preview"
+                                                 width="135" style="cursor: pointer"/>
+                                        </if>
+
+                                    </a>
+                                    <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片">
+                                </div>
+
+                            </div>
+                            <div class="tab-content">
+                                <label>身份证反面</label>
+                                <div style="text-align: center;">
+                                    <input type="hidden" name="card_img2" id="card_img2"
+                                           value="{$auth_info['card_img2'] |default=''}">
+                                    <a href="javascript:uploadOneImage('图片上传','#card_img2');">
+                                        <if condition="!empty($auth_info['card_img1'])">
+                                            <img src="{$auth_info['card_img1']}"
+                                                 id="card_img2-preview"
+                                                 width="135" style="cursor: pointer"/>
+                                            <else/>
+                                            <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                                 id="card_img2-preview"
+                                                 width="135" style="cursor: pointer"/>
+                                        </if>
+
+                                    </a>
+                                    <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary js-ajax-submit">提交</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /container -->
+<include file="public@footer"/>
+<include file="public@scripts"/>
+</body>
+<script type="text/javascript" src="__STATIC__/js/admin.js"></script>
+<script type="text/javascript">
+
+</script>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页 {$site_info.site_name|default=''}</title>
+    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
+    <meta name="description" content="{$site_info.site_seo_description|default=''}">
+    <include file="public@head"/>
+
+    <link href="__TMPL__/public/assets/simpleboot3/themes/simpleboot3/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="__STATIC__/js/layui/css/layui.css" media="all">
+    <link href="__TMPL__/public/assets/css/tube.css" rel="stylesheet">
+    <link href="__TMPL__/public/assets/css/user-center.css" rel="stylesheet">
+
+    <hook name="before_head_end"/>
+</head>
+<body class="body-all">
+<include file="public@nav_new"/>
+
+
+    <!--  我的应用左侧 -->
+<div class="col-sm-2 pad-left_right tube-left1">
+    <a href="{:cmf_url('user/tube/index')}">
+        <div class="col-sm-12 tube-lgs tube-bgs"><i class="fa"><img src="__TMPL__/public/assets/images/summarya.png"></i><span>概述</span></div>
+    </a>
+    <a href="/user/profile/center.html">
+        <div class="col-sm-12 tube-lyy tube-bgs">
+        	<i class="fa"><img src="__TMPL__/public/assets/images/me.png"></i><span>个人中心</span>
+        </div>
+        <div class="user-center">
+        	<div class="user-center-c">
+        		<a href="{:cmf_url('user/Profile/center')}">修改资料</a>
+        	</div>
+        	<div>
+        		<a href="{:cmf_url('user/Profile/real_name_auth')}">实名认证</a>
+        	</div>
+        	<div>
+        		<a href="{:cmf_url('user/Profile/password')}">修改密码</a>
+        	</div>
+        	<div>
+        		<a href="{:cmf_url('user/Profile/binding')}">绑定账号</a>
+        	</div>
+        	
+        	
+        </div>
+    </a>
+    <!-- <a href="/portal/index/posted">
+        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa fa-plus-circle"></i><span>发布应用</span></div>
+    </a> -->
+    <a href="/portal/posted/index">
+        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa"><img src="__TMPL__/public/assets/images/publish.png"></i><span>内测分发应用</span></div>
+    </a>
+    <a href="/portal/posted/supindex">
+        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa"><img src="__TMPL__/public/assets/images/qianming.png"></i><span>超级签名应用</span></div>
+    </a>
+    <a href="/user/certificate/index">
+        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa"><img src="__TMPL__/public/assets/images/summary.png"></i><span>证书管理</span>
+        </div>
+    </a>
+    <!--todo 暂时没想好什么作用-->
+    <!--    <a href="/user/tube/editor/id/0.html">-->
+    <!--        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa fa-plus-circle"></i><span>发布空应用</span></div>-->
+    <!--    </a>-->
+    
+    
+</div>
+
+<div class="user-left">
+	<div class="user-left-top">
+		<p>个人中心> <span class="span-c">修改资料</span></p>
+	</div>
+    <div class="user-left-bottom">
+        <div class="tab-content">
+        	<div class="tab-content-top">修改资料</div>
+            <div class="tab-pane active tab-content-bottom" id="one">
+                <br/>
+                <form class="js-ajax-form" action="{:url('user/profile/editPost')}" method="post">
+                	<div class="form-group">
+                        
+                        <div style="">
+                        	<label>头像&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="hidden" name="avatar" id="avatar"
+                                   value="{$user['avatar'] |default=''}">
+                            <a href="javascript:uploadOneImage('图片上传','#avatar');">
+                                <if condition="!empty($avatar)">
+                                    <img src="{$avatar}" onerror="this.src='__TMPL__/public/assets/images/head3.png'" 
+                                         id="avatar-preview"
+                                         width="135" style="cursor: pointer"/>
+                                    <else/>
+                                    <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                         id="avatar-preview"
+                                         width="135" style="cursor: pointer"/>
+                                </if>
+
+                            </a>
+                            <input type="button" class="btn btn-sm btn-cancel-thumbnail" style="width:80px;" value="取消图片">
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-user">
+                        <label for="input-user_nickname" style="float: left;">昵称&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" class="form-control" id="input-user_nickname" placeholder="昵称"
+                               name="user_nickname" value="{$user_nickname}">
+                    </div>
+
+                    <div class="form-group form-group-user">
+                        <label for="input-user_url" style="float: left;">个人网址&nbsp;&nbsp;&nbsp;</label>
+                        <input class="form-control" type="text" id="input-user_url"
+                               placeholder="" name="user_url" value="{$user_url}">
+                    </div>
+                    
+                    <div class="form-group form-group-user-b">
+                        <button type="submit" class="btn btn-primary js-ajax-submit">保存</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+        
+</div>
+<include file="public@scripts"/>
+</body>
+</html>

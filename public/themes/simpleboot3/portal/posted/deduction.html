@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页 {$site_info.site_name|default=''}</title>
+    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
+    <meta name="description" content="{$site_info.site_seo_description|default=''}">
+    <include file="public@head"/>
+
+    <link href="__TMPL__/public/assets/simpleboot3/themes/simpleboot3/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="__STATIC__/js/layui/css/layui.css" media="all">
+    <link href="__TMPL__/public/assets/css/tube.css" rel="stylesheet">
+    <link href="__TMPL__/public/assets/css/posted.css" rel="stylesheet">
+
+</head>
+<body class="body-white" style="background: #ECEEEE;">
+<include file="public@nav_new"/>
+
+<div class="tube_left pad-left_right">
+    <!--  我的应用左侧 -->
+    <div class="col-sm-2 pad-left_right tube-left1">
+    <a href="{:cmf_url('user/tube/index')}">
+        <div class="col-sm-12 tube-lgs tube-bgs"><i class="fa"><img src="__TMPL__/public/assets/images/summarya.png"></i><span>概述</span></div>
+    </a>
+    <a href="/user/profile/center.html">
+        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa"><img src="__TMPL__/public/assets/images/me.png"></i><span>个人中心</span></div>
+    </a>
+    <!-- <a href="/portal/index/posted">
+        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa fa-plus-circle"></i><span>发布应用</span></div>
+    </a> -->
+    <a href="/portal/posted/index">
+        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa"><img src="__TMPL__/public/assets/images/publish.png"></i><span>内测分发应用</span></div>
+    </a>
+    <a href="/portal/posted/supindex">
+        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa"><img src="__TMPL__/public/assets/images/qianming1.png"></i><span>超级签名应用</span></div>
+    </a>
+    <a href="/user/certificate/index">
+        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa"><img src="__TMPL__/public/assets/images/summary.png"></i><span>证书管理</span></div>
+    </a>
+    <!--todo 暂时没想好什么作用-->
+    <!--    <a href="/user/tube/editor/id/0.html">-->
+    <!--        <div class="col-sm-12 tube-lyy tube-bgs"><i class="fa fa-plus-circle"></i><span>发布空应用</span></div>-->
+    <!--    </a>-->
+    <div class="col-sm-12 tube-bor"></div>
+    
+</div>
+    
+    <!--  我的应用右侧 概述 -->
+    <div class="col-sm-10 pad-left_right tube-right">
+
+        <!--     账户资料 -->
+        <div class="col-sm-12 pad-left_right" style="font-size: 14px;padding: 0;margin-top:40px;margin-bottom: 20px;">超级签名应用 > <span style="color:#3BCDAE;">扣量明细</span></div>
+
+            <div class="col-sm-12 tube-panel panel-default pad-left_right box_card tube-panel-bottom">
+                <table class="table">
+                    <thead style="">
+                    <tr>
+                        <th>应用名称</th>
+                        <th>版本</th>
+                        <th>udid</th>
+                        <th>设备</th>
+                        <th>下载IP</th>
+                        <th>下载时间</th>
+                        
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <foreach name="assets" id="v">
+                        <tr>
+                            <th scope="row">
+                                <div class="col-sm-3 pad-left_right tube-row">
+                                    <img src="{$v.img}" class="headicon">
+                                </div>
+                                <div class="col-sm-8 pad-left_right">
+                                    <div class="col-sm-12 pad-left_right tube-yingy">{$v.name}</div>
+                                    <div class="col-sm-12 pad-left_right tube-ying-t ">
+                                            <i class="fa fa-apple"></i>&nbsp;&nbsp;苹果
+                                        
+                                    </div>
+                                </div>
+                            </th>
+                            <td>{$v.version}</td>
+                            <td>{$v.udid}</td>
+                            <td>{$v.device}</td>
+                            <td>{$v.ip}</td>
+                            
+                            
+                            <td>{$v['addtime'] | date="Y-m-d H:i:s",###}</td>
+                            
+                            
+                        </tr>
+                    </foreach>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <input class="sup-textarea" type="hidden" value="">
+
+</body>
+<script src="__TMPL__/public/assets/simpleboot3/bootstrap/js/bootstrap.min.js"></script>
+<script src="__STATIC__/js/layui/layui.all.js"></script>
+
+<script type="text/javascript">
+
+  
+    $('#dow-link').click(function(){
+        var appid = $(this).attr('data-id');
+        var url = $(this).attr('date-url');
+        //date-url
+        $.ajax({
+            url: '/portal/posted/download_link',
+            type: 'POST', //GET
+            async: true,    //或false,是否异步
+            data: {
+                appid: appid,
+                url: url,
+            },
+            timeout: 5000,    //超时时间
+            dataType: 'json',    //返回的数据格式：json/xml/html/script/jsonp/text
+            /*beforeSend: function (xhr) {
+                log(xhr)
+                log('发送前')
+            },*/
+            success: function (data) {
+
+                log(data)
+                layer.open({
+                    type: 1
+                    //,offset: type //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+                    //,id: 'layerDemo' //防止重复弹出
+                    ,content: '<div style="padding: 20px 10px;">'+ data.url +'</div>'
+                    ,btn: '关闭'
+                    ,btnAlign: 'c' //按钮居中
+                    ,shade: 0 //不显示遮罩
+                    ,yes: function(){
+                      layer.closeAll();
+                    }
+                });
+
+            },
+            error: function (xhr, textStatus) {
+                log('错误')
+                //log(xhr)
+                //log(textStatus)
+            },
+            complete: function () {
+                log('结束')
+            }
+        });
+    })
+
+    
+
+</script>
+</html>
+

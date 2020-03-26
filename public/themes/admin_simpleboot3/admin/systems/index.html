@@ -1,0 +1,121 @@
+<include file="public@header" />
+<style>
+.form-img{width:;}
+</style>
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+
+			<foreach name="type" item="vo">
+
+				<li <if condition="$key eq 0"> class="active" </if>>
+				    <a href="#{$key}" data-toggle="tab">{$vo.group_id}</a>
+				</li>
+				
+			</foreach>
+				<li>
+				    <a href="{:url('systems/add_sys')}" >添加配置</a>
+				</li>
+		</ul>
+		<form class="form-horizontal margin-top-20" role="form" action="{:url('systems/upd_post')}" method="post">
+			<fieldset>
+				<div class="tabbable">
+					<div class="tab-content">
+						<foreach name="type" item="vo" key='k'>
+							<div id="{$k}" <if condition="$k eq 0"> class="tab-pane active" <else/>  class="tab-pane" </if> >
+								<foreach name="config" item="v">
+									<if condition="($v['group_id'] eq $vo['group_id']) and ($v['type'] eq 0)">
+										<div class="form-group">
+											<label for="input-site-name" class="col-sm-2 control-label"><span class="form-required">*</span>{$v['title']}</label>
+											<div class="col-md-6 col-sm-10">
+												<input type="text" class="form-control" id="input-site-name" name="{$v['code']}" value="{$v['val']|default=''}">
+											</div>
+										</div>
+									</if>
+									<if condition="($v['group_id'] eq $vo['group_id']) and ($v['type'] eq 1)">	
+										<div class="form-group">
+											<label for="input-site-name" class="col-sm-2 control-label"><span class="form-required">*</span>{$v['title']}</label>
+											<div class="col-md-6 col-sm-10">
+												 <textarea name="{$v['code']}">{$v['val']}</textarea>
+											</div>
+										</div>
+									</if>
+									<if condition="($v['group_id'] eq $vo['group_id']) and ($v['type'] eq 2)">
+										<div class="form-group">
+												<label for="input-mobile_tpl_enabled" class="col-sm-2 control-label">缩略图</label>
+												<div class="col-md-6 col-sm-10">
+													
+													<div style="text-align: center;">
+							                                <input type="hidden" name="{$v['code']}" id="thumb" value="{$v.val|default=''}">
+							                                <a href="javascript:uploadOneImage('图片上传','#thumb');">
+							                                    <if condition="empty($v['val'])">
+							                                        <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+							                                             id="thumb-preview" width="135" style="cursor: hand"/>
+							                                        <else/>
+							                                        <img src="{:cmf_get_image_preview_url($v['val'])}" id="thumb-preview"
+							                                             width="135" style="cursor: hand"/>
+							                                    </if>
+							                                </a>
+							                                <input type="button" class="btn btn-sm"
+							                                       onclick="$('#thumb-preview').attr('src','__TMPL__/public/assets/images/default-thumbnail.png');$('#thumb').val('');return false;"
+							                                       value="取消图片">
+							                            </div>
+												</div>
+										</div>
+									</if>
+									<if condition="($v['group_id'] eq $vo['group_id']) and ($v['type'] eq 3)">
+										<div class="form-group">
+											<label for="input-mobile_tpl_enabled" class="col-sm-2 control-label">{$v['title']}</label>
+											<div class="col-md-6 col-sm-10">
+												<div class="checkbox">
+												    <foreach name="v['checkbox_val']" item="tv" key="i">
+														<label>
+															<input type="checkbox" name="{$v['code']}[]" value="{$i}" <foreach name="v['checkbox_check']" item="cv"><if condition="$i eq $cv"> checked </if></foreach> > {$tv}
+														</label>
+													</foreach>
+												</div>
+											</div>
+										</div>
+									</if>
+									<if condition="($v['group_id'] eq $vo['group_id']) and ($v['type'] eq 4)">
+										<div class="form-group">
+											<label for="input-mobile_tpl_enabled" class="col-sm-2 control-label">{$v['title']}</label>
+											<div class="col-md-6 col-sm-10">
+												<div class="checkbox">
+												    <foreach name="v['type_val']" item="tv">
+														<label>
+															<input type="radio" name="{$v['code']}" value="{$key}" <if condition="$v['val'] eq $key"> checked </if> > {$tv}
+														</label>
+													</foreach>
+												</div>
+											</div>
+										</div>
+									</if>
+									<if condition="($v['group_id'] eq $vo['group_id']) and ($v['type'] eq 5)">
+										<div class="form-group">
+											<label for="input-site-name" class="col-sm-2 control-label"><span class="form-required">*</span>{$v['title']}</label>
+											<div class="col-md-6 col-sm-10">
+												 <input type="text" class="form-control js-bootstrap-datetime" name="{$v['code']}"
+              											 value="{$v['val']}" style="width: 140px;" autocomplete="off">
+											</div>
+										</div>
+					               </if>
+									
+								</foreach>	
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										<button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="1">{:lang('SAVE')}</button>
+									</div>
+								</div>
+							</div>	
+						</foreach>						
+					</div>
+				</div>
+			</fieldset>
+		</form>
+
+	</div>
+	<script type="text/javascript" src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

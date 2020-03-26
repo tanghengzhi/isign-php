@@ -1,0 +1,61 @@
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <array>
+    <dict>
+      <key>John</key>
+      <dict>
+        <key>instrument</key>
+        <string>rhythm guitar</string>
+        <key>born</key>
+        <date>1940-10-09T22:13:56Z</date>
+        <key>wives</key>
+        <integer>2</integer>
+        <key>alive</key>
+        <false />
+        <key>coolness</key>
+        <real>9.1</real>
+        <key>secret</key>
+        <data>U29tZSBkYXRh</data>
+      </dict>
+      <key>Paul</key>
+      <dict>
+        <key>instrument</key>
+        <string>bass</string>
+        <key>born</key>
+        <date>1940-06-18T22:13:56Z</date>
+        <key>wives</key>
+        <integer>1</integer>
+        <key>coolness</key>
+        <real>4.7</real>
+        <key>alive</key>
+        <true />
+      </dict>
+      <key>George</key>
+      <dict>
+        <key>instrument</key>
+        <string>lead guitar</string>
+        <key>born</key>
+        <date>1940-02-24T22:13:56Z</date>
+        <key>wives</key>
+        <integer>1</integer>
+        <key>coolness</key>
+        <real>8.2</real>
+        <key>alive</key>
+        <false />
+      </dict>
+      <key>Ringo</key>
+      <dict>
+        <key>instrument</key>
+        <string>drums</string>
+        <key>born</key>
+        <date>1940-07-07T22:13:56Z</date>
+        <key>wives</key>
+        <integer>2</integer>
+        <key>coolness</key>
+        <real>6.1234567</real>
+        <key>alive</key>
+        <true />
+      </dict>
+    </dict>
+  </array>
+</plist>

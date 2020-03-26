@@ -1,0 +1,1755 @@
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <array>
+    <dict>
+      <key>client</key>
+      <string>Mike &amp; Rachael</string>
+      <key>description</key>
+      <string>What happens when an art director gets married. Our very own Mike Mates got hitched in the woodland splendor of the Pacific Northwest and this invitation system complimented our couple's offbeat style with full wedding-day guidebook, map and scout badges.</string>
+      <key>thumbnail</key>
+      <string>/sites/default/files/imagecache/portfolio_thumb/assets/MMRK01.jpg</string>
+      <key>assets</key>
+      <array>
+        <dict>
+          <key>title</key>
+          <string>Invitation Tag Detail</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/MMRK01.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Invitation Bundle and Envelope</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/MMRK02.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Invite, Map and RSVP Card</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/MMRK03.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Invitation Detail</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/MMRK04.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Intro Page &amp; I.D. Cards</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/MMRK05.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Stamp Detail</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/MMRK06.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Spread Detail</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/MMRK07.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Spread Detail</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/MMRK08.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Spread Detail</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/MMRK09.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Map</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/MMRK10.jpg</string>
+        </dict>
+      </array>
+    </dict>
+    <dict>
+      <key>client</key>
+      <string>SEOmoz</string>
+      <key>description</key>
+      <string>The SEOmoz Beginner's Guide to Search Engine Optimization teaches users the basics of SEO. Their current guide was long and cumbersome, making for a difficult read at time.s SEOmoz sought our expertise to help them present their large volume of information in a package that was engaging and easily digestible. Our solution was an illustrative online guide that keeps the subject matter fun and light to make the large volumes of technical information more palatable. </string>
+      <key>thumbnail</key>
+      <string>/sites/default/files/imagecache/portfolio_thumb/assets/SEOmozPortfolio_2.png</string>
+      <key>assets</key>
+      <array>
+        <dict>
+          <key>title</key>
+          <string>LANDING PAGE</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/SEOmozPortfolio_2.png</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>CHAPTER ONE DETAIL</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/SEOmozPortfolio_3.png</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>CHAPTER 5</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/SEOmozPortfolio_4.png</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>GUIDE DETAIL</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/SEOmozPortfolio_5.png</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>ILLUSTRATION DETAIL</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/SEOmozPortfolio_1.png</string>
+        </dict>
+      </array>
+    </dict>
+    <dict>
+      <key>client</key>
+      <string>Molly Moon's Homemade Ice Cream</string>
+      <key>description</key>
+      <string>Molly Moon's, a Seattle staple is all about simple, wholesome, feel-good ice cream. We helped Molly Moon's extend their brand into their mobile ice creamery, lip balm line and gift card holder.</string>
+      <key>thumbnail</key>
+      <string>/sites/default/files/imagecache/portfolio_thumb/assets/01.jpg</string>
+      <key>assets</key>
+      <array>
+        <dict>
+          <key>title</key>
+          <string>Molly Moon's Ice Cream Truck</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/01.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Molly Moon's Ice Cream Truck</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/02.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Molly Moon's Ice Cream Truck</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/03.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Molly Moon's Ice Cream Truck</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/04.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Molly Moon's Ice Cream Truck</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/05.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Molly Moon's Ice Cream Truck</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/06.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Molly Moon's Giftcard Holder</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/MM_Giftcard_0.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Molly Moon's Lipbalm</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/Lipbalm01_0.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Molly Moon's Lipbalm Detail</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/Lipbalm02.jpg</string>
+        </dict>
+      </array>
+    </dict>
+    <dict>
+      <key>client</key>
+      <string>Visible Technologies</string>
+      <key>description</key>
+      <string>Logo, product icons and full website for online brand reputation manager, Visible Technologies.</string>
+      <key>thumbnail</key>
+      <string>/sites/default/files/imagecache/portfolio_thumb/assets/Visible_Web_01.jpg</string>
+      <key>assets</key>
+      <array>
+        <dict>
+          <key>title</key>
+          <string>Logo</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/visible_logo.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Website Home Page</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/Visible_Web_01.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Website Products Page</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/Visible_Web_02.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Website Press Release Page</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/Visible_Web_03.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Product Brand Icons</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/Visible_Icons.png</string>
+        </dict>
+      </array>
+    </dict>
+    <dict>
+      <key>client</key>
+      <string>Sweet Beauty</string>
+      <key>description</key>
+      <string>E-Commerce website for natural beauty product producer, Sweet Beauty.</string>
+      <key>thumbnail</key>
+      <string>/sites/default/files/imagecache/portfolio_thumb/assets/SweetWeb01.jpg</string>
+      <key>assets</key>
+      <array>
+        <dict>
+          <key>title</key>
+          <string>Website Home Page</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/SweetWeb01.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Website Ecommerce Catalog Page</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/SweetBeauty_Web_02.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Website About Us Page</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/SweetBeauty_Web_03.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Backend - Ecommerce Catalog Management Page</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/SweetBeauty_Web_04.jpg</string>
+        </dict>
+      </array>
+    </dict>
+    <dict>
+      <key>client</key>
+      <string>Old Police Headquarters</string>
+      <key>description</key>
+      <string>Old Police Headquarters is a historic complex with beautiful architectural details located in downtown San Diego. A new initiative to transform the property from an abandoned municipal building into a vibrant community experience, featuring a unique blend of restaurants and retailers, demanded a brand story clearly considered from start to finish.
+
+        The project began with a renaming of the property from the address driven name of One Pacific to Old Police Headquarters. The new name captures the originality of the buildings history and sets the stage for a vibrant visual story. Marketing materials evoke an aura of casual sophistication with Spanish Mediterranean influences, setting the tone necessary to turn an exclusively Californian location into an extraordinary hub of activity. 
+      </string>
+      <key>thumbnail</key>
+      <string>/sites/default/files/imagecache/portfolio_thumb/assets/_AMP8483.jpg</string>
+      <key>assets</key>
+      <array>
+        <dict>
+          <key>title</key>
+          <string>Logo</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/oph_logo.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Overview Brochure</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/_AMP8483.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Marketing Kit Folder Cover</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/_AMP8427_B.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Marketing Kit Folder Interior</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/_AMP8441.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Marketing Kit Cards</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/_AMP8448.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Website Home Page</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/OldPolice_Web_01.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Website History and Design Page</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/OldPolice_Web_02.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Website Neighborhood Location page</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/OldPolice_Web_03.jpg</string>
+        </dict>
+      </array>
+    </dict>
+    <dict>
+      <key>client</key>
+      <string>New Sheridan Hotel</string>
+      <key>description</key>
+      <string>Four years after Telluride, Colorado was founded, the New Sheridan Hotel was built in classic Victorian style. Over the past few decades, directional changes left the hotel without a defined voice. Renovations in 2008, including interior design by renowned Nina Campbell, created an opportunity for the New Sheridan to address the entire brand experience.  
+
+        The New Sheridan’s brand focuses on unprecedented attention to detail in every collateral touchpoint. The same exquisite detail lavished upon the interior design is reflected in every component from custom menu covers and uniforms to maps and to-go cups, for an unforgettably modern brand experience rooted in true old world service ideals.
+      </string>
+      <key>thumbnail</key>
+      <string>/sites/default/files/imagecache/portfolio_thumb/assets/NWSH_Coffee_Horz.jpg</string>
+      <key>assets</key>
+      <array>
+        <dict>
+          <key>title</key>
+          <string>Logo</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/newsheridan_logo.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>To-go Coffee Cups</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/NWSH_Coffee_Horz.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Grand Re-Opening Invitation</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/NWSH_Invite_Horz.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Menu Detail</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/NWSH_MenuCoverDetail_Horz.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Dinner Menu</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/NWSH_MenuCover_Horz.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Menu System</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/NWSH_Menus_Horz.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Poker Set</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/NWSH_PokerBox_Horz.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Poker Chip Detail</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/NWSH_PokerChips_Horz.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Guest Services Directory</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/NWSH_Directory_Horz.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Business Cards</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/NWSH_Bcards_Horz.jpg</string>
+        </dict>
+      </array>
+    </dict>
+    <dict>
+      <key>client</key>
+      <string>Revelry Vinters</string>
+      <key>description</key>
+      <string>Revelry Vintners, a Washington wine producer came to us seeking an updated take on their classic wine heritage. Revelry's wine reflects all the quality that one would expect from a good table wine only delivered at a price without pretension. Our solution was a brand and packaging system that honored the pristine aesthetic of classic wine labeling with subtle modern twists in typography, photo style and production methods.</string>
+      <key>thumbnail</key>
+      <string>/sites/default/files/imagecache/portfolio_thumb/assets/RVRY_BottleDetail_01a.jpg</string>
+      <key>assets</key>
+      <array>
+        <dict>
+          <key>title</key>
+          <string>Logo</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/revelry_logo.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Wine Label Detail</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/RVRY_BottleDetail_01a.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Wine Labels</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/RVRY_Chardonnay_Group_01a.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Case Box</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/RVRY_Case_Isolated_01a.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Brochure Cover &amp; Opening Spread</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/RevelryBrochure01.jpg</string>
+        </dict>
+        <dict>
+          <key>title</key>
+          <string>Revelry Vintners Brochure Interior</string>
+          <key>image</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/RevelryBrochure02.jpg</string>
+        </dict>
+      </array>
+    </dict>
+    <dict>
+      <key>client</key>
+      <string>Endurance</string>
+      <key>description</key>
+      <string>Endurance, a nation-wide provider of quality vehicle service contracts needed a brand overhaul. We helped them align their brand with the vision they shared of providing the best possible coverage in an industry that was tarnished by the self-interested. 
+
+        By rooting the brand in a straight-forward and empowering value set we applied it consistently from website, to collateral and even employee training. This consistent application resulted in an effortless, attentive and transparent message to be conveyed across all touch-points to Endurance's customers overcoming industry stereotypes and far exceeding expectations.</string>
+        <key>thumbnail</key>
+        <string>/sites/default/files/imagecache/portfolio_thumb/assets/ENDW_Stationery_02_4.jpg</string>
+        <key>assets</key>
+        <array>
+          <dict>
+            <key>title</key>
+            <string>Logo</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/endurance_logo.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Business Cards</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/ENDW_Stationery_02_4.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Stationery System</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/ENDW_Stationery_01.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Member Kit Folder</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/ENDW_MarketingKit_01b.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Records Envelope</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/ENDW_RecordsEnvelope_01.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Thank You Card</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/ENDW_PostcardThankYou_01_0.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Website Home Page</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Endurance_Web_01.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Website Interactive Plan Finder</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Endurance_Web_02.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Website About Us Page</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Endurance_Web_03.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>CMS Edit Auto Plan Page</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Endurance_Web_04.jpg</string>
+          </dict>
+        </array>
+      </dict>
+      <dict>
+        <key>client</key>
+        <string>Mode of Fitness</string>
+        <key>description</key>
+        <string>Historically personal training has been viewed as a luxury reserved for the financially stable. Mode offers a brilliant and flexible training solution with the support of a personal trainer and the strengths and convenience of technology. 
+
+          Mode’s core concept, flexibility and customization, is expressed throughout the brand system with an icon set representing choice and lifestyle. The new brand communicates the fluid and smooth integration of all aspects of the experience from online support to personal encounters with trainers. Mode is poised to be a leading high-tech, high touch health, fitness and lifestyle solution with an inspirational and empowering attitude.
+        </string>
+        <key>thumbnail</key>
+        <string>/sites/default/files/imagecache/portfolio_thumb/assets/MODE_Posters_Horz.jpg</string>
+        <key>assets</key>
+        <array>
+          <dict>
+            <key>title</key>
+            <string>Logo</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/mode_logo.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Posters</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/MODE_Posters_Horz.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Brochure</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/MODE_Brochure_Horz.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Tee Shirts</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/ModeTeeShirts.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Stationery System</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/MODE_Stationery_Horz.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Website Home Page</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Mode_Web_01.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Website About Us Page</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Mode_Web_02.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Website Membership Details Page</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Mode_Web_03.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Backend - Event Calendar CMS Page</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Mode_Web_04.jpg</string>
+          </dict>
+        </array>
+      </dict>
+      <dict>
+        <key>client</key>
+        <string>Belltown Billiards</string>
+        <key>description</key>
+        <string>Logo, website and promotional collateral for Seattle lounge, Belltown Billiards.</string>
+        <key>thumbnail</key>
+        <string>/sites/default/files/imagecache/portfolio_thumb/assets/Belltown_Web_01_0.jpg</string>
+        <key>assets</key>
+        <array>
+          <dict>
+            <key>title</key>
+            <string>Logo</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/belltow_logo.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Website Home Page</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Belltown_Web_01_0.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>About Us Page</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Belltown_Web_02_0.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Plan an Event Page</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Belltown_Web_03.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Backend -  About Us page edit screen</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Belltown_Web_04.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Various Collateral</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/BLBD_AllPieces_01.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Promo Gift Certificate</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/BLBD_GiftCert_01.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Gift Card Holder</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/BLBD_GiftCard_01.jpg</string>
+          </dict>
+        </array>
+      </dict>
+      <dict>
+        <key>client</key>
+        <string>Cloudrock</string>
+        <key>description</key>
+        <string>Set in Moab, Utah, Cloudrock is a visionary development establishing a luxury living experience without disturbing the beauty of nature. Our central challenge was to intrigue and motivate potential buyers and investors. 
+
+          The story of life at Cloudrock is built on the breathtaking experience of the surrounding area. Landscape and adventure sports photography combine with inspiring messaging to complete the picture. Visitors first experience with Cloudrock is attentively guided from initial contact online to exploring desert living with a customized welcome kit of activity cards, maps and promotional gear.
+        </string>
+        <key>thumbnail</key>
+        <string>/sites/default/files/imagecache/portfolio_thumb/assets/CDRK_ExperienceKit_Horz.jpg</string>
+        <key>assets</key>
+        <array>
+          <dict>
+            <key>title</key>
+            <string>Logo</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Cloudrock_Logo.png</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Experience Kit</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/CDRK_ExperienceKit_Horz.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Experience Kit Box Detail</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/CDRK_ExperienceBox_Horz.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Experience Kit Folder</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/CDRK_ExperienceItinerary_Horz.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Experience Kit Activity Cards</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/CDRK_ActivityCards_Horz.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Marketing Kit Folder</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/CDRK_MarketingFolder_Horz.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Marketing Kit Brochure</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/CDRK_Brochure_Horz.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>"Mini" Map Brochure</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/CDRK_MiniBrochure_Horz.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Tee Shirts</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/CDRK_TeeShirts_Horz.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Business Card Detail</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/cloudrock_02.jpg</string>
+          </dict>
+        </array>
+      </dict>
+      <dict>
+        <key>client</key>
+        <string>Interurban Development</string>
+        <key>description</key>
+        <string>Interurban is known in the industry as a small developer focusing on renewal of historic buildings for modern use. With earned recognition for revitalization efforts, strong commitment to community, and entrepreneurial spirit, Interurban was ready to expand.
+
+          Our brand captures the zeitgeist of Interurban’s development style with unique illustrations and bold typographic collages, reflecting the layered nature of urban environments and the sincere interest Interurban has in community development.
+        </string>
+        <key>thumbnail</key>
+        <string>/sites/default/files/imagecache/portfolio_thumb/assets/INUR_DataSheetsDetail_01a.jpg</string>
+        <key>assets</key>
+        <array>
+          <dict>
+            <key>title</key>
+            <string>Logo</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/interurban_logo.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Data Sheets</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/INUR_DataSheetsDetail_01a.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Stationery System</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/INUR_Stationery_01a.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Brochure</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Interurban_Brochure.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Marketing Kit Folder</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Interurban_Folder.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Website Home Page</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Interurban_Web_01.jpeg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Website Property Finder Page</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Interurban_Web_02.jpeg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Website About Us Page</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Interurban_Web_03.jpeg</string>
+          </dict>
+        </array>
+      </dict>
+      <dict>
+        <key>client</key>
+        <string>Amos Morgan</string>
+        <key>description</key>
+        <string>Brand identity system for Seattle photographer Amos Morgan.</string>
+        <key>thumbnail</key>
+        <string>/sites/default/files/imagecache/portfolio_thumb/assets/AMOS_Bcards_Horz.jpg</string>
+        <key>assets</key>
+        <array>
+          <dict>
+            <key>title</key>
+            <string>Logo</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/amphoto_logo.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Business Cards</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/AMOS_Bcards_Horz.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Stationery System</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/AMOS_Stat_Horz.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Brochure Cover</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/AMOS_BrochureDetail_Horz.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Brochure Overview</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/AMOS_Brochure_Horz.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Portfolio Case &amp; Cover</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/_AMP8489.jpg</string>
+          </dict>
+        </array>
+      </dict>
+      <dict>
+        <key>client</key>
+        <string>Ginger Pup Lane</string>
+        <key>description</key>
+        <string>Ginger Pup Lane, an LA based pet outfitter specializes in fashionable products unique as each pet and its owner.</string>
+        <key>thumbnail</key>
+        <string>/sites/default/files/imagecache/portfolio_thumb/assets/GingerPup_01.jpg</string>
+        <key>assets</key>
+        <array>
+          <dict>
+            <key>title</key>
+            <string>Logo</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/ginger_logo.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Dog Treats</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/GingerPup_01.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Dog Spritzers</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/GingerPup_02.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Business Cards</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/GingerPup_04.jpg</string>
+          </dict>
+          <dict>
+            <key>title</key>
+            <string>Stationery System</string>
+            <key>image</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/GingerPup_03.jpg</string>
+          </dict>
+        </array>
+      </dict>
+      <dict>
+        <key>client</key>
+        <string>The Leasing Studio</string>
+        <key>description</key>
+        <string>Building successful retail environments by hand-selecting and placing tenants requires vision and demographic expertise. The Leasing Studio makes these connections for landlords. This specialty company needed a system to tell informed and compelling property stories.
+
+          This flexible brand system features customizable presentation materials easily utilized by the client, reflecting The Leasing Studio’s ability to make notable connections. The system includes a debossed folio, custom memo pad for brainstorming, along with overview and capabilities brochures for a more complete story.</string>
+          <key>thumbnail</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/007.jpg</string>
+          <key>assets</key>
+          <array>
+            <dict>
+              <key>title</key>
+              <string>Logo</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/leasing_logo.jpg</string>
+            </dict>
+            <dict>
+              <key>title</key>
+              <string>Capabilities Brochure</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/007.jpg</string>
+            </dict>
+            <dict>
+              <key>title</key>
+              <string>Marketing Kit</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/056.jpg</string>
+            </dict>
+            <dict>
+              <key>title</key>
+              <string>Project Folder System</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/070.jpg</string>
+            </dict>
+            <dict>
+              <key>title</key>
+              <string>Project Folder System</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/078.jpg</string>
+            </dict>
+            <dict>
+              <key>title</key>
+              <string>Project Folder System Detail</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/080.jpg</string>
+            </dict>
+            <dict>
+              <key>title</key>
+              <string>Business Cards</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/035.jpg</string>
+            </dict>
+            <dict>
+              <key>title</key>
+              <string>Stationery System</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/024.jpg</string>
+            </dict>
+            <dict>
+              <key>title</key>
+              <string>Holiday Promo Gift</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/LeasingPromo_01.jpg</string>
+            </dict>
+            <dict>
+              <key>title</key>
+              <string>Holiday Promo Card</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/LeasingPromo_02.jpg</string>
+            </dict>
+          </array>
+        </dict>
+        <dict>
+          <key>client</key>
+          <string>Flying Lab Software</string>
+          <key>description</key>
+          <string>Website and interactive guide for Flying Lab Software's latest game: Pirates of the Burning Sea.</string>
+          <key>thumbnail</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/FlyingLabs_Web_01.jpg</string>
+          <key>assets</key>
+          <array>
+            <dict>
+              <key>title</key>
+              <string>Website Home Page</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/FlyingLabs_Web_01.jpg</string>
+            </dict>
+            <dict>
+              <key>title</key>
+              <string>Website Interior Page</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/FlyingLabs_Web_02.jpg</string>
+            </dict>
+            <dict>
+              <key>title</key>
+              <string>Interactive Ship Guide</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/Pirates03.jpg</string>
+            </dict>
+          </array>
+        </dict>
+        <dict>
+          <key>client</key>
+          <string>Ecohaus</string>
+          <key>description</key>
+          <string>Sustainable building material supplier.</string>
+          <key>thumbnail</key>
+          <string>/sites/all/modules/uiportfolio/images/portfolio_thumb_default.png</string>
+          <key>assets</key>
+          <array>
+            <dict>
+              <key>title</key>
+              <string>Logo</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/ecohaus_logo.jpg</string>
+            </dict>
+          </array>
+        </dict>
+        <dict>
+          <key>client</key>
+          <string>Tax Help Associates</string>
+          <key>description</key>
+          <string>Logo and website for tax consultancy, Tax Help Associates.</string>
+          <key>thumbnail</key>
+          <string>/sites/all/modules/uiportfolio/images/portfolio_thumb_default.png</string>
+          <key>assets</key>
+          <array>
+            <dict>
+              <key>title</key>
+              <string>Logo</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/taxhelp_logo.jpg</string>
+            </dict>
+          </array>
+        </dict>
+        <dict>
+          <key>client</key>
+          <string>Frontier Room</string>
+          <key>description</key>
+          <string>The Frontier Room, a Seattle Institution since the 1950s, lacked a clearly defined identity. Changes in ownership and shifting neighborhood dynamics left the classic location without a regular crowd.
+
+            The Frontier Room’s new brand welcomes current neighborhood dwellers with a fun, quirky, yet modern portrayal of a classic BBQ joint depicted through a series of animals mascots. Built on the revolutionary concept, “Barbeque With Class,” the latest iteration of the Frontier Room now attracts a regular crowd and loyal customer base.
+          </string>
+          <key>thumbnail</key>
+          <string>/sites/default/files/imagecache/portfolio_thumb/assets/Frontier_03.jpg</string>
+          <key>assets</key>
+          <array>
+            <dict>
+              <key>title</key>
+              <string>Gift Certificate</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/Frontier_03.jpg</string>
+            </dict>
+            <dict>
+              <key>title</key>
+              <string>Promo Cards</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/Frontier_01.jpg</string>
+            </dict>
+            <dict>
+              <key>title</key>
+              <string>Gift Card System</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/_DSC4896.jpg</string>
+            </dict>
+            <dict>
+              <key>title</key>
+              <string>Posters</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/Frontier_05.jpg</string>
+            </dict>
+            <dict>
+              <key>title</key>
+              <string>Coasters</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/Frontier_02.jpg</string>
+            </dict>
+            <dict>
+              <key>title</key>
+              <string>Website Home Page</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/FR_Web01.jpg</string>
+            </dict>
+            <dict>
+              <key>title</key>
+              <string>Website Interior Page</string>
+              <key>image</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/FR_Web03.jpg</string>
+            </dict>
+          </array>
+        </dict>
+        <dict>
+          <key>client</key>
+          <string>Arctic Club Hotel</string>
+          <key>description</key>
+          <string>In 1917, adventurers who struck it rich in the Klondike gold rush formed an exclusive men’s club. Today their legacy lives on in Seattle’s  premier hospitality project, Arctic Club Hotel—featuring exquisite interiors designed by Candra Scott &amp; Anderson.
+
+            Our solution for the Arctic Club Hotel was inspired by the original story of the hotel. A collection of pieces invoking the spirit of the explorers who built the club implores guests to ‘Live Like An Icon’ with historic photography and modern messaging. The brand is further extended with the gentlemanly attitude of The Polar Bar and has inspired many guests to ‘borrow’ more than a few collateral pieces from the hotel.</string>
+            <key>thumbnail</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Arctic_09.jpg</string>
+            <key>assets</key>
+            <array>
+              <dict>
+                <key>title</key>
+                <string>Logo</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/arctic_logo.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Brand System Overview</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Arctic_09.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Brochure</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Arctic_05.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Marketing Folder Kit Detail</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Arctic_01.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Marketing Folder Kit Interior</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Arctic_02.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>In-Room Guest Directory</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Arctic_06.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Keycard Holder</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Arctic_07.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Key Cards</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Arctic_08.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Door Hanger</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Arctic_08_0.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Stationery System</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Arctic_03.jpg</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>client</key>
+            <string>JUNO</string>
+            <key>description</key>
+            <string>Situated in the contemporary street-level restaurant space of the historic Arctic Club Hotel, Juno needed a distinct and modern identity. 
+
+              We worked with the head chef to develop his notion of sampling bounty of each new season and integrated this concept into the core of the Juno brand. Natural colors and cyclical illustrations embody the seasonal rotation of the menu and are utilized throughout components of the brand system. 
+            </string>
+            <key>thumbnail</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Juno_01.jpg</string>
+            <key>assets</key>
+            <array>
+              <dict>
+                <key>title</key>
+                <string>Logo</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/juno_logo.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Business Cards</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Juno_01.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Gift Card System</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Juno_03.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>To-Go Box Label</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Juno_02.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Wine Menu</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/juno_06.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Menu System</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Juno_04.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Website Home Page</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Juno_Web_01.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Website Interior Page</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Juno_Web_02.jpg</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>client</key>
+            <string>Acumen Hotel Group</string>
+            <key>description</key>
+            <string>Logo and stationery system for luxury hotel management group.</string>
+            <key>thumbnail</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/acumen_01.jpg</string>
+            <key>assets</key>
+            <array>
+              <dict>
+                <key>title</key>
+                <string>Logo</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/acumen_logo.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Letter head and business cards</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/acumen_01.jpg</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>client</key>
+            <string>Metro Hi Speed</string>
+            <key>description</key>
+            <string>Metro Hi Speed came to us as Acumen Associates. As a smaller internet service provider, they needed a boutique service oriented brand that stood apart from the bland, impersonal style characteristic of other technology companies. 
+
+              Under our care Acumen Associates became Metro Hi Speed, an exceptional brand expressed through a unique retro-futuristic illustration style . Seeing tremendous growth potential in fax services, Metro Hi Speed came to us to  launch the subsidiary product brand MetroFax. Within 6 months, Metrofax netted Metro Hi Speed more than all other service offerings combined. This gave them radical new focus, transforming their business model and brand from boutique service provider to a national value driven brand. Together we are now moving into the next phase of product development and brand extension for the MetroFax brand.
+            </string>
+            <key>thumbnail</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/metr_04.jpg</string>
+            <key>assets</key>
+            <array>
+              <dict>
+                <key>title</key>
+                <string>Logo</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/metro_logo.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Stationery System</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/metr_04.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Website Home Page</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Metro_Web_01.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Website Products Page</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Metro_Web_02_0.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Interactive Demo Landing Page</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Metro_Web_03.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Interactive Demo Feature Page</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Metro_Web_04.jpg</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>client</key>
+            <string>SCIDPDA</string>
+            <key>description</key>
+            <string>Logo &amp; Collateral for Seattle Chinatown Internation District Preservation and Development Authority.</string>
+            <key>thumbnail</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/scid_01.jpg</string>
+            <key>assets</key>
+            <array>
+              <dict>
+                <key>title</key>
+                <string>Logo</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/scidpda_logo.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Annual Report</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/scid_01.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Stationery System</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/scid_03.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Stationery Card</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/scid_02.jpg</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>client</key>
+            <string>Hilton</string>
+            <key>description</key>
+            <string>007 themed opening party invitation for Seattle based Hilton.</string>
+            <key>thumbnail</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/hilt_01.jpg</string>
+            <key>assets</key>
+            <array>
+              <dict>
+                <key>title</key>
+                <string>Opening Invitation</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/hilt_01.jpg</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>client</key>
+            <string>Carguard</string>
+            <key>description</key>
+            <string>Interactive promo site for the makers of Carguard, an auto performance enhancing product.</string>
+            <key>thumbnail</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Carguard_Web_01.jpg</string>
+            <key>assets</key>
+            <array>
+              <dict>
+                <key>title</key>
+                <string>Website Home Page</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Carguard_Web_01.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Our Coverage Page</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Carguard_Web_02.jpg</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>client</key>
+            <string>Carolina Heritage Peanuts</string>
+            <key>description</key>
+            <string>Gourmet peanut producer from North Carolina.</string>
+            <key>thumbnail</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/Peanuts_01.jpg</string>
+            <key>assets</key>
+            <array>
+              <dict>
+                <key>title</key>
+                <string>Product Packaging</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/Peanuts_01.jpg</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>client</key>
+            <string>Queen City Grill</string>
+            <key>description</key>
+            <string>20 Year anniversary dinner invitation for Seattle restaurant, Queen City Grill.</string>
+            <key>thumbnail</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/QueenInvite_01.jpg</string>
+            <key>assets</key>
+            <array>
+              <dict>
+                <key>title</key>
+                <string>Invitation</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/QueenInvite_01.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Invitation</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/QueenInvite_02.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Invitation</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/QueenInvite03.jpg</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>client</key>
+            <string>Insite Works</string>
+            <key>description</key>
+            <string>Website for contemporary architecture firm, Insite Works.</string>
+            <key>thumbnail</key>
+            <string>/sites/default/files/imagecache/portfolio_thumb/assets/inst_web_01.jpg</string>
+            <key>assets</key>
+            <array>
+              <dict>
+                <key>title</key>
+                <string>Website Home Page</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/inst_web_01.jpg</string>
+              </dict>
+              <dict>
+                <key>title</key>
+                <string>Website Interior Page</string>
+                <key>image</key>
+                <string>/sites/default/files/imagecache/portfolio_thumb/assets/inst_web_02.jpg</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>client</key>
+            <string>123 West</string>
+            <key>description</key>
+            <string>As the first high-end, LEED certified mixed-use development located in Washington’s nautical Friday Harbor, 123 West needed a brand and marketing plan that would portray the premium nature of the development without steamrolling the charming character and appeal of a small-town, island retreat.
+
+              To showcase the unique offering of this brand, we focused on modularity and texture. Highlighting the rustic nautical environment of Friday Harbor and natural elements of the San Juan landscape, we developed a multi-component marketing kit and website directing audience attention to specific touch points.</string>
+              <key>thumbnail</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/123West_02.jpg</string>
+              <key>assets</key>
+              <array>
+                <dict>
+                  <key>title</key>
+                  <string>Logo</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/123west_logo.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Overview Brochure</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/123West_02.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Marketing Kit</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/123West_01.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Brochure - Assembled</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/123West_03.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Website Home Page</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/Website01.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Website About Us Page</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/Website02.jpg</string>
+                </dict>
+              </array>
+            </dict>
+            <dict>
+              <key>client</key>
+              <string>Herban Palate</string>
+              <key>description</key>
+              <string>Logo and stationery system for holistic personal chef service, Herban Palate.</string>
+              <key>thumbnail</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/herb_01.jpg</string>
+              <key>assets</key>
+              <array>
+                <dict>
+                  <key>title</key>
+                  <string>Logo</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/herban_logo.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Stationery System</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/herb_01.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Splash Website</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/herb_web_01.jpg</string>
+                </dict>
+              </array>
+            </dict>
+            <dict>
+              <key>client</key>
+              <string>La Vita E Bella</string>
+              <key>description</key>
+              <string>Seattle family owned Italian restaurant, La Vita e Bella.</string>
+              <key>thumbnail</key>
+              <string>/sites/all/modules/uiportfolio/images/portfolio_thumb_default.png</string>
+              <key>assets</key>
+              <array>
+                <dict>
+                  <key>title</key>
+                  <string>Logo</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/lavita_logo.jpg</string>
+                </dict>
+              </array>
+            </dict>
+            <dict>
+              <key>client</key>
+              <string>Wags</string>
+              <key>description</key>
+              <string>Logo &amp; Collateral for Seattle Doggy Daycare, Wags.</string>
+              <key>thumbnail</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/wags_cards.jpg</string>
+              <key>assets</key>
+              <array>
+                <dict>
+                  <key>title</key>
+                  <string>Logo</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/wags_logo.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Business Cards</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/wags_cards.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Stationery System</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/wags_01.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Brochure Booklet</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/wags_01_0.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Brochure Booklet Interior Spread</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/wags_02.jpg</string>
+                </dict>
+              </array>
+            </dict>
+            <dict>
+              <key>client</key>
+              <string>Safe Harbor</string>
+              <key>description</key>
+              <string>Logo, Stationery &amp; Website for Safeharbor, a customer-solutions software company.</string>
+              <key>thumbnail</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/043.jpg</string>
+              <key>assets</key>
+              <array>
+                <dict>
+                  <key>title</key>
+                  <string>Logo</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/safeharbor_logo.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Marketing Folder</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/043.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Stationery System</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/Safe_01.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Website Home Page</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/SafeharborHome.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Website Interior Page</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/SafeharborT1.jpg</string>
+                </dict>
+              </array>
+            </dict>
+            <dict>
+              <key>client</key>
+              <string>Lasercare</string>
+              <key>description</key>
+              <string>Logo, website and collateral for laser light physical therapy centers located throughout Canada.</string>
+              <key>thumbnail</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/Laser_02.jpg</string>
+              <key>assets</key>
+              <array>
+                <dict>
+                  <key>title</key>
+                  <string>Logo</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/lasercare_logo.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Brochure Cover</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/Laser_02.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Brochure Spreads</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/Laser_03.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Stationery System</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/Laser_01.jpg</string>
+                </dict>
+              </array>
+            </dict>
+            <dict>
+              <key>client</key>
+              <string>Thuma Works</string>
+              <key>description</key>
+              <string>Logo for interior architecture firm, Thuma Works.</string>
+              <key>thumbnail</key>
+              <string>/sites/all/modules/uiportfolio/images/portfolio_thumb_default.png</string>
+              <key>assets</key>
+              <array>
+                <dict>
+                  <key>title</key>
+                  <string>Logo</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/thuma_logo.jpg</string>
+                </dict>
+              </array>
+            </dict>
+            <dict>
+              <key>client</key>
+              <string>59 Limousine</string>
+              <key>description</key>
+              <string>Logo for vintage limousine service, 59 Limo.</string>
+              <key>thumbnail</key>
+              <string>/sites/all/modules/uiportfolio/images/portfolio_thumb_default.png</string>
+              <key>assets</key>
+              <array>
+                <dict>
+                  <key>title</key>
+                  <string>59 Limousine Logo</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/59limo_logo.jpg</string>
+                </dict>
+              </array>
+            </dict>
+            <dict>
+              <key>client</key>
+              <string>Funky Lofts</string>
+              <key>description</key>
+              <string>Logo and stationery system for Seattle based boutique urban realtor, Funkylofts.</string>
+              <key>thumbnail</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/Funky_01.jpg</string>
+              <key>assets</key>
+              <array>
+                <dict>
+                  <key>title</key>
+                  <string>Logo</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/funkylofts_logo.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Stationery System</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/Funky_01.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Mailing Envelope</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/Funky_02.jpg</string>
+                </dict>
+              </array>
+            </dict>
+            <dict>
+              <key>client</key>
+              <string>Urban Influence</string>
+              <key>description</key>
+              <string/>
+              <key>thumbnail</key>
+              <string>/sites/default/files/imagecache/portfolio_thumb/assets/IMG_6288.jpg</string>
+              <key>assets</key>
+              <array>
+                <dict>
+                  <key>title</key>
+                  <string>Logo</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/urban_logo.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>2009 Holiday Promo</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/IMG_6288.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>2009 Holiday Promo</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/IMG_6297.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>2009 Holiday Promo</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/IMG_6327.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>2009 Holiday Promo</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/IMG_6338.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Anniversary Watch Design</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/IMG_6369.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Anniversary Watch Design</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/IMG_6173.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Anniversary Watch Design</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/IMG_6235.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Holiday Promo 08</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/URBN_Wine_Horz.jpg</string>
+                </dict>
+                <dict>
+                  <key>title</key>
+                  <string>Holiday Promo 08 Card</string>
+                  <key>image</key>
+                  <string>/sites/default/files/imagecache/portfolio_thumb/assets/URBN_Card_Horz.jpg</string>
+                </dict>
+              </array>
+            </dict>
+          </array>
+        </plist>

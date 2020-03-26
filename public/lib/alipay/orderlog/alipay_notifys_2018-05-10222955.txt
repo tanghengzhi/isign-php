@@ -1,0 +1,28 @@
+TRADE_SUCCESS~~~~~~~~~~Array
+(
+    [gmt_create] => 2018-05-10 22:29:47
+    [charset] => UTF-8
+    [gmt_payment] => 2018-05-10 22:29:54
+    [notify_time] => 2018-05-10 22:29:55
+    [subject] => 充值下载次数 10000 送1000
+    [sign] => IOovHsIc9QfcT1jzPUj3G1RuuFPlMZs/+4GJp0wUpBYLVS3fxWcHR4z46ogk4aTNCa8y/RE/FywEcP3iuFkbkZbKUd33/eHrohms2gxLNie5ao9yCA4eQO+QM6ituq+rcnON72m6goCps4IaSMEK1HB7x3Ju0YKMvhchIlQX65jsywx4mrb3K+qSq4m/watzOCAo77/yyMnSY0HyrYZfca6kNf9NzG2TgpDbV1MhB9ok7EgQyGEnteAMOU17uLmK0O/gXLpqlaRrlIstvciMcQMtUQtAxgJngC6lZEglDtiX/FegPXHxD9YTxNT4q9XH2ULNx2tVRqivPqpbbNZtXA==
+    [buyer_id] => 2088122669375319
+    [body] => 充值下载次数 10000 送1000
+    [invoice_amount] => 230.00
+    [version] => 1.0
+    [notify_id] => 937ce3895bcab47846f3f953f0b4b89ie9
+    [fund_bill_list] => [{"amount":"230.00","fundChannel":"ALIPAYACCOUNT"}]
+    [notify_type] => trade_status_sync
+    [out_trade_no] => 2018510222940810
+    [total_amount] => 230.00
+    [trade_status] => TRADE_SUCCESS
+    [trade_no] => 2018051021001004310539880080
+    [auth_app_id] => 2018020202132058
+    [receipt_amount] => 230.00
+    [point_amount] => 0.00
+    [app_id] => 2018020202132058
+    [buyer_pay_amount] => 230.00
+    [sign_type] => RSA2
+    [seller_id] => 2088621983682009
+    [signs] => 877c5a7ed0980954f206a660c95b413e
+)

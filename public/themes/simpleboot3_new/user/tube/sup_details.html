@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页 {$site_info.site_name|default=''}</title>
+    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
+    <meta name="description" content="{$site_info.site_seo_description|default=''}">
+    <include file="public@head"/>
+
+    <link href="__TMPL__/public/assets/simpleboot3/themes/simpleboot3/bootstrap.min.css" rel="stylesheet">
+    <link href="__TMPL__/public/assets/css/tube.css" rel="stylesheet">
+    <link rel="stylesheet" href="__STATIC__/js/layui/css/layui.css" media="all">
+
+    <hook name="before_head_end"/>
+</head>
+<body class="body-white" style="background: #ECEEEE;">
+
+        <style type="text/css">
+            .all-top{
+                margin-top: 35px;
+                margin-bottom: 20px;
+                font-size: 18px;
+                color: #666;
+                margin-left: 1%;
+            }
+            .all-top-c{
+                color: #3BCDAE;
+            }
+        </style>
+        <!--     账户资料 -->
+        <div class="all-top">
+            <p>超级签名应用 > <span class="all-top-c">详情</span></p>
+        </div>
+        <!--     应用管理详情 -->
+        <div class="col-sm-12 details-til  pad-left_right box_card" style="margin-left: 1%;">
+            <div class="col-sm-12 details-type">
+                <div class="col-sm-6 details-type-tou">
+                    <div class="col-sm-2 details-type-to">
+                        <php>$user=cmf_get_current_user();</php>
+                        <img src="{$assets.img}" class="headicon">
+                    </div>
+                    <div class="col-sm-6 details-type-p pad-left_right">
+                        <div class="col-sm-12 details-type-p1">{$assets.name}</div>
+                        <div class="col-sm-12 "><span class="details-type-p2-1">内测版</span>
+                            <if condition="$assets['type'] neq '0'">
+                                <i class="fa fa-apple"></i>
+                                <span class="details-type-p2-2"> 适用于 iOS 设备</span>
+                                <else/>
+                                <i class="fa fa-android"></i>
+                                <span class="details-type-p2-2"> 适用于 Android 设备</span>
+                            </if>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="col-sm-3 details-but"><a
+                            href="{:cmf_url('user/tube/editor',array('id'=>$assets['id']))}">编辑</a></div>
+                    <div class="col-sm-3 details-but2"><a style="background: #0097FF;" href="/">上传</a></div>
+
+                    
+                </div>
+            </div>
+            <div class="col-sm-12 details-ner pad-left_right">
+                <div class="posted-edit-t">
+                    <div class="col-sm-12 details-ner-lei-1">版本</div>
+                    <div class="col-sm-12 details-ner-lei-2">{$assets.version}</div>
+                </div>
+                <div class="posted-edit-t">
+                    <div class="col-sm-12 details-ner-lei-1">Build</div>
+                    <div class="col-sm-12 details-ner-lei-2">{$assets.build}</div>
+                </div>
+                <div class="posted-edit-t">
+                    <div class="col-sm-12 details-ner-lei-1">大小</div>
+                    <div class="col-sm-12 details-ner-lei-2">{$assets.big}MB</div>
+                </div>
+                <div class="posted-edit-t ">
+                    <div class="col-sm-12 details-ner-lei-1">总下载次数</div>
+                    <div class="col-sm-12 details-ner-lei-2 details-ner-lei-3">{$sum}</div>
+                </div>
+                <div class="posted-edit-t">
+                    <div class="col-sm-12 details-ner-lei-1">Bundle ID</div>
+                    <div class="col-sm-12 details-ner-lei-2">{$assets.bundle}</div>
+                </div>
+                <div class="posted-edit-t">
+                    <div class="col-sm-12 details-ner-lei-1">过期时间</div>
+                    <div class="col-sm-12 details-ner-lei-2">{$assets['endtime'] | date="Y-m-d H:i:s",###}</div>
+                </div>
+                <div class="posted-edit-t">
+                    <div class="col-sm-12 details-ner-lei-1">下载地址</div>
+                    <div class="col-sm-12 details-ner-lei-2">
+                        <a href="{$assets.er_logo}" target="_blank" style="color:#848484;text-decoration:none;">{$assets.er_logo}</a>
+                    </div>
+                </div>
+                <div class="posted-edit-t ">
+                    <div class="col-sm-12 details-ner-lei-1">下载二维码</div>
+                    <div class="col-sm-12 details-ner-lei-2 details-ner-lei-3 erweim" style="height: 60px;"
+                         date-url="{$assets.er_logo}">
+                        <i class="fa fa-qrcode " aria-hidden="true"></i>
+                        <div class="erweidws"></div>
+                    </div>
+                    <!-- <div class="col-sm-12 details-ner-lei-2 details-ner-lei-3 ermxz"><img src="{$assets.er_img}" class="headicon"></div>-->
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-12 tube-zil pad-left_right" style="margin-left: 1%;">版本信息</div>
+        <div style="margin-left: 1%;" class="col-sm-12 tube-panel panel-default pad-left_right box_card">
+            <table class="table">
+                <thead class="thead1">
+                <tr>
+                    <th>版本</th>
+                    <th>Build</th>
+                    <th>大小</th>
+                    <th>下载次数</th>
+                    <th>更新时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">{$assets.version}</th>
+                    <td>{$assets.build}</td>
+                    <td>{$assets.big} MB</td>
+                    <td>{$sum}</td>
+                    <td>{$assets['addtime'] | date="Y-m-d H:i",###}</td>
+                    <td class="tube-tiz details-tiz">
+                        <a class="bogo-global-btn" href="{$assets['www_url']}/{$assets['url']}" data-url="{$assets['url']}"
+                           data-urls="{:cmf_url('user/tube/downfile',array('id'=>$assets['id']))}"
+                           data-id="{$assets['id']}" class="downfile">下载</a>
+                        <a class="bogo-global-btn tube-hebing">合并</a>
+                        <a class="bogo-global-btn tube-tiz12"
+                           href="{:cmf_url('user/tube/del',array('id'=>$assets['id']))}" date-url="">删除</a>
+
+                    </td>
+                </tr>
+                <foreach name="type" id="vo">
+                    <tr>
+                        <th scope="row">{$vo.version}</th>
+                        <td>{$vo.build}</td>
+                        <td>{$vo.big} MB</td>
+                        <td>{$vo.sum}</td>
+                        <td>{$vo['addtime'] | date="Y-m-d H:i",###}</td>
+                        <td class="tube-tiz details-tiz">
+                            <a class="bogo-global-btn" href="{$assets['www_url']}/{$vo['url']}" data-url="{$vo['url']}"
+                               data-urls="{:cmf_url('user/tube/downfile',array('id'=>$vo['id']))}"
+                               data-id="{$vo['id']}" class="downfile">下载</a>
+                            <a class="bogo-global-btn tube-hebing">合并</a>
+                            <a class="bogo-global-btn tube-tiz12"
+                               href="{:cmf_url('user/tube/del',array('id'=>$vo['id']))}" date-url="">删除</a>
+
+                        </td>
+                    </tr>
+                </foreach>
+                
+
+
+                </tbody>
+            </table>
+
+        </div>
+
+    
+
+    <include file="public@scripts"/>
+    <script src="__TMPL__/public/assets/js/slippry.min.js"></script>
+    <script src="/static/js/layer/layer.js"></script>
+
+    <script>
+        $(function () {
+            $(".erweim").click(function () {
+                var url = $(this).attr("date-url");
+                $(".erweim").find("div").html("");
+                $(this).find("div").qrcode({
+                    render: "canvas", //table方式
+                    width: 98, //宽度
+                    height: 98, //高度
+                    text: url //任意内容
+                });
+                $(this).find("div").toggle();
+            });
+            $("#home-slider").slippry({
+                transition: 'fade',
+                useCSS: true,
+                captions: false,
+                speed: 1000,
+                pause: 3000,
+                auto: true,
+                preload: 'visible'
+            });
+            $("#home-slider").show();
+            $(".tube-tiz12").click(function () {
+                var $url = $(this).attr("date-url");
+                alert("确定删除");
+                window.location.href = url;
+            })
+            //iframe层
+            $(".tube-hebing").click(function () {
+                layer.open({
+                    type: 2,
+                    title: '合并',
+                    shadeClose: true,
+                    shade: 0.8,
+                    area: ['50%', '50%'],
+                    content: "{:cmf_url('user/tube/hebing',array('id'=>$assets['id']))}" //iframe的url
+                });
+            });
+            $(".downfile").click(function () {
+                return true;
+                var url = $(this).attr("data-url");
+                var id = $(this).attr("data-id");
+                $.ajax({
+                    type: 'POST',
+                    url: "{:cmf_url('user/tube/downfile_type')}",
+                    data: {id: id},
+                    success: function (data) {
+                        if (data['type'] == '0') {
+                            layer.msg('可用下载点数不足', {icon: 2, time: 1000});
+                        } else if (data['type'] == '3') {
+                            layer.msg('下载失败，请重新下载', {icon: 2, time: 1000});
+                        } else {
+                            alert(1);
+                            window.location.href = {$assets['www_url']}+url;
+                        }
+                    }
+                });
+            })
+
+
+        });
+    </script>
+    <hook name="before_body_end"/>
+</body>
+</html>
