@@ -56,7 +56,7 @@ function get_config()
 
 //获取站点地址
 function get_site_url(){
-    return 'https://www.371.li';
+    return 'http://101.37.67.72/';
 }
 
 function make_password($length = 8)

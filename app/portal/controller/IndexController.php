@@ -743,7 +743,7 @@ class IndexController extends HomeBaseController
         $filepathaoi = $absolute_path.'public/ios_describe_aoi/';
         $filepatha = $absolute_path.'public/sign/';
         
-        exec('openssl smime -sign -in '.$filepathaoi.$id.'.mobileconfig   -out '.$filepath.$id.'.mobileconfig -signer '.$filepatha.'cert.pem -inkey '.$filepatha.'private.pem -certfile '.$filepatha.'fullchain.pem -outform der -nodetach 2>&1',$out,$status);
+        exec('openssl smime -sign -in '.$filepathaoi.$id.'.mobileconfig   -out '.$filepath.$id.'.mobileconfig -signer '.$filepatha.'cert.pem -inkey '.$filepatha.'privkey.pem -certfile '.$filepatha.'fullchain.pem -outform der -nodetach 2>&1',$out,$status);
         return 1;
     }
 }
