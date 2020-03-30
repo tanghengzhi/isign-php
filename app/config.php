@@ -229,6 +229,6 @@ $configs = [
     'cmf_admin_default_theme' => 'admin_simpleboot3',
     //路径
     //项目绝对目录
-    'absolute_path' => '/www/wwwroot/www.371.li/',
+    'absolute_path' => '/var/www/isign-php/',
 ];
 return array_merge($configs, $runtimeConfig);
