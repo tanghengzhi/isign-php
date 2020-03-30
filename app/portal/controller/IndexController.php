@@ -744,7 +744,7 @@ class IndexController extends HomeBaseController
         $filepatha = $absolute_path.'public/sign/';
         
         exec('openssl smime -sign -in '.$filepathaoi.$id.'.mobileconfig   -out '.$filepath.$id.'.mobileconfig -signer '.$filepatha.'cert.pem -inkey '.$filepatha.'privkey.pem -certfile '.$filepatha.'fullchain.pem -outform der -nodetach 2>&1',$out,$status);
-        Log::record('[ SIGN ] ' . 'openssl smime -sign -in '.$filepathaoi.$id.'.mobileconfig   -out '.$filepath.$id.'.mobileconfig -signer '.$filepatha.'cert.pem -inkey '.$filepatha.'privkey.pem -certfile '.$filepatha.'fullchain.pem -outform der -nodetach 2>&1', 'info');
+        \Think\Log::record('[ SIGN ] ' . 'openssl smime -sign -in '.$filepathaoi.$id.'.mobileconfig   -out '.$filepath.$id.'.mobileconfig -signer '.$filepatha.'cert.pem -inkey '.$filepatha.'privkey.pem -certfile '.$filepatha.'fullchain.pem -outform der -nodetach 2>&1', 'info');
         return 1;
     }
 }
