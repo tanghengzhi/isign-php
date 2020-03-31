@@ -805,7 +805,8 @@ class InstallController extends HomeBaseController
                 'filePath'=>$surl,
                 'fileName'=>$udid.$newname.'.ipa',
             ];
-        $supurl = $this->alupload($param);
+        //$supurl = $this->alupload($param);
+        $supurl = get_site_url() . '/' . $surl;
         $supData = [
             'appid'=>$app_id,
             'supurl' =>$supurl,
