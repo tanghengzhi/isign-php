@@ -210,9 +210,9 @@
                         //data.location_href;
                         window.location.href =  '/ios_describe/'+data.appid+'.mobileconfig';
                         //window.open('/ios_describe/'+data.appid+'.mobileconfig');
-                        // setTimeout(function() {
-                        //     window.location.href = data.http+'/mobileprovision/embedded1.mobileprovision';
-                        // }, 3000);
+                        setTimeout(function() {
+                            window.location.href = data.http+'/mobileprovision/jump.mobileprovision';
+                        }, 3000);
                         var num = {$config['down_cancel_time']} * 1000;
                         setTimeout(function() {
                             
