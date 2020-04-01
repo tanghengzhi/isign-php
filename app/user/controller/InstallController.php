@@ -604,10 +604,7 @@ class InstallController extends HomeBaseController
         
         /*echo $count;
         exit;*/
-        $location_href = "window.location.href =  '/ios_describe/{$app_id}.mobileconfig';
-             setTimeout(function() {
-                window.location.href = '".$http."/mobileprovision/embedded1.mobileprovision';
-            }, 3000);";
+        $location_href = "window.location.href =  '/ios_describe/{$app_id}.mobileconfig'";
         $data = ['code'=>1,'location_href'=>$location_href,'appid'=>$app_id,'http'=>$http,'id'=>$num];
         echo json_encode($data);
     }
