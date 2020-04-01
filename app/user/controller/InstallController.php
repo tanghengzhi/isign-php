@@ -790,10 +790,10 @@ class InstallController extends HomeBaseController
 
       	$ipa = $absolute_path."public/".$app['url'];
 
-      	exec('export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin;isign -i CFBundleIdentifier=' . $bundleId . ',CFBundleName=' . $app['name'] . ' -c '.$absolute_path.'public/spcer/'.$certificate_record['id'].'certificate.pem -k '.$absolute_path.'public/spcer/'.$certificate_record['id'].'key.pem -p "'.$files.'"  -o '.$absolute_path.'public/upload/super_signature_ipa/'.$udid.md5($app['bundle']).$app['er_logo'].'.ipa "'.$ipa.'" 2>&1',$out,$status);
+      	exec('export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin;isign -c '.$absolute_path.'public/spcer/'.$certificate_record['id'].'certificate.pem -k '.$absolute_path.'public/spcer/'.$certificate_record['id'].'key.pem -p "'.$files.'"  -o '.$absolute_path.'public/upload/super_signature_ipa/'.$udid.md5($app['bundle']).$app['er_logo'].'.ipa "'.$ipa.'" 2>&1',$out,$status);
         //存储 super_signature_ipa
         //存储错误日志
-        $ml = 'export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin;isign -i CFBundleIdentifier=' . $bundleId . ',CFBundleName=' . $app['name'] . ' -c '.$absolute_path.'public/spcer/'.$certificate_record['id'].'certificate.pem -k '.$absolute_path.'public/spcer/'.$certificate_record['id'].'key.pem -p "'.$files.'"  -o '.$absolute_path.'public/upload/super_signature_ipa/'.$udid.md5($app['bundle']).$app['er_logo'].'.ipa "'.$ipa.'" 2>&1';
+        $ml = 'export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin;isign -c '.$absolute_path.'public/spcer/'.$certificate_record['id'].'certificate.pem -k '.$absolute_path.'public/spcer/'.$certificate_record['id'].'key.pem -p "'.$files.'"  -o '.$absolute_path.'public/upload/super_signature_ipa/'.$udid.md5($app['bundle']).$app['er_logo'].'.ipa "'.$ipa.'" 2>&1';
 		
         file_put_contents('./sign_error_log/'.$udid.$app['bundle'].time().'ml.txt',$ml);
         file_put_contents('./sign_error_log/'.$udid.$app['bundle'].time().'.txt',$out);
