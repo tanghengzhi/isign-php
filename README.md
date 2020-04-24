@@ -1,19 +1,73 @@
-liunx系统装宝塔，php7.0 mysql5.6需要开启ss1和伪静态
+安装步骤（Ubuntu 18.04 LTS）
 
-ningx 伪静态：
+1. 安装软件
 
-location/
-if（-e $request filename）{
-rewrite"/（La-zA-20-9]（6））$"/user/install/index/$1/last.
-rewrite（.*）/index.php？s=$1 last；break；
+apt install nginx php-fpm php-mysql php-gd php-mbstring php-zip mysql-server git python-pip
+
+2. 克隆代码
+
+cd /var/www/
+git clone https://github.com/tanghengzhi/isign-php.git
+chown -R www-data:www-data isign-php
+
+3. 配置 nginx
+
+vi /etc/nginx/sites-available/isign-php
+```
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name app.fvlrung.com;
+
+        root /var/www/isign-php/public;
+        index index.php;
+
+        location / {
+                rewrite "^/([a-zA-Z0-9]{6})$" /user/install/index/$1 last;
+                try_files $uri $uri/ /index.php?s=$uri;
+        }
+
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+                fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+        }
 }
+```
+ln -s /etc/nginx/sites-available/isign-php /etc/nginx/sites-enabled/
+nginx -s reload
 
-1：自录指向public关防跨站
+4. 申请证书(Let's Encrypt)
 
-2：修改数据库地址：data/conf/database.php
+sudo apt-get update
+sudo apt-get install software-properties-common
+sudo add-apt-repository universe
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
 
-3：导入数据库文件 shujuku.sql
+sudo apt-get install certbot python-certbot-nginx
+sudo certbot --nginx
 
-4：后台地址：/admin/public/login.html
+5. 配置 mysql
+
+mysql -u root
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+FLUSH PRIVILEGES;
+
+mysql -u root -p
+CREATE DATABASE `isign-php`;
+mysql -u root -p isign-php < /var/www/isign-php/isign-php.sql
+
+mysql -u root -p
+set sql_mode = '';
+
+6. 安装 isign
+
+cd /var/www/
+git clone https://github.com/apperian/isign.git
+cd isign/
+pip install .
+
+7. 后台地址：/admin
 
  管理：admin 密码123456
