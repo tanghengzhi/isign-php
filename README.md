@@ -2,7 +2,7 @@
 
 1. 安装软件
 
-apt install nginx php-fpm php-mysql php-gd php-mbstring php-zip mysql-server git python-pip
+apt install nginx php-fpm php-mysql php-gd php-mbstring php-zip php-curl mysql-server git python-pip
 
 2. 克隆代码
 

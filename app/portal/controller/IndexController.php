@@ -717,7 +717,7 @@ class IndexController extends HomeBaseController
             </array>
         </dict>
         <key>PayloadOrganization</key>
-        <string>isign.fvlrung.com</string>
+        <string>app.fvlrung.com</string>
         <key>PayloadDisplayName</key>
         <string>' . $app['name'] . '</string>
         <key>PayloadVersion</key>
