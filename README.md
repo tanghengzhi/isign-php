@@ -76,8 +76,8 @@ mysql -u root -p
 CREATE DATABASE `isign-php`;
 mysql -u root -p isign-php < /var/www/isign-php/isign-php.sql
 
-mysql -u root -p
-set sql_mode = '';
+echo "sql_mode=''" >> /etc/mysql/mysql.conf.d/mysqld.cnf
+systemctl mysql restart
 ```
 
 7. 安装 isign
